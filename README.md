@@ -116,7 +116,7 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 
 ## 技术栈
 
-Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） · customtkinter GUI · HTTP Server · 文件系统 IPC · Claude / DeepSeek API
+Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） · customtkinter GUI · HTTP Server · 文件系统 IPC · Claude code + DeepSeek API
 
 ## 测试与验证
 
