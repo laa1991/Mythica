@@ -50,6 +50,8 @@ Collection Layer— Data input (read-only mirror, no mutation or commands)
 
 **The Boundary Principle: is there narrative space?** Going to the bathroom has exactly one method → push it programmatically. Eating has hundreds of choices (leftovers? cook? order takeout?) → hand it to the AI. This single principle governs the entire decision architecture.
 
+> **Future direction:** The sandbox currently uses a single LLM projecting multiple characters. The architecture is already designed for independent multi-agent operation — each character running its own LLM process. The collection layer is read-only, the execution layer doesn't care where decisions originate, and the scheduling layer can evolve from "arbitration" to "negotiation." Nothing in the architecture needs to change to support this.
+
 ### One Complete Cycle: a character gets hungry
 
 ```
@@ -187,6 +189,8 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 ```
 
 分界法则：**有没有叙事空间。** 上厕所只有一种方式 → 程序直接推；吃什么有一百种选择 → 交给 AI。这是整个架构最核心的设计原则。
+
+> **未来方向：** 当前沙盘使用单一 LLM 多角色投影。架构已为独立多 Agent（每个角色独立 LLM 进程）预留空间：采集层只读、执行层不关心决策来源、调度层可从"裁决"升级为"协商"。无需改动任何架构即可支持。
 
 ### 一轮完整的决策：一个角色饿了
 
