@@ -82,6 +82,20 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 
 ---
 
+## 独立贡献：Sims 4 交互系统知识库
+
+以下文档**独立于 AI 系统**，是 Sims 4 mod 开发的基础设施。Sims 4 没有公开 API 文档——modder 搞清楚一个交互机制往往需要数小时试错。这里的三篇文档把探索结果系统化，任何想写 Sims 4 mod 的人都能受益：
+
+| 文档 | 内容 | 独立价值 |
+|------|------|---------|
+| [`docs/game/interaction-system.md`](docs/game/interaction-system.md) | 三层交互模型（静态/动态 affordance、mixer、SI 生命周期） | "为什么这个交互推不进去"的根因字典 |
+| [`docs/game/action-routing-rulebook.md`](docs/game/action-routing-rulebook.md) | 动作注入决策树、四条域路径、探针预检命令 | 加新动作的标准操作流程 |
+| [`docs/game/data-extraction.md`](docs/game/data-extraction.md) | API 对照表、类型陷阱、空值判读、血案索引 | 改采集代码前的避坑手册 |
+
+> 这三篇不依赖任何 AI 知识。你不需要关心 LLM、Agent、沙盘——只需要想给 Sims 4 写 mod。
+
+---
+
 ## 快速导航
 
 | 想看什么 | 从这里开始 |
@@ -96,7 +110,7 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 | **动作规则** | [`sandbox/actions/`](sandbox/actions/) — 声明式规则系统（5 个域，112 条） |
 | **数据中枢** | [`lib/probe_hub.py`](lib/probe_hub.py) — 发布/订阅 + Protocol 接口 |
 | **IPC 协议** | [`lib/signal_protocol.py`](lib/signal_protocol.py) — 声明式连接发现 |
-| **游戏逆向** | [`docs/game/`](docs/game/) — 三层交互模型 + 路由决策树 + API 对照 |
+| **Sims 4 知识库** | [见上方独立贡献](#独立贡献sims-4-交互系统知识库) — 为 mod 开发者整理的三篇基础设施文档 |
 
 ---
 
