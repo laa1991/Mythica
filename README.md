@@ -1,3 +1,139 @@
+# Mythica — An LLM Agent for Game Narrative & Behavioral Decision-Making
+
+**Not an AI that writes stories. An AI that directs them.**
+
+An LLM agent system running inside a live game environment (The Sims 4). It reads real-time game state — character attributes, relationships, environmental events — generates coherent narratives through a three-phase pipeline, and makes executable behavioral decisions through a sandbox engine.
+
+> ⚠️ This is a curated showcase. The full project spans 20+ modules, ~2,000 tests, and 39 numbered design decisions. Only the core architecture, design methodology, and reusable code modules are shown here.
+
+---
+
+## What problem does this solve?
+
+LLMs writing poetry in a chat window is a solved problem. But operating an LLM inside a **long-lifetime, stateful, real-time** environment — making decisions that persist across hundreds of interactions — remains rare.
+
+The Sims 4 provides a perfect testbed: dense game state (needs, skills, traits, relationships, objects, weather, time), real-time constraints, and a **black-box** engine with no public API documentation. The Python runtime is embedded inside the game.
+
+Three core explorations:
+
+1. **How to build data extraction capabilities in a black-box system** — Probe toolkit (type library + structure tree)
+2. **How to maintain narrative coherence across hundreds of LLM interactions** — Three-phase pipeline + Baton handoff + state machine
+3. **How to safely land AI decisions in the real world** — Sandbox engine + dual-loop action verification
+
+---
+
+## Architecture
+
+```
+Game Client (Sims 4 Mod)          Desktop (Mythica)                AI API
+┌──────────────────┐         ┌──────────────────────┐         ┌─────────┐
+│ Event Capture     │  HTTP   │ Story / Inner Voice   │  API    │ Claude  │
+│ Data Collection   │ ──────► │ Dialogue Engine       │ ──────► │ DeepSeek│
+│ Action Execution  │         │ Sandbox (Decision)    │         │         │
+│ Signal Polling    │ ◄────── │ Signal Protocol       │         │         │
+└──────────────────┘   File  └──────────┬───────────┘         └─────────┘
+       ▲                                │
+       │     Execution results + data   │
+       └────────────────────────────────┘
+             Dual-Loop: Feedback-Driven Decisions
+```
+
+### Sandbox Five-Layer Architecture (highlight)
+
+```
+Meta Layer      — Human interface (observe state, edit world)
+Execution Layer — Signal emission (decision → Action_Command.signal → game)
+Scheduling Layer— Conflict resolution (survival > AI > auto, one action per sim)
+Decision Layer  — Three-tier (P4 physiological / AI narrative / P3-P1 auto-scan)
+Collection Layer— Data input (read-only mirror, no mutation or commands)
+```
+
+**The Boundary Principle: is there narrative space?** Going to the bathroom has exactly one method → push it programmatically. Eating has hundreds of choices (leftovers? cook? order takeout?) → hand it to the AI. This single principle governs the entire decision architecture.
+
+### One Complete Cycle: a character gets hungry
+
+```
+1. Collection:  game sends full snapshot every 3s → "Madara, hunger -85, kitchen has fridge, stove, leftovers"
+2. Decision:    AI sees hunger, searches action catalog → 3 options: eat leftovers / cook / order takeout
+3. Inner Voice: "Hungry... there's still leftovers from last night in the fridge, just heat them up"
+4. Scheduling:  AI picks "eat leftovers". Madara isn't busy, action approved
+5. Execution:   write Action_Command.signal → game reads → push affordance → Madara walks to fridge
+6. Loop 1:      track action lifecycle → game reports "pushed ✓" → next cycle AI knows Madara is eating
+7. Loop 2:      Observer records "EatLeftover effective when hungry" → rule confidence +1
+```
+
+This is the standard cycle running every 2-5 seconds. No presets, no scripts — every round is a real-time AI decision based on current game state.
+
+---
+
+## What this project demonstrates
+
+| This Project | Demonstrates |
+|-------------|-------------|
+| Sandbox 5-layer architecture + 3-tier decision boundary | Agent architecture design |
+| Pub/sub data hub + signal file protocol | Distributed system communication |
+| Three-phase narrative pipeline + Baton handoff + archival | Long-context memory & state management |
+| God class (11,887 lines) → 12 Mixins + 20 modules | [Architecture governance](docs/refactoring.md) — incremental refactoring |
+| Probe toolkit: type library + structure tree (black-box reverse engineering) | Methodology for undocumented systems |
+| ~2,000 tests + 13 offline verification scripts + pre-deploy hard gates | Engineering discipline & QA |
+| Declarative action rule system (132 rules, 112 shown) | DSL design & extensible frameworks |
+| Dual-loop: execution feedback + knowledge discovery | Self-correcting agent system design |
+| 39 numbered design decisions, each with rejected alternatives | Written technical decision-making |
+
+---
+
+## Standalone Contribution: Sims 4 Interaction System Knowledge Base
+
+The following documents are **independent of the AI system** — they are infrastructure for Sims 4 mod development. Sims 4 has no public API documentation. A modder figuring out one interaction mechanic can take hours of trial and error. These three documents systematize the results:
+
+| Document | Content | Standalone Value |
+|----------|---------|-----------------|
+| [`docs/game/interaction-system.md`](docs/game/interaction-system.md) | Three-layer interaction model (static/dynamic affordances, mixers, SI lifecycle) | Root cause dictionary for "why won't this interaction push" |
+| [`docs/game/action-routing-rulebook.md`](docs/game/action-routing-rulebook.md) | Action injection decision tree, four domain paths, probe pre-check commands | Standard operating procedure for adding new actions |
+| [`docs/game/data-extraction.md`](docs/game/data-extraction.md) | API cross-reference, type traps, null value interpretation, incident index | Pre-flight checklist before modifying collection code |
+
+> These three documents require zero AI knowledge. You don't need to care about LLMs, agents, or sandboxes — you just need to want to mod Sims 4.
+
+---
+
+## Quick Navigation
+
+| Looking for | Start here |
+|------------|------------|
+| **Core Code** | [`sandbox/engine.py`](sandbox/engine.py) — AI decision loop (1,600 lines) |
+| **Architecture** | [`sandbox/ARCHITECTURE.md`](sandbox/ARCHITECTURE.md) — 5-layer architecture + 39 design decisions |
+| **Architecture Governance** | [`docs/refactoring.md`](docs/refactoring.md) — God class → 12 Mixin incremental refactoring |
+| **Narrative Pipeline** | [`docs/pipeline.md`](docs/pipeline.md) — Three-phase pipeline + Baton handoff + crash philosophy |
+| **Design Decisions** | [`docs/design-decisions.md`](docs/design-decisions.md) — 8 most representative decisions |
+| **Action Closed Loop** | [`docs/action-closed-loop.md`](docs/action-closed-loop.md) — Decide→Execute→Observe→Feedback dual-loop |
+| **Black-Box Exploration** | [`docs/probe-toolkit.md`](docs/probe-toolkit.md) — API discovery methodology for undocumented systems |
+| **Action Rules** | [`sandbox/actions/`](sandbox/actions/) — Declarative rule system (5 domains, 112 rules) |
+| **Data Hub** | [`lib/probe_hub.py`](lib/probe_hub.py) — Pub/sub + Protocol interface |
+| **IPC Protocol** | [`lib/signal_protocol.py`](lib/signal_protocol.py) — Declarative connection discovery |
+| **Sims 4 Knowledge Base** | [See standalone contribution above](#standalone-contribution-sims-4-interaction-system-knowledge-base) — Three infrastructure docs for mod developers |
+
+---
+
+## Tech Stack
+
+Python 3.12 (desktop/sandbox) · Python 3.7 (game client, embedded in Sims 4) · customtkinter GUI · HTTP Server · Filesystem IPC · Claude / DeepSeek API
+
+## Testing & Verification
+
+~2,000 pytest unit tests across three targets · 13 offline verification scripts · Pre-deploy field consistency hard gates · Runtime unknown-field safe discard + log alerts
+
+---
+
+## About
+
+Solo development, iterating through 2026. This project started with a question: "If AI could truly understand what's happening inside a game world, what kind of stories could it tell?"
+
+**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 6 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
+
+---
+
+---
+
 # Mythica — LLM Agent 驱动的游戏叙事与行为决策引擎
 
 **不是让 AI 写小说，是让 AI 做导演。**
@@ -129,4 +265,3 @@ Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） �
 独立开发，2026 年持续迭代中。
 
 **本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、声明式动作规则系统（`sandbox/actions/`，5 域 112 条）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
-
