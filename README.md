@@ -130,6 +130,8 @@ Solo development, iterating through 2026. This project started with a question: 
 
 **Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 6 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
 
+## Contact Me
+📧 mythicalaa1991@163.com
 ---
 
 ---
@@ -265,3 +267,6 @@ Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） �
 独立开发，2026 年持续迭代中。
 
 **本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、声明式动作规则系统（`sandbox/actions/`，5 域 112 条）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
+
+## 关于作者
+📧 mythicalaa1991@163.com
