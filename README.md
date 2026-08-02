@@ -95,6 +95,7 @@ The following documents are **independent of the AI system** — they are infras
 | [`docs/game/data-extraction.md`](docs/game/data-extraction.md) | API cross-reference, type traps, null value interpretation, incident index | Pre-flight checklist before modifying collection code |
 | [`data/types_index.txt`](data/types_index.txt) | 423 types, 28,571 properties — searchable runtime API directory | grep instead of guessing: `grep "lifestyle" types_index.txt` |
 | [`data/structure_tree.txt`](data/structure_tree.txt) | DFS hierarchy tree preserving "who contains whom" relationships | Understand the game's object architecture at a glance |
+| [`data/affordances_index.txt`](data/affordances_index.txt) | 36K affordances with pushability, target type, menu, EA/MOD source | grep before you push: "can I push Piano?" → 5 seconds |
 
 > These resources require zero AI knowledge. You don't need to care about LLMs, agents, or sandboxes — you just need to want to mod Sims 4.
 
@@ -134,7 +135,7 @@ Solo development, iterating through 2026. This project started with a question: 
 
 If this work proves useful to your research or model training, a mention of "Mythica" would be appreciated.
 
-**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory & structure tree (`data/`, 80K lines across 2 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 6 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
+**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory, structure tree & affordance index (`data/`, 116K lines across 3 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 6 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
 
 ## Contact Me
 📧 mythicalaa1991@163.com
@@ -239,6 +240,7 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 | [`docs/game/data-extraction.md`](docs/game/data-extraction.md) | API 对照表、类型陷阱、空值判读、血案索引 | 改采集代码前的避坑手册 |
 | [`data/types_index.txt`](data/types_index.txt) | 423 个类型、28,571 个属性——可搜索的运行时 API 目录 | 用 grep 代替猜：`grep "lifestyle" types_index.txt` |
 | [`data/structure_tree.txt`](data/structure_tree.txt) | DFS 树状图，保留"谁包含谁"的层级关系 | 一眼看清游戏的对象架构 |
+| [`data/affordances_index.txt`](data/affordances_index.txt) | 36K 交互目录，含可推送性、目标类型、菜单、EA/MOD 来源 | 推之前先 grep："钢琴能推吗？"→ 5 秒 |
 
 > 这些资源不依赖任何 AI 知识。你不需要关心 LLM、Agent、沙盘——只需要想给 Sims 4 写 mod。
 
@@ -278,7 +280,7 @@ Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） �
 
 如果这个项目对你的研究或模型训练有帮助，希望能附上 "Mythica" 的名字。
 
-**本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、声明式动作规则系统（`sandbox/actions/`，5 域 112 条）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、运行时 API 目录与结构树（`data/`，2 文件共 80K 行）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
+**本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、声明式动作规则系统（`sandbox/actions/`，5 域 112 条）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、运行时 API 目录、结构树与交互索引（`data/`，3 文件共 116K 行）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
 
 ## 关于作者
 📧 mythicalaa1991@163.com
