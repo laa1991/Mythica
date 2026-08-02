@@ -1,0 +1,3324 @@
+===== Mythica Structure Tree [2026-07-23 12:58:52] build=2026-07-23 12:29:51 =====
+起点: 32 个 (services含子管理器 / zone / household / sim + sim_info / objects)
+深度: 5  节点: 3181  扫描属性: 24690  用时: 1.0s  
+读法: 缩进=包含关系  ├─=兄弟节点  └─=最后一个兄弟
+  <类型名> = 值  → 非叶对象展开子树
+  → 见 <路径> = 同类型对象已在别处展开（避免重复）
+  方法() 不展开（只取值不调方法）
+用法: 桌面端读此文件理解游戏对象图结构——谁包含谁 / 数据从哪到哪。
+
+├─ services <module> = <module> <module 'services' from 'E:\\The Sims 4\\Data\\Simulation\\G
+├─ sim_info_manager() <SimInfoManager>
+  (5 种类型全部 None — _sim_info_cap_override, _sim_info_to_spin_up_action, _startup_time, _super_interaction_restorer, zone_id)
+│  ├─ _firemeter <SimInfoFireMeter>
+│  │  ├─ FIREMETER_FREQUENCY <int> = 120
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ SIM_INFO_ALLOWED_PERCENTAGE_ABOVE_CAP <float> = 0.15
+│  │  └─ _alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3A953B440>
+│  ├─ _sim_info_telemetry_manager <SimInfoTelemetryManager>
+│  │  ├─ _daily_sim_info_creation_count <int> = 3
+│  │  └─ _daily_sim_info_creation_count_telemetry_alarm <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3ACCB0710>
+│  ├─ id_object_pairs <dict_items>
+│  ├─ ids <dict_keys>
+│  ├─ objects <dict_values>
+│  ├─ save_error_code <ErrorCodes>
+│    (ErrorCodes 枚举值 × 125，首见 services.sim_info_manager().save_error_code)
+│  │  ├─ _enum_export_path <str> = "persistence_error_types.ErrorCodes"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "ErrorCodes"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = False
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "SERVICE_SAVE_FAILED_SIM_INFO_MANAGER"
+│  │  ├─ name_to_value <dict> = <dict len=125>
+│  │  ├─ numerator <int> = 510
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 510
+│  │  ├─ value <int> = 510
+│  │  └─ value_to_name <dict> = <dict len=124>
+│  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  ├─ SIM_INFO_CAP <int> = 1041
+│  ├─ _objects <dict> = <dict len=477>
+│  ├─ _objects_to_be_removed <list> = <list len=0>
+│  ├─ _registered_callbacks <dict> = <dict len=3>
+│  ├─ _sim_ids_to_skip_preroll <set> = <set len=0>
+│  ├─ _sim_infos_injected_into_zone <list> = <list len=0>
+│  ├─ _sim_infos_saved_in_open_street <list> = <list len=0>
+│  ├─ _sim_infos_saved_in_plex_group <list> = <list len=0>
+│  ├─ _sim_infos_saved_in_zone <list> = <list len=0>
+│  ├─ _sim_infos_to_persist_carry <dict> = <dict len=0>
+│  ├─ _sims_traveled_to_zone <list> = <list len=0>
+│  ├─ _start_all_sims_opted_out_of_fame <bool> = False
+│  ├─ _whims_enabled <bool> = True
+│  ├─ acne_enabled <bool> = True
+│  ├─ auto_manage_distributor <bool> = True
+│  ├─ can_incremental_start <bool> = False
+│  ├─ has_any_traveled_sims <bool> = False
+│  ├─ id <int> = 3
+│  ├─ required_packs <tuple> = <tuple len=1>
+│  └─ supports_parenting <bool> = False
+├─ client_manager() <ClientManager>
+│  ├─ id_object_pairs <dict_items> → 见 services.sim_info_manager().id_object_pairs
+│  ├─ ids <dict_keys> → 见 services.sim_info_manager().ids
+│  ├─ objects <dict_values> → 见 services.sim_info_manager().objects
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ _objects <dict> = <dict len=1>
+│  ├─ _objects_to_be_removed <list> = <list len=0>
+│  ├─ _registered_callbacks <dict> = <dict len=3>
+│  ├─ auto_manage_distributor <bool> = True
+│  ├─ can_incremental_start <bool> = False
+│  ├─ id <int> = 4
+│  ├─ required_packs <tuple> = <tuple len=1>
+│  ├─ supports_parenting <bool> = False
+│  └─ zone_id <NoneType> = <None>
+├─ active_household() <Household>
+   (省略 39 个子属性…)
+│  ├─ _autonomy_settings <AutonomySettings>
+│  │  ├─ STARTING_DEFAULT_AUTONOMY_STATE <AutonomyState>
+│  │    (AutonomyState 枚举值 × 5，首见 services.active_household()._autonomy_settings.STA)
+│  │  │  ├─ _enum_export_path <str> = "autonomy-settings.AutonomyState"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "AutonomyState"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "FULL"
+│  │  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  │  ├─ numerator <int> = 3
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 3
+│  │  │  ├─ value <int> = 3
+│  │  │  └─ value_to_name <dict> = <dict len=5>
+│  │  ├─ STARTING_DEFAULT_RANDOMIZATION <AutonomyRandomization>
+│  │    (AutonomyRandomization 枚举值 × 3，首见 services.active_household()._autonomy_settings.STA)
+│  │  │  ├─ _enum_export_path <str> = "autonomy-settings.AutonomyRandomization"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "AutonomyRandomization"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "ENABLED"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ STARTING_HOUSEHOLD_AUTONOMY_STATE <AutonomyState> → 见 services.active_household()._autonomy_settings.STARTING_DEFAULT_AUTONOMY_STATE
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=4>
+│  │  ├─ STARTING_SELECTED_SIM_AUTONOMY <bool> = True
+│  │  ├─ _npc_autonomy_settings <dict> = <dict len=3>
+│  │  └─ _setting_groups <dict> = <dict len=2>
+│  ├─ _collection_tracker <CollectionTracker>
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel>
+│  │    (SimInfoLODLevel 枚举值 × 6，首见 services.active_household()._collection_tracker._t)
+│  │  │  ├─ _enum_export_path <str> = "sims-sim_info_lod.SimInfoLODLevel"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ _next_lod <dict> = <dict len=4>
+│  │  │  ├─ _prev_lod <dict> = <dict len=5>
+│  │  │  ├─ cache_key <str> = "SimInfoLODLevel"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "BACKGROUND"
+│  │  │  ├─ name_to_value <dict> = <dict len=6>
+│  │  │  ├─ numerator <int> = 10
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 10
+│  │  │  ├─ value <int> = 10
+│  │  │  └─ value_to_name <dict> = <dict len=6>
+│  │  ├─ owner <Household> → 见 services.active_household()
+│  │  ├─ _collections <dict> = <dict len=0>
+│  │  └─ collection_data <dict> = <dict len=0>
+│  ├─ _funds <FamilyFunds>
+│  │  ├─ MAX_FUNDS <int> = 9999999
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _funds <int> = 8760081
+│  │  ├─ _household_id <int> = 47875306169303069
+│  │  ├─ allow_negative_funds <bool> = False
+│  │  ├─ allow_npcs <bool> = False
+│  │  ├─ funds_transfer_gain_reason <int> = 13
+│  │  ├─ funds_transfer_loss_reason <int> = 14
+│  │  └─ money <int> = 8760081
+│  ├─ _holiday_tracker <HolidayTracker>
+│    (6 种类型全部 None — _active_holiday_id, _cancelled_holiday, _cancelled_holiday_time, _situation_holiday_time, _situation_holiday_type…)
+│  │  ├─ _pre_day_holiday_id <int> = 182139
+│  │  ├─ _situation_seeds <list> = <list len=0>
+│  │  ├─ _traditions <defaultdict> = <defaultdict len=1>
+│  │  └─ upcoming_holiday_id <int> = 182139
+│  ├─ _household_milestone_tracker <HouseholdMilestoneTracker>
+│  │  ├─ owner_sim_info <SimInfo>
+│  │    (134 种类型全部 None — AffordanceTuning, AnimalHome, AnimalObject, AnimalPreference, Animation…)
+│  │     (省略 268 个子属性…)
+│  │  │  ├─ Buffs <BuffComponent>
+│  │  │  │  ├─ owner <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ priority <ComponentPriority>
+│  │  │  │    (ComponentPriority 枚举值 × 5，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ _enum_export_path <str> = "objects-components.ComponentPriority"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "ComponentPriority"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = False
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "PRIORITY_DEFAULT"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=5>
+│  │  │  │  ├─ CNAME <str> = "Buffs"
+│  │  │  │  ├─ EXCLUSIVE_SET <tuple> = <tuple len=420>
+│  │  │  │  ├─ INAME <str> = "buffs_component"
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  │  │  ├─ UPDATE_INTENSITY_BUFFER <int> = 1
+│  │  │  │  ├─ _active_buffs <dict> = <dict len=208>
+│  │  │  │  ├─ _active_mood_buff_handle <int> = 246
+│  │  │  │  ├─ _active_mood_intensity <int> = 1
+│  │  │  │  ├─ _active_teleport_styles <NoneType> = <None>
+│  │  │  │  ├─ _actor_mixers_cache <defaultdict> = <defaultdict len=2>
+│  │  │  │  ├─ _additional_posture_costs <Counter> = <Counter len=0>
+│  │  │  │  ├─ _additional_posture_costs_ref_count <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _appropriate_tags <Counter> = <Counter len=2>
+│  │  │  │  ├─ _inappropriate_tags <Counter> = <Counter len=0>
+│  │  │  │  ├─ _provided_mixers_cache <defaultdict> = <defaultdict len=2>
+│  │  │  │  ├─ _success_chance_modification <float> = 0.0
+│  │  │  │  ├─ _super_affordances_cache <set> = <set len=117>
+│  │  │  │  ├─ _target_provided_affordances_cache <list> = <list len=39>
+│  │  │  │  ├─ allow_dynamic <bool> = False
+│  │  │  │  ├─ buff_source_dict <dict> = <dict len=0>
+│  │  │  │  ├─ buff_update_alarms <dict> = <dict len=14>
+│  │  │  │  ├─ load_in_progress <bool> = False
+│  │  │  │  ├─ portal_cost_override_map <OrderedDict> = <OrderedDict len=0>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ DEFAULT_GAMEPLAY_OPTIONS <SimInfoGameplayOptions>
+│  │  │    (SimInfoGameplayOptions 枚举值 × 4，首见 services.active_household()._household_milestone_t)
+│  │  │  │  ├─ _enum_export_path <str> = "sims-sim_info_gameplay_options.SimInfoGameplayOptions"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "SimInfoGameplayOptions"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = True
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "ALLOW_FAME|ALLOW_REPUTATION"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  │  ├─ numerator <int> = 3
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 3
+│  │  │  │  ├─ value <int> = 3
+│  │  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  │  ├─ _account <Account>
+│  │  │  │  ├─ _achievement_tracker <AchievementTracker>
+│  │  │  │  │  ├─ owner_sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  │  ├─ TIME_DATA_UPDATE_RATE <int> = 60000
+│  │  │  │  │  ├─ _account_id <int> = 1000200030000
+│  │  │  │  │  ├─ _completed_milestones <set> = <set len=30>
+│  │  │  │  │  ├─ _completed_objectives <set> = <set len=29>
+│  │  │  │  │  ├─ _data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  │  │  │  ├─ _dirty_objective_state <dict> = <dict len=0>
+│  │  │  │  │  ├─ _event_trackers <dict> = <dict len=0>
+│  │  │  │  │  ├─ _last_objective_state <dict> = <dict len=4665>
+│  │  │  │  │  ├─ _reset_objectives <set> = <set len=0>
+│  │  │  │  │  ├─ _sent_milestones <set> = <set len=30>
+│  │  │  │  │  ├─ _sent_objectives <set> = <set len=29>
+│  │  │  │  │  ├─ _sent_unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  │  │  │  ├─ _total_milestone_completion_count <Counter> = <Counter len=0>
+│  │  │  │  │  ├─ _tracker_dirty <bool> = False
+│  │  │  │  │  ├─ _unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  │  │  │  ├─ data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  │  │  │  ├─ latest_objective <NoneType> = <None>
+│  │  │  │  │  ├─ server_time_last_update <DateAndTime> = 06:32:08.480 day:0 week:28864
+│  │  │  │  │  ├─ server_time_on_connect <DateAndTime> = 05:24:29.759 day:0 week:28864
+│  │  │  │  │  ├─ sim_time_last_update <DateAndTime> = 09:30:51.520 day:2 week:11
+│  │  │  │  │  ├─ sim_time_on_connect <DateAndTime> = 08:50:51.520 day:2 week:11
+│  │  │  │  │  ├─ simless <bool> = True
+│  │  │  │  │  ├─ tooltip_disabled_for_special_case <bool> = False
+│  │  │  │  │  └─ update_alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF40C996A28>
+│  │  │  │  ├─ _households <WeakSet>
+│  │  │  │  │  ├─ _iterating <set> = <set len=0>
+│  │  │  │  │  ├─ _pending_removals <list> = <list len=0>
+│  │  │  │  │  └─ data <set> = <set len=215>
+│  │  │  │  ├─ achievement_tracker <AchievementTracker> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  ├─ clients <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  ├─ _gameplay_data <dict> = <dict len=0>
+│  │  │  │  ├─ _persona_name <str> = "呆呆"
+│  │  │  │  ├─ id <int> = 1000200030000
+│  │  │  │  ├─ locale <str> = "zh-tw"
+│  │  │  │  ├─ persona_name <str> = "呆呆"
+│  │  │  │  └─ save_slot_id <int> = 0
+│  │  │  ├─ _adventure_tracker <AdventureTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _adventure_cooldowns <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _adventure_mappings <dict> = <dict len=1>
+│  │  │  │  ├─ _success_override <NoneType> = <None>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _age_progress <AgeProgressContinuousStatistic>
+│  │  │    (14 种类型全部 None — _active_callback, _alarm_handle, _callback_queue_head, _decay_callback_handle, _decay_rate_modifiers…)
+│  │  │     (省略 14 个子属性…)
+│  │  │  │  ├─ _decay_rate_override <UnsetType>
+│  │  │  │  │  └─ _instance <UnsetType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._age_pro
+│  │  │  │  ├─ _delayed_decay_rate_override <UnsetType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._age_pro
+│  │  │  │  ├─ _final_delay_override <UnsetType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._age_pro
+│  │  │  │  ├─ _initial_delay_override <UnsetType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._age_pro
+│  │  │  │  ├─ min_lod_value <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=2>
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  ├─ SAVE_VALUE_MULTIPLE <int> = 10
+│  │  │  │  ├─ _convergence_value <float> = inf
+│  │  │  │  ├─ _decay_enabled <bool> = False
+│  │  │  │  ├─ _decay_rate_modifier <int> = 1
+│  │  │  │  ├─ _default_convergence_value <float> = inf
+│  │  │  │  ├─ _delayed_decay_active <bool> = False
+│  │  │  │  ├─ _last_update <DateAndTime> = 10:08:59.520 day:2 week:11
+│  │  │  │  ├─ _locked <int> = 0
+│  │  │  │  ├─ _skill_based_statistic_multipliers_decrease <dict> = <dict len=0>
+│  │  │  │  ├─ _skill_based_statistic_multipliers_increase <dict> = <dict len=19>
+│  │  │  │  ├─ _statistic_callback_listeners <list> = <list len=0>
+│  │  │  │  ├─ _statistic_modifier <int> = 0
+│  │  │  │  ├─ _statistic_multiplier_decrease <float> = 1.0
+│  │  │  │  ├─ _statistic_multiplier_increase <float> = 1.0
+│  │  │  │  ├─ _suppress_update_active_callbacks <bool> = False
+│  │  │  │  ├─ _value <float> = 1.2615654468536377
+│  │  │  │  ├─ add_if_not_in_tracker <bool> = True
+│  │  │  │  ├─ autonomous_desire <int> = 0
+│  │  │  │  ├─ autonomy_weight <int> = 1
+│  │  │  │  ├─ base_decay_rate <float> = 0.0006944444444444445
+│  │  │  │  ├─ best_value <float> = inf
+│  │  │  │  ├─ continuous <bool> = True
+│  │  │  │  ├─ convergence_value <float> = inf
+│  │  │  │  ├─ core <bool> = False
+│  │  │  │  ├─ decay_enabled <bool> = False
+│  │  │  │  ├─ decay_modifier <int> = 1
+│  │  │  │  ├─ decay_rate <int> = 0
+│  │  │  │  └─ default_convergence_value <float> = inf
+│  │  │  ├─ _age_speed_setting <AgeSpeeds>
+│  │  │    (AgeSpeeds 枚举值 × 4，首见 services.active_household()._household_milestone_t)
+│  │  │  │  ├─ _enum_export_path <str> = "sims-aging-aging_enums.AgeSpeeds"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "AgeSpeeds"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = True
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "SLOW"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 2
+│  │  │  │  ├─ value <int> = 2
+│  │  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  │  ├─ _aspiration_tracker <AspirationTracker>
+│  │  │    (4 种类型全部 None — _actor_mixers_cache, _childhood_inspiration_suggested_aspirat, _provided_mixers_cache, _super_affordances_cache)
+│  │  │     (省略 2 个子属性…)
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ owner_sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ TIME_DATA_UPDATE_RATE <int> = 60000
+│  │  │  │  ├─ _additional_objectives <dict> = <dict len=1>
+│  │  │  │  ├─ _childhood_inspiration_completed <bool> = False
+│  │  │  │  ├─ _completed_milestones <set> = <set len=83>
+│  │  │  │  ├─ _completed_objectives <set> = <set len=114>
+│  │  │  │  ├─ _data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  │  │  ├─ _dirty_objective_state <dict> = <dict len=0>
+│  │  │  │  ├─ _event_trackers <dict> = <dict len=0>
+│  │  │  │  ├─ _last_objective_state <dict> = <dict len=4658>
+│  │  │  │  ├─ _reset_objectives <set> = <set len=0>
+│  │  │  │  ├─ _selected_aspiration <int> = 0
+│  │  │  │  ├─ _sent_milestones <set> = <set len=83>
+│  │  │  │  ├─ _sent_objectives <set> = <set len=114>
+│  │  │  │  ├─ _sent_unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  │  │  ├─ _target_provided_affordances_cache <list> = <list len=1>
+│  │  │  │  ├─ _timed_aspirations <dict> = <dict len=0>
+│  │  │  │  ├─ _total_milestone_completion_count <Counter> = <Counter len=0>
+│  │  │  │  ├─ _tracker_dirty <bool> = False
+│  │  │  │  ├─ _unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  │  │  ├─ _whimsets_to_reset <set> = <set len=3>
+│  │  │  │  ├─ childhood_inspiration_completed_state <bool> = False
+│  │  │  │  ├─ completed_objectives <set> = <set len=114>
+│  │  │  │  ├─ data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  │  │  ├─ get_all_additional_objectives <dict> = <dict len=1>
+│  │  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  │  ├─ server_time_last_update <DateAndTime> = 06:32:08.480 day:0 week:28864
+│  │  │  │  ├─ server_time_on_connect <DateAndTime> = 05:46:30.439 day:0 week:28864
+│  │  │  │  ├─ sim_time_last_update <DateAndTime> = 09:30:51.520 day:2 week:11
+│  │  │  │  ├─ sim_time_on_connect <DateAndTime> = 08:50:51.520 day:2 week:11
+│  │  │  │  └─ simless <bool> = False
+│  │  │  ├─ _away_action_tracker <AwayActionTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _current_away_action <NoneType> = <None>
+│  │  │  │  ├─ current_away_action <NoneType> = <None>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _base <SimInfo>
+│  │  │  │  ├─ facial_attributes <bytes>
+│  │  │  │  ├─ genetic_data <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ outfits <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ pelt_layers <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ pronouns <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ age <int> = 32
+│  │  │  │  ├─ aspiration_id <int> = 0
+│  │  │  │  ├─ base_trait_ids <tuple> = <tuple len=237>
+│  │  │  │  ├─ breed_name <str> = ""
+│  │  │  │  ├─ breed_name_key <int> = 0
+│  │  │  │  ├─ current_occult_types <int> = 1
+│  │  │  │  ├─ custom_texture <int> = 0
+│  │  │  │  ├─ first_name <str> = "柱间"
+│  │  │  │  ├─ first_name_key <int> = 0
+│  │  │  │  ├─ flags <int> = 0
+│  │  │  │  ├─ full_name_key <int> = 0
+│  │  │  │  ├─ gender <int> = 4096
+│  │  │  │  ├─ last_name <str> = "千手"
+│  │  │  │  ├─ last_name_key <int> = 0
+│  │  │  │  ├─ occult_types <int> = 1
+│  │  │  │  ├─ outfit_type_and_index <tuple> = <tuple len=2>
+│  │  │  │  ├─ packed_pronouns <str> = "|||||"
+│  │  │  │  ├─ parts_custom_tattoos <dict> = <dict len=0>
+│  │  │  │  ├─ physique <str> = "0.000,0.591,1.000,0.000,0.000,0.000,0.000,0.000,0.000,"
+│  │  │  │  ├─ rig_key <Key> = <Key> '00000000!d057fcc5'34c1bcbb.8eaf13de'
+│  │  │  │  ├─ skin_tone <int> = 774417577
+│  │  │  │  ├─ skin_tone_val_shift <float> = 0.0
+│  │  │  │  ├─ species <int> = 1
+│  │  │  │  ├─ trait_ids <tuple> = <tuple len=237>
+│  │  │  │  ├─ voice_actor <int> = 1685527060
+│  │  │  │  ├─ voice_effect <int> = 0
+│  │  │  │  └─ voice_pitch <float> = -0.3199999928474426
+│  │  │  ├─ _body_type_level_tracker <BodyTypeLevelTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ COLLECT_REQUESTS_MINUTES <float> = 0.5
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  ├─ _pending_requests <NoneType> = <None>
+│  │  │  │  ├─ _send_pending_requests_alarm_handle <NoneType> = <None>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _bucks_tracker <SimInfoBucksTracker>
+│  │  │  │  ├─ BUCK_TYPE_TO_CATEGORIES_MAPPING <frozendict> = <frozendict len=10>
+│  │  │  │  ├─ MAX_BUCKS_ALLOWED <int> = 9999999
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  ├─ _active_perk_timers <dict> = <dict len=24>
+│  │  │  │  ├─ _bucks <dict> = <dict len=23>
+│  │  │  │  ├─ _bucks_modified_callbacks <defaultdict> = <defaultdict len=23>
+│  │  │  │  ├─ _inactive_perk_timers <dict> = <dict len=24>
+│  │  │  │  ├─ _perk_unlocked_callbacks <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _recently_locked_perks <defaultdict> = <defaultdict len=0>
+│  │  │  │  └─ _unlocked_perks <dict> = <dict len=24>
+│  │  │  ├─ _career_tracker <CareerTracker>
+│  │  │    (11 种类型全部 None — _actor_mixers_cache, _custom_data, _last_gig_history_key, _provided_mixers_cache, _retirement…)
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _career_history <defaultdict> = <defaultdict len=2>
+│  │  │  │  ├─ _careers <dict> = <dict len=1>
+│  │  │  │  ├─ _gig_history <dict> = <dict len=0>
+│  │  │  │  ├─ career_history <defaultdict> = <defaultdict len=2>
+│  │  │  │  ├─ careers <dict> = <dict len=1>
+│  │  │  │  ├─ currently_at_work <bool> = False
+│  │  │  │  ├─ currently_during_work_hours <bool> = False
+│  │  │  │  ├─ gig_history <dict> = <dict len=0>
+│  │  │  │  ├─ has_career <bool> = True
+│  │  │  │  ├─ has_custom_career <bool> = False
+│  │  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  │  └─ retired_career_uid <int> = 0
+│  │  │  ├─ _client_outfits <SimInfoBaseWrapper>
+│  │  │     (省略 19 个子属性…)
+│  │  │  │  ├─ _base <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base
+│  │  │  │  ├─ _client_outfits <SimInfoBaseWrapper> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._client_
+│  │  │  │  ├─ _species <SpeciesExtended>
+│  │  │  │    (SpeciesExtended 枚举值 × 7，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ _enum_export_path <str> = "sims-sim_info_types.SpeciesExtended"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SpeciesExtended"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "HUMAN"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=7>
+│  │  │  │  │  ├─ numerator <int> = 1
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 1
+│  │  │  │  │  ├─ value <int> = 1
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=7>
+│  │  │  │  ├─ age <Age>
+│  │  │  │    (Age 枚举值 × 9，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ SEQUENTIAL_VALUE_MAP <frozendict> = <frozendict len=8>
+│  │  │  │  │  ├─ _enum_export_path <str> = "sims-sim_info_types.Age"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ animation_age_param <str> = "adult"
+│  │  │  │  │  ├─ cache_key <str> = "Age"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "ADULT"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=8>
+│  │  │  │  │  ├─ numerator <int> = 32
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 32
+│  │  │  │  │  ├─ sequential_value <int> = 6
+│  │  │  │  │  ├─ value <int> = 32
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=8>
+│  │  │  │  ├─ appearance_tracker <AppearanceTracker>
+│  │  │  │    (5 种类型全部 None — _active_appearance_modifier_infos, _active_sim_attachment_modifiers, _appearance_target_obj, _current_appearance_override_sim_info, appearance_override_sim_info)
+│  │  │  │  │  ├─ _sim_info <SimInfoBaseWrapper> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._client_
+│  │  │  │  │  ├─ _no_overrides <bool> = False
+│  │  │  │  │  └─ _persisted_appearance_data <dict> = <dict len=0>
+│  │  │  │  ├─ base <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base
+│  │  │  │  ├─ facial_attributes <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ gender <Gender>
+│  │  │  │    (Gender 枚举值 × 2，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ _enum_export_path <str> = "sims-sim_info_types.Gender"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ animation_gender_param <str> = "male"
+│  │  │  │  │  ├─ cache_key <str> = "Gender"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "MALE"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=2>
+│  │  │  │  │  ├─ numerator <int> = 4096
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 4096
+│  │  │  │  │  ├─ value <int> = 4096
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=2>
+│  │  │  │  ├─ genetic_data <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ pelt_layers <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  │  │  │  ├─ species <SpeciesExtended> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._client_
+│  │  │  │  ├─ _current_outfit <tuple> = <tuple len=2>
+│  │  │  │  ├─ _daily_defaults <dict> = <dict len=0>
+│  │  │  │  ├─ _default_outfit_priorities <list> = <list len=0>
+│  │  │  │  ├─ _last_randomize <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _name_prefix_key <int> = 0
+│  │  │  │  ├─ _name_prefix_string <str> = ""
+│  │  │  │  ├─ _outfit_dirty <set> = <set len=0>
+│  │  │  │  ├─ _preload_outfit_list <list> = <list len=0>
+│  │  │  │  ├─ _previous_outfit <tuple> = <tuple len=2>
+│  │  │  │  ├─ _randomize_daily <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ base_trait_ids <tuple> = <tuple len=237>
+│  │  │  │  ├─ breed_name <str> = ""
+│  │  │  │  ├─ breed_name_key <int> = 0
+│  │  │  │  ├─ custom_texture <int> = 0
+│  │  │  │  ├─ extended_species <int> = 1
+│  │  │  │  ├─ first_name <str> = "柱间"
+│  │  │  │  ├─ first_name_key <int> = 0
+│  │  │  │  ├─ flags <int> = 0
+│  │  │  │  ├─ full_name <str> = ""
+│  │  │  │  ├─ full_name_key <int> = 0
+│  │  │  │  ├─ id <int> = 984624028662366240
+│  │  │  │  ├─ is_baby <bool> = False
+│  │  │  │  ├─ is_female <bool> = False
+│  │  │  │  ├─ is_ghost <bool> = False
+│  │  │  │  ├─ is_human <bool> = True
+│  │  │  │  ├─ is_infant <bool> = False
+│  │  │  │  ├─ is_infant_or_toddler <bool> = False
+│  │  │  │  ├─ is_male <bool> = True
+│  │  │  │  ├─ is_pet <bool> = False
+│  │  │  │  └─ is_toddler <bool> = False
+│  │  │  ├─ _creation_source <SimInfoCreationSource>
+│  │  │    (SimInfoCreationSource 枚举值 × 12，首见 services.active_household()._household_milestone_t)
+│  │  │  │  ├─ _CREATION_PATH_TO_CREATION_SOURCE <dict> = <dict len=5>
+│  │  │  │  ├─ _LEGACY_SOURCE_TO_CREATION_SOURCE <dict> = <dict len=12>
+│  │  │  │  ├─ _enum_export_path <str> = "sims-sim_spawner_enums.SimInfoCreationSource"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "SimInfoCreationSource"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = False
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "CAS_INITIAL"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=12>
+│  │  │  │  ├─ numerator <int> = 1
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 1
+│  │  │  │  ├─ value <int> = 1
+│  │  │  │  └─ value_to_name <dict> = <dict len=12>
+│  │  │  ├─ _death_tracker <DeathTracker>
+│  │  │  │  ├─ _death_type <DeathType>
+│  │  │  │    (DeathType 枚举值 × 38，首见 services.active_household()._household_milestone_t)
+│  │  │  │    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  │  ├─ _enum_export_path <str> = "interactions-utils-death_enums.DeathType"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ _static_index <int> = 0
+│  │  │  │  │  ├─ cache_key <str> = "DeathType"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = True
+│  │  │  │  │  ├─ name <str> = "NONE"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=38>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = True
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=38>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ death_type <DeathType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._death_t
+│  │  │  │  ├─ DEATH_BUFFS <tuple> = <tuple len=44>
+│  │  │  │  ├─ DEATH_TYPE_GHOST_TRAIT_MAP <frozendict> = <frozendict len=37>
+│  │  │  │  ├─ DEATH_ZONE_ID <int> = 0
+│  │  │  │  ├─ INVENTORY_OPTIONS_DIALOG <ImmutableSlots> = <ImmutableSlots len=7>
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=7>
+│  │  │  │  ├─ ON_DEATH_LOOTS <tuple> = <tuple len=1>
+│  │  │  │  ├─ RELATIONSHIP_BASED_FIXUP <ImmutableSlots> = <ImmutableSlots len=4>
+│  │  │  │  ├─ _death_object_id <int> = 0
+│  │  │  │  ├─ _death_time <int> = 0
+│  │  │  │  ├─ death_object_id <int> = 0
+│  │  │  │  ├─ death_time <int> = 0
+│  │  │  │  ├─ is_ghost <bool> = False
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _degree_tracker <DegreeTracker>
+│  │  │    (13 种类型全部 None — _accepted_degrees, _current_major, _current_university, _daily_update_handle, _diploma_handle…)
+│  │  │     (省略 13 个子属性…)
+│  │  │  │  ├─ TERM_COURSE_COUNT <TunedInterval>
+│  │  │  │  │  ├─ _fields <tuple> = <tuple len=2>
+│  │  │  │  │  ├─ _fields_defaults <dict> = <dict len=0>
+│  │  │  │  │  ├─ lower_bound <int> = 1
+│  │  │  │  │  └─ upper_bound <int> = 4
+│  │  │  │  ├─ _enrollment_status <EnrollmentStatus>
+│  │  │  │    (EnrollmentStatus 枚举值 × 7，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ _enum_export_path <str> = "sims-university-university_enums.EnrollmentStatus"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "EnrollmentStatus"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "NONE"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=7>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=7>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ kickout_reason <UniversityHousingKickOutReason>
+│  │  │  │    (UniversityHousingKickOutReason 枚举值 × 8，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ _enum_export_path <str> = "sims-university-university_enums.UniversityHousingKickOutRea"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "UniversityHousingKickOutReason"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "NONE"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=8>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=8>
+│  │  │  │  ├─ ALL_UNIVERSITY_COURSE_CAREER_SLOTS <list> = <list len=5>
+│  │  │  │  ├─ COURSE_GRADE_FAIL_THRESHOLD <float> = 0.5
+│  │  │  │  ├─ COURSE_LECTURE_COUNT <int> = 2
+│  │  │  │  ├─ CREDITS_REQUIRED <int> = 12
+│  │  │  │  ├─ CREDITS_RETAINED <int> = 3
+│  │  │  │  ├─ CREDIT_CARRYOVER_PERCENTAGE <float> = 0.5
+│  │  │  │  ├─ DIPLOMA_MAIL_DELAY <int> = 1
+│  │  │  │  ├─ DROPOUT_DURATION <int> = 5
+│  │  │  │  ├─ ENROLLMENT_BENEFITS <tuple> = <tuple len=4>
+│  │  │  │  ├─ ENROLLMENT_STATUS_LOOT_MAP <frozendict> = <frozendict len=6>
+│  │  │  │  ├─ GPA_PROBATION_THRESHOLD <float> = 1.835
+│  │  │  │  ├─ GRADE_INFO <frozendict> = <frozendict len=13>
+│  │  │  │  ├─ GRADE_REPORT_MAPPING <frozendict> = <frozendict len=5>
+│  │  │  │  ├─ GRADE_SKILL_MAX_MODIFICATION <int> = 9
+│  │  │  │  ├─ GRADE_SKILL_MODIFICATION <LinearCurve> = <LinearCurve> <sims4.math.LinearCurve object at 0x00007FF3C1E4DA28>
+│  │  │  │  ├─ GRADUATION_DRAMA_NODE_MAP <frozendict> = <frozendict len=2>
+│  │  │  │  ├─ IS_REENROLLMENT_DIALOGS_IN_PROCESS <bool> = False
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=44>
+│  │  │  │  ├─ POST_GRADUATION_REWARDS <ImmutableSlots> = <ImmutableSlots len=3>
+│  │  │  │  ├─ STARTING_PROFESSOR_REL_GAIN <int> = 1
+│  │  │  │  ├─ SUSPENSION_DURATION <int> = 5
+│  │  │  │  ├─ TERM_LENGTH <int> = 5
+│  │  │  │  ├─ _ALL_UNIVERSITY_COURSE_CAREER_SLOTS <list> = <list len=5>
+│  │  │  │  ├─ _accepted_scholarships <list> = <list len=0>
+│  │  │  │  ├─ _active_scholarships <list> = <list len=0>
+│  │  │  │  ├─ _course_infos <dict> = <dict len=0>
+│  │  │  │  ├─ _current_credits <int> = 0
+│  │  │  │  ├─ _pending_scholarship_alarm_handles <dict> = <dict len=0>
+│  │  │  │  ├─ _previous_courses <list> = <list len=0>
+│  │  │  │  └─ _previous_majors <list> = <list len=0>
+│  │  │  ├─ _developmental_milestone_tracker <DevelopmentalMilestoneTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ active_milestones <dict_values> → 见 services.sim_info_manager().objects
+│  │  │  │  ├─ _active_goal_map <dict> = <dict len=153>
+│  │  │  │  ├─ _active_milestones_data <dict> = <dict len=153>
+│  │  │  │  ├─ _archived_milestones_data <dict> = <dict len=0>
+│  │  │  │  ├─ _developmental_milestone_proto <NoneType> = <None>
+│  │  │  │  ├─ _initial_loot_applied <bool> = True
+│  │  │  │  ├─ _milestone_evaluations <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _setup_delayed_goals <bool> = False
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _familiar_tracker <FamiliarTracker>
+│  │  │    (7 种类型全部 None — _active_familiar_id, _active_familiar_obj_id, _pet_buff_handle, _sim_buff_handle, active_familiar_id…)
+│  │  │  │  ├─ ACTIVE_FAMILIAR_BUFF <BuffReference>
+│  │  │  │  │  ├─ _buff_reason <LocalizedString>
+│  │  │  │  │  ├─ buff_reason <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ _buff_source <NoneType> = <None>
+│  │  │  │  │  └─ buff_source <NoneType> = <None>
+│  │  │  │  ├─ FAMILIAR_PLACEMENT <_PlacementStrategyLocation>
+│  │  │  │    (6 种类型全部 None — AUTO_INIT_OPTIONAL_KWARGS, initial_location_fallback, max_water_depth, min_water_depth, surface_type_override…)
+│  │  │  │  │  ├─ initial_location <_ObjectsFromParticipant>
+│  │  │  │  │  ├─ reference_obj_hidden_flags <HiddenReasonFlag>
+│  │  │  │  │    (HiddenReasonFlag 枚举值 × 4，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=24>
+│  │  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=23>
+│  │  │  │  │  ├─ POSITION_INCREMENT <float> = 0.5
+│  │  │  │  │  ├─ allow_off_lot_placement <bool> = True
+│  │  │  │  │  ├─ enclosed_room_only <bool> = False
+│  │  │  │  │  ├─ facing <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  │  │  │  ├─ ignore_bb_footprints <bool> = False
+│  │  │  │  │  ├─ ignore_sim_positions <bool> = True
+│  │  │  │  │  ├─ in_same_room <bool> = False
+│  │  │  │  │  ├─ initial_location_offset <ImmutableSlots> = <ImmutableSlots len=3>
+│  │  │  │  │  ├─ lot_terrain_only <bool> = False
+│  │  │  │  │  ├─ perform_fgl_check <bool> = True
+│  │  │  │  │  ├─ placement_constraints <frozendict> = <frozendict len=0>
+│  │  │  │  │  ├─ randomize_orientation <bool> = True
+│  │  │  │  │  ├─ raytest <ImmutableSlots> = <ImmutableSlots len=4>
+│  │  │  │  │  ├─ remove_from_parent_slot <bool> = False
+│  │  │  │  │  ├─ search_flag_set <list> = <list len=3>
+│  │  │  │  │  ├─ skip_plex_starting_position_validation <bool> = False
+│  │  │  │  │  ├─ stay_in_connected_connectivity_group <bool> = True
+│  │  │  │  │  └─ stay_outside_placement <bool> = False
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ FAMILIAR_DATA <frozendict> = <frozendict len=13>
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=8>
+│  │  │  │  ├─ PET_FAMILIAR_BUFF <frozendict> = <frozendict len=3>
+│  │  │  │  ├─ _familiars <dict> = <dict len=0>
+│  │  │  │  ├─ has_familiars <bool> = False
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _family_recipes_tracker <FamilyRecipesTracker>
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _family_recipes <list> = <list len=0>
+│  │  │  │  ├─ _initial_loot_applied <bool> = True
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _favorites_tracker <FavoritesTracker>
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _favorite_stacks <list> = <list len=0>
+│  │  │  │  ├─ _favorites <NoneType> = <None>
+│  │  │  │  ├─ favorite_stacks <list> = <list len=0>
+│  │  │  │  ├─ favorites <NoneType> = <None>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _fixup_tracker <FixupTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _pending_fixups <list> = <list len=0>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _food_restriction_tracker <FoodRestrictionTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _food_restriction_ingredients <NoneType> = <None>
+│  │  │  │  ├─ food_restriction_ingredients <NoneType> = <None>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _genealogy_tracker <GenealogyTracker>
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ _archived_relationship_bits <dict> = <dict len=1>
+│  │  │  │  ├─ _family_relations <dict> = <dict len=1>
+│  │  │  │  ├─ _owner_id <int> = 984624028662366240
+│  │  │  │  ├─ _pinned_relationship_bits <dict> = <dict len=0>
+│  │  │  │  ├─ _relationship_romance_tropes <dict> = <dict len=0>
+│  │  │  │  ├─ _relationship_trope_tuples <list> = <list len=0>
+│  │  │  │  ├─ _relationship_tropes <dict> = <dict len=0>
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _jewelry_tracker <JewelryTracker>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ WEREABLE_CATEGORIES <list> = <list len=9>
+│  │  │  │  ├─ _equipped_jewels <NoneType> = <None>
+│  │  │  │  ├─ has_data_to_save <bool> = False
+│  │  │  │  └─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ _lifestyle_brand_tracker <LifestyleBrandTracker>
+│  │  │  │  ├─ BRAND_PAYMENT_MULTIPLIERS <TunableMultiplier>
+│  │  │  │  │  ├─ ONE <TunableMultiplier> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._lifesty
+│  │  │  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=2>
+│  │  │  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <set> = <set len=1>
+│  │  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=2>
+│  │  │  │  │  ├─ base_value <float> = 1.0
+│  │  │  │  │  └─ multipliers <tuple> = <tuple len=1>
+│  │  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  │  ├─ LIFESTYLE_BRAND_PAYOUT_MAPPING <frozendict> = <frozendict len=5>
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=4>
+│  │  │  │  ├─ _active_multiplier <int> = 1
+│  │  │  │  ├─ _brand_name <str> = ""
+│  │  │  │  ├─ _days_active <int> = 0
+│  │  │  │  ├─ _logo <Key> = <Key> '00000000!00000000'00000000.00000000'
+│  │  │  │  ├─ _product_choice <int> = 0
+│  │  │  │  ├─ _target_market <int> = 0
+│  │  │  │  ├─ active <bool> = False
+│  │  │  │  ├─ brand_name <str> = ""
+│  │  │  │  ├─ days_active <int> = 0
+│  │  │  │  ├─ logo <Key> = <Key> '00000000!00000000'00000000.00000000'
+│  │  │  │  ├─ product_choice <int> = 0
+│  │  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  │  └─ target_market <int> = 0
+│  │  │  ├─ AGE_PROGRESS_BAR_FACTOR <int> = 100
+│  │  │  ├─ AWAY_ACTIONS <frozendict> = <frozendict len=3>
+│  │  │  ├─ DEFAULT_AWAY_ACTION <frozendict> = <frozendict len=15>
+│  │  │  ├─ DEFAULT_THUMBNAIL <Key> = <Key> '00000000!2cafa54b'01826078.2f7d0004'
+│  │  │  ├─ FILL_AGE_PROGRESS_BAR_BUFFER <float> = 0.0001
+│  │  │  ├─ GENDER_STRINGS <frozendict> = <frozendict len=5>
+│  │  │  ├─ GENDER_SYMBOLS <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  │  ├─ INFANT_HOUR_DELAY <int> = 1
+│  │  │  ├─ INITIAL_STATISTICS <tuple> = <tuple len=2>
+│  │  │  ├─ MAXIMUM_SAFE_FITNESS_VALUE <int> = 40
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=14>
+│  │  │  ├─ PHYSIQUE_CHANGE_AFFORDANCES <ImmutableSlots> = <ImmutableSlots len=8>
+│  │  │  ├─ ROMANTIC_ATTRACTION_FILTER_STRINGS <frozendict> = <frozendict len=4>
+│  │  │  ├─ SIM_DEFINITIONS <frozendict> = <frozendict len=6>
+│  │  │  ├─ SIM_INFO_TRACKERS <OrderedDict> = <OrderedDict len=33>
+│  │  │  ├─ SIM_SKEWER_AFFORDANCES <tuple> = <tuple len=5>
+│  │  │  ├─ SPECIES_VALUE_STATISTICS <frozendict> = <frozendict len=1>
+│  │  │  ├─ STATIC_COMMODITIES_WHILE_INSTANCED <tuple> = <tuple len=1>
+│  │  │  ├─ TEEN_DELAY_DAYS_TILL_NEXT_AGING_ATTEMPT <int> = 7
+│  │  │  ├─ _additional_bonus_days <int> = 0
+│  │  │  ├─ _age_duration <float> = 168.0
+│  │  │  ├─ _age_progress_display_data <tuple> = <tuple len=2>
+│  │  │  ├─ _auto_aging_enabled <bool> = False
+│  │  │  ├─ _autonomy_scoring_preferences <dict> = <dict len=0>
+│  │  │  ├─ _autonomy_use_preferences <dict> = <dict len=4>
+│  │  │  ├─ _build_buy_unlocks <set> = <set len=67>
+│  │  │  ├─ _cached_inventory_value <int> = 3524
+│  │  │  ├─ _component_definitions <tuple> = <tuple len=2>
+│  │  │  ├─ _component_instances <dict> = <dict len=2>
+│  │  │  └─ _component_reload_hooks <dict> = <dict len=3>
+│  │  ├─ TIME_DATA_UPDATE_RATE <int> = 60000
+│  │  ├─ _completed_milestones <set> = <set len=2>
+│  │  ├─ _completed_objectives <set> = <set len=2>
+│  │  ├─ _data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  ├─ _dirty_objective_state <dict> = <dict len=0>
+│  │  ├─ _event_trackers <dict> = <dict len=0>
+│  │  ├─ _last_objective_state <dict> = <dict len=0>
+│  │  ├─ _reset_objectives <set> = <set len=0>
+│  │  ├─ _sent_milestones <set> = <set len=0>
+│  │  ├─ _sent_objectives <set> = <set len=0>
+│  │  ├─ _sent_unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  ├─ _total_milestone_completion_count <Counter> = <Counter len=0>
+│  │  ├─ _tracker_dirty <bool> = False
+│  │  ├─ _unlocked_hidden_aspiration_tracks <set> = <set len=0>
+│  │  ├─ data_object <EventDataObject> = <EventDataObject> <event_testing.event_data_object.EventDataObject object at 0
+│  │  ├─ latest_objective <NoneType> = <None>
+│  │  ├─ server_time_last_update <DateAndTime> = 00:00:00.000 day:0 week:0
+│  │  ├─ server_time_on_connect <DateAndTime> = 00:00:00.000 day:0 week:0
+│  │  ├─ sim_time_last_update <DateAndTime> = 00:00:00.000 day:0 week:0
+│  │  ├─ sim_time_on_connect <DateAndTime> = 00:00:00.000 day:0 week:0
+│  │  ├─ simless <bool> = True
+│  │  ├─ tooltip_disabled_for_special_case <bool> = False
+│  │  └─ update_alarm_handle <NoneType> = <None>
+│  ├─ _max_sim_lod <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  ├─ _pivotal_moment_tracker <HouseholdPivotalMomentTracker>
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ _completed_pivotal_moment_ids <set> = <set len=0>
+│  │  ├─ _pivotal_moment_situation_seeds <list> = <list len=0>
+│  │  ├─ _pivotal_moments <dict> = <dict len=5>
+│  │  └─ _rewarded_pivotal_moment_ids <set> = <set len=0>
+│  ├─ _rebate_manager <RebateManager>
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=4>
+│  │  ├─ REBATES <frozendict> = <frozendict len=4>
+│  │  ├─ _rebate_cycle <NoneType> = <None>
+│  │  ├─ _rebate_object_ids <defaultdict> = <defaultdict len=0>
+│  │  ├─ _rebates <Counter> = <Counter len=0>
+│  │  └─ _schedule <NoneType> = <None>
+│  ├─ _reward_inventory <RewardPartList>
+│  │  ├─ DESCRIPTOR <Descriptor>
+│  │  │  ├─ file <FileDescriptor>
+│  │  │  │  ├─ _options <NoneType> = <None>
+│  │  │  │  ├─ _options_class_name <str> = "FileOptions"
+│  │  │  │  ├─ has_options <bool> = False
+│  │  │  │  ├─ message_types_by_name <dict> = <dict len=60>
+│  │  │  │  ├─ name <str> = "FileSerialization.proto"
+│  │  │  │  ├─ package <str> = "EA.Sims4.Persistence"
+│  │  │  │  └─ serialized_pb <str> = "\nFileSerialization.protoEA.Sims4.PersistenceGameplaySa"
+│  │  │  ├─ _options <NoneType> = <None>
+│  │  │  ├─ _options_class_name <str> = "MessageOptions"
+│  │  │  ├─ _serialized_end <int> = 8501
+│  │  │  ├─ _serialized_start <int> = 8425
+│  │  │  ├─ containing_type <NoneType> = <None>
+│  │  │  ├─ enum_types <list> = <list len=0>
+│  │  │  ├─ enum_types_by_name <dict> = <dict len=0>
+│  │  │  ├─ enum_values_by_name <dict> = <dict len=0>
+│  │  │  ├─ extension_ranges <list> = <list len=0>
+│  │  │  ├─ extensions <list> = <list len=0>
+│  │  │  ├─ extensions_by_name <dict> = <dict len=0>
+│  │  │  ├─ fields <list> = <list len=1>
+│  │  │  ├─ fields_by_name <dict> = <dict len=1>
+│  │  │  ├─ fields_by_number <dict> = <dict len=1>
+│  │  │  ├─ full_name <str> = "EA.Sims4.Persistence.RewardPartList"
+│  │  │  ├─ has_options <bool> = False
+│  │  │  ├─ is_extendable <bool> = False
+│  │  │  ├─ name <str> = "RewardPartList"
+│  │  │  ├─ nested_types <list> = <list len=0>
+│  │  │  └─ nested_types_by_name <dict> = <dict len=0>
+│  │  ├─ _HACK_REFCOUNTS <RewardPartList> → 见 services.active_household()._reward_inventory
+│  │  ├─ _cmsg <CMessage>
+│  │  │  └─ full_name <str> = "EA.Sims4.Persistence.RewardPartList"
+│  │  ├─ message_descriptor <Descriptor> → 见 services.active_household()._reward_inventory.DESCRIPTOR
+│  │  ├─ reward_parts <RepeatedCompositeContainer>
+│  │  │  ├─ _cfield_descriptor <CFieldDescriptor>
+│  │  │  │  ├─ cpp_type <int> = 10
+│  │  │  │  ├─ full_name <str> = "EA.Sims4.Persistence.RewardPartList.reward_parts"
+│  │  │  │  ├─ id <int> = 140687752653488
+│  │  │  │  ├─ label <int> = 3
+│  │  │  │  └─ name <str> = "reward_parts"
+│  │  │  ├─ _cmsg <CMessage> → 见 services.active_household()._reward_inventory._cmsg
+│  │  │  └─ _message <RewardPartList> → 见 services.active_household()._reward_inventory
+│  │  ├─ REWARD_PARTS_FIELD_NUMBER <int> = 1
+│  │  ├─ _composite_fields <dict> = <dict len=1>
+│  │  └─ _extensions_by_name <dict> = <dict len=0>
+│  ├─ _story_progression_tracker <HouseholdStoryProgressionTracker>
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ household <Household> → 见 services.active_household()
+│  │  ├─ tracker_type <StoryType>
+│  │    (StoryType 枚举值 × 3，首见 services.active_household()._story_progression_tra)
+│  │  │  ├─ _enum_export_path <str> = "story_progression-story_progression_enums.StoryType"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "StoryType"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "HOUSEHOLD_BASED"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 2
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 2
+│  │  │  ├─ value <int> = 2
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ _current_arcs <NoneType> = <None>
+│  │  ├─ _historical_arcs <NoneType> = <None>
+│  │  ├─ current_arcs <tuple> = <tuple len=0>
+│  │  ├─ has_arcs <bool> = False
+│  │  ├─ historical_arcs <tuple> = <tuple len=0>
+│  │  └─ owner_name <str> = "波斑一家人v8"
+│  ├─ _telemetry_tracker <HouseholdTelemetryTracker>
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ _buff_alarm <NoneType> = <None>
+│  │  └─ _emotion_relationship_alarm <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3E5E57F80>
+│  ├─ account <Account> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ autonomy_settings <AutonomySettings> → 见 services.active_household()._autonomy_settings
+│  ├─ bills_manager <Bills>
+│    (7 种类型全部 None — _current_payment_owed, _rent_late_handle, _rent_warning_handle, _repo_man_due_time, _shutoff_handle…)
+│     (省略 6 个子属性…)
+│  │  ├─ BILLS_UTILITY_SHUTOFF_REASON <UtilityShutoffReasonPriority>
+│  │    (UtilityShutoffReasonPriority 枚举值 × 9，首见 services.active_household().bills_manager.BILLS_UT)
+│  │    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  ├─ _enum_export_path <str> = "sims-household_utilities-utility_types.UtilityShutoffReasonP"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ _static_index <int> = 0
+│  │  │  ├─ cache_key <str> = "UtilityShutoffReasonPriority"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "BILLS_DELINQUENT"
+│  │  │  ├─ name_to_value <dict> = <dict len=9>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=9>
+│  │  ├─ BILL_OBJECT <Definition>
+│  │    (6 种类型全部 None — _material_variant, _name, material_variant, name, parent…)
+│  │  │  ├─ _slots_resource <ObjectSlots>
+│  │  │  │  ├─ SLOT_CONE <int> = 4
+│  │  │  │  ├─ SLOT_CONTAINMENT <int> = 1
+│  │  │  │  ├─ SLOT_FX <int> = 2
+│  │  │  │  ├─ SLOT_ROUTING <int> = 0
+│  │  │  │  ├─ SLOT_TARGET <int> = 3
+│  │  │  │  └─ SLOT_TYPECOUNT <int> = 5
+│  │  │  ├─ build_buy_style_tags <array>
+│  │  │  │  ├─ itemsize <int> = 4
+│  │  │  │  └─ typecode <str> = "L"
+│  │  │  ├─ build_buy_tags <array> → 见 services.active_household().bills_manager.BILL_OBJECT.build_buy_style_tags
+│  │  │  ├─ definition <Definition> → 见 services.active_household().bills_manager.BILL_OBJECT
+│  │  │  ├─ _catalog_price <int> = 0
+│  │  │  ├─ _components <tuple> = <tuple len=9>
+│  │  │  ├─ _environment_mood_tags <tuple> = <tuple len=0>
+│  │  │  ├─ _environment_scores <tuple> = <tuple len=0>
+│  │  │  ├─ _footprint <Key> = <Key> '00000000!39bea611'42dae108.d382bf57'
+│  │  │  ├─ _icon <Key> = <Key> '00000000!00000000'00000000.00000000'
+│  │  │  ├─ _model <Key> = <Key> '00000000!af9c5558'e3961cb4.01661233'
+│  │  │  ├─ _negative_environment_score <int> = 0
+│  │  │  ├─ _positive_environment_score <int> = 0
+│  │  │  ├─ _rig <Key> = <Key> '00000000!397a8b11'42a0e6ac.8eaf13de'
+│  │  │  ├─ _slot <Key> = <Key> '00000000!397a8b11'42a0e6ac.d3044521'
+│  │  │  ├─ _thumbnail_geo_state_hash <int> = 0
+│  │  │  ├─ _tuning_file_id <int> = 14835
+│  │  │  ├─ components <tuple> = <tuple len=9>
+│  │  │  ├─ environment_score_mood_tags <tuple> = <tuple len=0>
+│  │  │  ├─ environment_scores <tuple> = <tuple len=0>
+│  │  │  ├─ icon <Key> = <Key> '00000000!00000000'00000000.00000000'
+│  │  │  ├─ id <int> = 21471
+│  │  │  ├─ is_sim <bool> = False
+│  │  │  ├─ negative_environment_score <int> = 0
+│  │  │  ├─ positive_environment_score <int> = 0
+│  │  │  ├─ price <int> = 0
+│  │  │  ├─ thumbnail_geo_state_hash <int> = 0
+│  │  │  └─ tuning_file_id <int> = 14835
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ ADDITIONAL_BILL_SOURCE_KEY_START <int> = 256
+│  │  ├─ AUDIO <ImmutableSlots> = <ImmutableSlots len=4>
+│  │  ├─ BILLS_UI <ImmutableSlots> = <ImmutableSlots len=10>
+│  │  ├─ BILL_ARRIVAL_NOTIFICATION <tuple> = <tuple len=5>
+│  │  ├─ BILL_ARRIVAL_NOTIFICATION_LOOT <tuple> = <tuple len=1>
+│  │  ├─ BILL_BRACKETS <tuple> = <tuple len=4>
+│  │  ├─ BILL_COST_MODIFIERS_HOUSEHOLD_WITH_REASON <tuple> = <tuple len=17>
+│  │  ├─ BILL_COST_MODIFIERS_SIM_WITH_REASON <tuple> = <tuple len=4>
+│  │  ├─ DELINQUENCY_FREQUENCY <int> = 24
+│  │  ├─ DELINQUENCY_WARNING_OFFSET_TIME <int> = 24
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=24>
+│  │  ├─ REDUCTION_REASON_SOURCE <frozendict> = <frozendict len=0>
+│  │  ├─ REDUCTION_REASON_TEXT_MAP <frozendict> = <frozendict len=1>
+│  │  ├─ UNKNOWN_SOURCE_KEY_START <int> = 2147483648
+│  │  ├─ UTILITY_INFO <frozendict> = <frozendict len=2>
+│  │  ├─ _additional_bill_costs <dict> = <dict len=0>
+│  │  ├─ _bill_timer_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3DC86CD88>
+│  │  ├─ _can_deliver_bill <bool> = False
+│  │  ├─ _current_bill_details <dict> = <dict len=0>
+│  │  ├─ _housing_costs_owed <int> = 0
+│  │  ├─ _lot_unpaid_bill <dict> = <dict len=0>
+│  │  ├─ _non_housing_costs_owed <int> = 0
+│  │  ├─ _put_bill_in_hidden_inventory <bool> = False
+│  │  ├─ _stored_bill_timer_ticks <int> = 0
+│  │  ├─ _stored_rent_late_timer_ticks <int> = 0
+│  │  ├─ _stored_rent_warning_timer_ticks <int> = 0
+│  │  ├─ _stored_shutoff_timer_ticks <int> = 0
+│  │  ├─ _stored_warning_timer_ticks <int> = 0
+│  │  ├─ _utility_bill_action <dict> = <dict len=0>
+│  │  └─ _utility_delinquency <dict> = <dict len=2>
+│  ├─ bucks_tracker <HouseholdBucksTracker>
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ MAX_BUCKS_ALLOWED <int> = 9999999
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _active_perk_timers <dict> = <dict len=24>
+│  │  ├─ _bucks <dict> = <dict len=23>
+│  │  ├─ _bucks_modified_callbacks <defaultdict> = <defaultdict len=23>
+│  │  ├─ _inactive_perk_timers <dict> = <dict len=24>
+│  │  ├─ _perk_unlocked_callbacks <defaultdict> = <defaultdict len=0>
+│  │  ├─ _recently_locked_perks <defaultdict> = <defaultdict len=0>
+│  │  └─ _unlocked_perks <dict> = <dict len=24>
+│  ├─ client <Client>
+│  │  ├─ _account <Account> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _active_sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  ├─ _choice_menu <ChoiceMenu>
+│  │  │  ├─ objects <WeakKeyDictionary>
+│  │  │  │  ├─ _MutableMapping__marker <object>
+│  │  │  │  ├─ _abc_impl <_abc_data>
+│  │  │  │  ├─ _dirty_len <bool> = False
+│  │  │  │  ├─ _iterating <set> = <set len=0>
+│  │  │  │  ├─ _pending_removals <list> = <list len=0>
+│  │  │  │  └─ data <dict> = <dict len=1>
+│  │  │  ├─ menu_items <OrderedDict> = <OrderedDict len=33>
+│  │  │  └─ revision <int> = 0
+│  │  ├─ _interaction_priority <Priority>
+│  │    (Priority 枚举值 × 3，首见 services.active_household().client._interaction_pr)
+│  │  │  ├─ _enum_export_path <str> = "interactions-priority.Priority"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "Priority"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "High"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 2
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 2
+│  │  │  ├─ value <int> = 2
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ _interaction_source <InteractionSource>
+│  │    (InteractionSource 枚举值 × 12，首见 services.active_household().client._interaction_so)
+│  │  │  ├─ _enum_export_path <str> = "interactions-context.InteractionSource"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "InteractionSource"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "PIE_MENU"
+│  │  │  ├─ name_to_value <dict> = <dict len=12>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=12>
+│  │  ├─ _live_drag_start_system <LiveDragLocation>
+│  │    (LiveDragLocation 枚举值 × 4，首见 services.active_household().client._live_drag_star)
+│  │  │  ├─ _enum_export_path <str> = "server-live_drag_tuning.LiveDragLocation"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "LiveDragLocation"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "INVALID"
+│  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  ├─ _selectable_sims <SelectableSims>
+│  │  │  ├─ client <Client> → 见 services.active_household().client
+│  │  │  ├─ _can_select_pets <bool> = False
+│  │  │  ├─ _selectable_sim_infos <list> = <list len=8>
+│  │  │  ├─ _watchers <defaultdict> = <defaultdict len=2>
+│  │  │  └─ can_select_pets <bool> = False
+│  │  ├─ account <Account> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ active_sim <object_sim>
+│  │    (206 种类型全部 None — AffordanceTuning, AnimalHome, AnimalObject, AnimalPreference, Animation…)
+│  │     (省略 319 个子属性…)
+│  │  │  ├─ BUFF_CLOTHING_REASON <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  ├─ Buffs <BuffComponent> → 见 services.active_household()._household_milestone_tracker.owner_sim_info.Buffs
+│  │  │  ├─ _UiObjectMetadata_sparse_value <SparseMessage>
+│  │  │  │  ├─ _set_fields <RepeatedScalarContainer>
+│  │  │  │  │  ├─ _cfield_descriptor <CFieldDescriptor> → 见 services.active_household()._reward_inventory.reward_parts._cfield_descriptor
+│  │  │  │  │  ├─ _cmsg <CMessage> → 见 services.active_household()._reward_inventory._cmsg
+│  │  │  │  │  └─ _message <SparseMessageData>
+│  │  │  │  ├─ _sparse_data <SparseMessageData> → 见 services.active_household().client.active_sim._UiObjectMetadata_sparse_value._se
+│  │  │  │  ├─ _value <UiObjectMetadata>
+│  │  │  │     (省略 56 个子属性…)
+│  │  │  │  │  ├─ DESCRIPTOR <Descriptor> → 见 services.active_household()._reward_inventory.DESCRIPTOR
+│  │  │  │  │  ├─ _HACK_REFCOUNTS <UiObjectMetadata> → 见 services.active_household().client.active_sim._UiObjectMetadata_sparse_value._va
+│  │  │  │  │  ├─ _cmsg <CMessage> → 见 services.active_household()._reward_inventory._cmsg
+│  │  │  │  │  ├─ active_seasons_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ buff_effects <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  │  │  │  ├─ crafted_by_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ engraved_message <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ footer_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ header <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ header_status <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ header_subtext <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ heirloom_owner <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ heirloom_title <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ icon_infos <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  │  │  │  ├─ message_descriptor <Descriptor> → 见 services.active_household()._reward_inventory.DESCRIPTOR
+│  │  │  │  │  ├─ object_info_descriptions <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  │  │  │  ├─ object_info_names <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  │  │  │  ├─ object_timers <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  │  │  │  ├─ percentage_left <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ quality_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ rarity_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ recipe_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ recipe_name <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ relic_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ season_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ ACTIVE_SEASONS_TEXT_FIELD_NUMBER <int> = 48
+│  │  │  │  │  ├─ BUFF_EFFECTS_FIELD_NUMBER <int> = 7
+│  │  │  │  │  ├─ CRAFTED_BY_TEXT_FIELD_NUMBER <int> = 25
+│  │  │  │  │  ├─ CRAFTER_SIM_ID_FIELD_NUMBER <int> = 6
+│  │  │  │  │  ├─ CREATURE_TYPE_FIELD_NUMBER <int> = 36
+│  │  │  │  │  ├─ CUSTOM_DESCRIPTION_FIELD_NUMBER <int> = 22
+│  │  │  │  │  ├─ CUSTOM_NAME_FIELD_NUMBER <int> = 4
+│  │  │  │  │  ├─ DEBUG_HOVER_TIP_FIELD_NUMBER <int> = 3
+│  │  │  │  │  ├─ ENCHANTMENT_TIME_FIELD_NUMBER <int> = 47
+│  │  │  │  │  ├─ ENGRAVED_MESSAGE_FIELD_NUMBER <int> = 45
+│  │  │  │  │  ├─ EVOLUTION_PROGRESS_FIELD_NUMBER <int> = 30
+│  │  │  │  │  ├─ FOOTER_TEXT_FIELD_NUMBER <int> = 41
+│  │  │  │  │  ├─ HEADER_FIELD_NUMBER <int> = 23
+│  │  │  │  │  ├─ HEADER_STATUS_FIELD_NUMBER <int> = 38
+│  │  │  │  │  ├─ HEADER_SUBTEXT_FIELD_NUMBER <int> = 37
+│  │  │  │  │  ├─ HEIRLOOM_OWNER_FIELD_NUMBER <int> = 44
+│  │  │  │  │  ├─ HEIRLOOM_SIM_ID_FIELD_NUMBER <int> = 42
+│  │  │  │  │  ├─ HEIRLOOM_TITLE_FIELD_NUMBER <int> = 43
+│  │  │  │  │  ├─ HOVER_TIP_COLLECTION <int> = 4
+│  │  │  │  │  ├─ HOVER_TIP_CONSUMABLE_CRAFTABLE <int> = 2
+│  │  │  │  │  ├─ HOVER_TIP_CUSTOM_OBJECT <int> = 5
+│  │  │  │  │  ├─ HOVER_TIP_DEFAULT <int> = 1
+│  │  │  │  │  ├─ HOVER_TIP_DISABLED <int> = 0
+│  │  │  │  │  ├─ HOVER_TIP_FIELD_NUMBER <int> = 2
+│  │  │  │  │  ├─ HOVER_TIP_GARDENING <int> = 3
+│  │  │  │  │  ├─ HOVER_TIP_HEIRLOOM_OBJECT <int> = 8
+│  │  │  │  │  ├─ HOVER_TIP_ICON_TITLE_DESCRIPTION <int> = 6
+│  │  │  │  │  ├─ HOVER_TIP_OBJECT_RELATIONSHIP <int> = 7
+│  │  │  │  │  ├─ ICON_INFOS_FIELD_NUMBER <int> = 34
+│  │  │  │  │  └─ INSCRIPTION_FIELD_NUMBER <int> = 21
+│  │  │  │  ├─ _repeated_attrs <dict> = <dict len=6>
+│  │  │  │  ├─ _sparse_data_attr <str> = "sparse_data"
+│  │  │  │  └─ set_field_names <set> = <set len=0>
+│  │  │  ├─ _children_objects <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  ├─ _crafting_lockouts <WeakKeyDictionary> → 见 services.active_household().client._choice_menu.objects
+│  │  │  ├─ _environment_score_broadcasters <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  ├─ _location <Location>
+│  │  │    (3 种类型全部 None — joint_name_or_hash, parent, parent_ref)
+│  │  │  │  ├─ routing_surface <SurfaceIdentifier>
+│  │  │  │  │  ├─ primary_id <int> = 984624028664234928
+│  │  │  │  │  ├─ routable_surface_height <int> = 0
+│  │  │  │  │  ├─ secondary_id <int> = 0
+│  │  │  │  │  ├─ type <int> = 1
+│  │  │  │  │  └─ valid <bool> = True
+│  │  │  │  ├─ transform <Transform>
+│  │  │  │  │  ├─ orientation <QuaternionImmutable>
+│  │  │  │  │  └─ translation <Vector3Immutable>
+│  │  │  │  ├─ world_routing_surface <SurfaceIdentifier> → 见 services.active_household().client.active_sim._location.routing_surface
+│  │  │  │  ├─ world_transform <Transform> → 见 services.active_household().client.active_sim._location.transform
+│  │  │  │  ├─ REQUIRED_PROVIDED_SURFACE_HEIGHT <float> = 0.1
+│  │  │  │  ├─ _fields <tuple> = <tuple len=7>
+│  │  │  │  ├─ _fields_defaults <dict> = <dict len=0>
+│  │  │  │  ├─ joint_name_hash <int> = 0
+│  │  │  │  ├─ level <int> = 0
+│  │  │  │  ├─ slot_hash <int> = 0
+│  │  │  │  └─ zone_id <int> = 984624028664234928
+│  │  │  ├─ _location_field_internal <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  ├─ _lockouts <WeakKeyDictionary> → 见 services.active_household().client._choice_menu.objects
+│  │  │  ├─ _los_constraint <Constraint>
+│  │  │    (12 种类型全部 None — _age, _create_jig_fn, _max_water_depth, _min_water_depth, _objects_to_ignore…)
+│  │  │  │  ├─ INTERSECT_PREFERENCE <IntersectPreference>
+│  │  │  │    (IntersectPreference 枚举值 × 6，首见 services.active_household().client.active_sim._los)
+│  │  │  │  │  ├─ _enum_export_path <str> = "interactions-constraints.IntersectPreference"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "IntersectPreference"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = False
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "GEOMETRIC"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=6>
+│  │  │  │  │  ├─ numerator <int> = 5
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 5
+│  │  │  │  │  ├─ value <int> = 5
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=6>
+│  │  │  │  ├─ _geometry <RestrictedPolygon>
+│  │  │  │  │  ├─ polygon <CompoundPolygon>
+│  │  │  │  │  └─ restrictions <frozenset> = <frozenset len=0>
+│  │  │  │  ├─ _los_reference_point <DefaultType>
+│  │  │  │  │  └─ _instance <DefaultType> → 见 services.active_household().client.active_sim._los_constraint._los_reference_poi
+│  │  │  │  ├─ _routing_surface <SurfaceIdentifier> → 见 services.active_household().client.active_sim._location.routing_surface
+│  │  │  │  ├─ average_position <Vector3>
+│  │  │  │  │  ├─ x <float> = 557.796630859375
+│  │  │  │  │  ├─ y <float> = 0.0
+│  │  │  │  │  └─ z <float> = 330.734375
+│  │  │  │  ├─ geometry <RestrictedPolygon> → 见 services.active_household().client.active_sim._los_constraint._geometry
+│  │  │  │  ├─ routing_surface <SurfaceIdentifier> → 见 services.active_household().client.active_sim._location.routing_surface
+│  │  │  │  ├─ DEFAULT_FACING_RANGE <float> = 1.7453292519943295
+│  │  │  │  ├─ IGNORE_OUTER_PENALTY_THRESHOLD <float> = 0.8
+│  │  │  │  ├─ MINIMUM_VALID_AREA <float> = 0.5
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  │  │  ├─ ROUTE_GOAL_COUNT_FOR_SCORING_FUNC <int> = 40
+│  │  │  │  ├─ WALL_OBJECT_FORWARD_MOD <float> = 0.15
+│  │  │  │  ├─ _allow_geometry_intersections <bool> = True
+│  │  │  │  ├─ _allow_small_intersections <bool> = True
+│  │  │  │  ├─ _cost <int> = 0
+│  │  │  │  ├─ _debug_name <str> = ""
+│  │  │  │  ├─ _enables_height_scoring <bool> = False
+│  │  │  │  ├─ _enforce_social_group_routing_surface <bool> = False
+│  │  │  │  ├─ _flush_planner <bool> = False
+│  │  │  │  ├─ _goal_functions <tuple> = <tuple len=0>
+│  │  │  │  ├─ _ignore_outer_penalty_threshold <float> = 0.8
+│  │  │  │  ├─ _multi_surface <bool> = False
+│  │  │  │  ├─ _require_carried <bool> = False
+│  │  │  │  ├─ _scoring_functions <tuple> = <tuple len=0>
+│  │  │  │  ├─ cost <int> = 0
+│  │  │  │  ├─ enables_height_scoring <bool> = False
+│  │  │  │  ├─ multi_surface <bool> = False
+│  │  │  │  ├─ polygons <tuple> = <tuple len=1>
+│  │  │  │  ├─ restricted_on_slope <bool> = False
+│  │  │  │  ├─ routing_positions <list> = <list len=5>
+│  │  │  │  ├─ supports_swim <bool> = True
+│  │  │  │  ├─ tentative <bool> = False
+│  │  │  │  └─ valid <bool> = True
+│  │  │  ├─ _material_state <MaterialState>
+│  │  │  │  ├─ debug_state_name <str> = "text"
+│  │  │  │  ├─ opacity <float> = 1.0
+│  │  │  │  ├─ state_name_hash <int> = 2972449336
+│  │  │  │  └─ transition <float> = 0.0
+│  │  │  ├─ _obj_manager <ObjectManager>
+│  │  │  │  ├─ _crafting_cache <CraftingObjectCache>
+│  │  │  │  │  ├─ _autonomy_cache <Counter> = <Counter len=15>
+│  │  │  │  │  └─ _user_directed_cache <Counter> = <Counter len=15>
+│  │  │  │  ├─ _dynamic_attractor_ids <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  ├─ _portal_cache <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  ├─ _water_terrain_object_cache <WaterTerrainObjectCache>
+│  │  │  │  │  ├─ OBJECT_SQ_DISTANCE_THRESHOLD <Threshold>
+│  │  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  │  │  │  ├─ WATER_TERRAIN_TAGS <tuple> = <tuple len=2>
+│  │  │  │  │  └─ _object_cache <list> = <list len=0>
+│  │  │  │  ├─ crafting_cache <CraftingObjectCache> → 见 services.active_household().client.active_sim._obj_manager._crafting_cache
+│  │  │  │  ├─ id_object_pairs <dict_items> → 见 services.sim_info_manager().id_object_pairs
+│  │  │  │  ├─ ids <dict_keys> → 见 services.sim_info_manager().ids
+│  │  │  │  ├─ objects <dict_values> → 见 services.sim_info_manager().objects
+│  │  │  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  │  │  ├─ water_terrain_object_cache <WaterTerrainObjectCache> → 见 services.active_household().client.active_sim._obj_manager._water_terrain_object
+│  │  │  │  ├─ ATTRACTOR_OBJECT_TAGS <frozenset> = <frozenset len=1>
+│  │  │  │  ├─ BED_TAGS <ImmutableSlots> = <ImmutableSlots len=4>
+│  │  │  │  ├─ FIREMETER_DISPOSABLE_OBJECT_CAP <int> = 5
+│  │  │  │  ├─ GLOBAL_SPAWN_FIREMETER <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  │  │  ├─ HOUSEHOLD_INVENTORY_OBJECT_TAGS <frozenset> = <frozenset len=1>
+│  │  │  │  ├─ INVALID_UNPARENTED_OBJECT_TAGS <frozenset> = <frozenset len=1>
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=5>
+│  │  │  │  ├─ SPAWN_POINT_ATTRACTORS <frozendict> = <frozendict len=1>
+│  │  │  │  ├─ _all_bed_tags <frozenset> = <frozenset len=4>
+│  │  │  │  ├─ _claimed_items <set> = <set len=0>
+│  │  │  │  ├─ _objects <dict> = <dict len=2195>
+│  │  │  │  ├─ _objects_providing_zone_modifiers <set> = <set len=11>
+│  │  │  │  ├─ _objects_to_be_removed <list> = <list len=0>
+│  │  │  │  ├─ _objects_to_ignore_portal_validation_cache <list> = <list len=0>
+│  │  │  │  ├─ _posture_providing_object_cache <set> = <set len=6>
+│  │  │  │  ├─ _registered_callbacks <dict> = <dict len=3>
+│  │  │  │  ├─ _sim_spawn_conditions <defaultdict> = <defaultdict len=0>
+│  │  │  │  ├─ _tag_to_object_list <defaultdict> = <defaultdict len=604>
+│  │  │  │  ├─ _whim_set_cache <Counter> = <Counter len=0>
+│  │  │  │  ├─ active_whim_sets <set> = <set len=0>
+│  │  │  │  ├─ auto_manage_distributor <bool> = True
+│  │  │  │  ├─ can_incremental_start <bool> = False
+│  │  │  │  ├─ id <int> = 1
+│  │  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  │  ├─ supports_parenting <bool> = True
+│  │  │  │  ├─ zone_id <int> = 984624028664234928
+│  │  │  │  └─ zone_modifier_objects <tuple> = <tuple len=11>
+│  │  │  ├─ _parent_type <ObjectParentType>
+│  │  │    (ObjectParentType 枚举值 × 7，首见 services.active_household().client.active_sim._par)
+│  │  │  │  ├─ _enum_export_path <str> = "objects-client_object_mixin.ObjectParentType"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "ObjectParentType"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = False
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "PARENT_NONE"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=7>
+│  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 0
+│  │  │  │  ├─ value <int> = 0
+│  │  │  │  └─ value_to_name <dict> = <dict len=7>
+│  │  │  ├─ _persistence <PersistenceType>
+│  │  │    (PersistenceType 枚举值 × 3，首见 services.active_household().client.active_sim._per)
+│  │  │  │  ├─ _enum_export_path <str> = "objects-object_enums.PersistenceType"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "PersistenceType"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = True
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "NONE"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 2
+│  │  │  │  ├─ value <int> = 2
+│  │  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  │  ├─ _persistence_group <PersistenceGroups>
+│  │  │    (PersistenceGroups 枚举值 × 4，首见 services.active_household().client.active_sim._per)
+│  │  │  │  ├─ _enum_export_path <str> = "objects-persistence_groups.PersistenceGroups"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "PersistenceGroups"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = False
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "SIM"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 2
+│  │  │  │  ├─ value <int> = 2
+│  │  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  │  ├─ _posture_state <PostureState>
+│  │  │    (5 种类型全部 None — _linked_posture_state, body_target, connectivity_handles, linked_posture_state, surface_target)
+│  │  │  │  ├─ _aspect_body <posture_Stand>
+│  │  │  │    (31 种类型全部 None — _context, _intersection, _jig_instance, _linked_posture, _locked_params_log…)
+│  │  │  │     (省略 47 个子属性…)
+│  │  │  │  │  ├─ _active_cancel_aops <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  │  ├─ _animation_context <AnimationContext>
+│  │  │  │  │  ├─ _animation_data <AnimationDataByActorSpecies>
+│  │  │  │  │  ├─ _asm <Asm>
+│  │  │  │  │    (4 种类型全部 None — _locked_params_log, _posture_manifest_overrides, parameters, supported_postures)
+│  │  │  │  │  ├─ _posture_at_none_constraint <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  │  ├─ _posture_at_none_posture_state_spec <PostureStateSpec>
+│  │  │  │  │  ├─ _primitive <PosturePrimitive>
+│  │  │  │  │    (4 种类型全部 None — _context, _dest_state, _posture_censor_handle, _wakeable_element)
+│  │  │  │  │  ├─ _source_interaction <sim-stand>
+│  │  │  │  │    (121 种类型全部 None — DEBUG_NAME_FACTORY, ITEM_COST_NAME_FACTORY, _actor_role_asm_info_map, _additional_basic_extras, _additional_basic_liabilities…)
+│  │  │  │  │     (省略 266 个子属性…)
+│  │  │  │  │  ├─ _track <PostureTrack>
+│  │  │  │  │    (PostureTrack 枚举值 × 4，首见 services.active_household().client.active_sim._pos)
+│  │  │  │  │  ├─ animation_context <AnimationContext> → 见 services.active_household().client.active_sim._posture_state._aspect_body._anima
+│  │  │  │  │  ├─ asm <Asm> → 见 services.active_household().client.active_sim._posture_state._aspect_body._asm
+│  │  │  │  │  ├─ outfit_change <_OutfitChangeNone>
+│  │  │  │  │  ├─ sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  │  │  ├─ source_interaction <sim-stand> → 见 services.active_household().client.active_sim._posture_state._aspect_body._sourc
+│  │  │  │  │  ├─ track <PostureTrack> → 见 services.active_household().client.active_sim._posture_state._aspect_body._track
+│  │  │  │  │  ├─ tuning_manager <InstanceManager>
+│  │  │  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=3>
+│  │  │  │  │  ├─ IS_BODY_POSTURE <bool> = True
+│  │  │  │  │  ├─ _actor_param_name <str> = "x"
+│  │  │  │  │  ├─ _appearance_modifier_active <bool> = False
+│  │  │  │  │  ├─ _apply_target_to_interaction_asms <bool> = True
+│  │  │  │  │  ├─ _asm_key <Key> = <Key> '00000000!54558007'f8b3c886.02d5df13'
+│  │  │  │  │  ├─ _asm_registry <defaultdict> = <defaultdict len=1>
+│  │  │  │  │  ├─ _asms_with_posture_info <set> = <set len=0>
+│  │  │  │  │  ├─ _carry_aspect_forwarding <ImmutableSlots> = <ImmutableSlots len=3>
+│  │  │  │  │  ├─ _enter_state_name <str> = "get_in"
+│  │  │  │  │  ├─ _entry_anim_complete <bool> = True
+│  │  │  │  │  ├─ _entry_occult_switch_processed <bool> = False
+│  │  │  │  │  ├─ _exit_anim_complete <bool> = False
+│  │  │  │  │  ├─ _exit_state_name <str> = "exit"
+│  │  │  │  │  ├─ _failed_parts <set> = <set len=0>
+│  │  │  │  │  ├─ _locked_params <frozendict> = <frozendict len=27>
+│  │  │  │  │  ├─ _owning_interactions <set> = <set len=0>
+│  │  │  │  │  ├─ _posture_name <str> = "stand"
+│  │  │  │  │  ├─ _posture_object_event_added <bool> = False
+│  │  │  │  │  ├─ _posture_transitions <dict> = <dict len=708>
+│  │  │  │  │  ├─ _primitive_created <bool> = True
+│  │  │  │  │  ├─ _provided_postures <frozendict> = <frozendict len=5>
+│  │  │  │  │  ├─ _skip_route <bool> = False
+│  │  │  │  │  ├─ _slot_constraint <dict> = <dict len=1>
+│  │  │  │  │  ├─ _state_name <str> = "Stand_Posture"
+│  │  │  │  │  ├─ _supported_postures <tuple> = <tuple len=1>
+│  │  │  │  │  ├─ _supports_carry <bool> = True
+│  │  │  │  │  ├─ _supports_infant <bool> = False
+│  │  │  │  │  ├─ additional_interaction_jig_fgl_distance <float> = 0.0
+│  │  │  │  │  └─ additional_put_down_distance <float> = 0.5
+│  │  │  │  ├─ _aspect_carry_back <posture_CarryNothing>
+│  │  │  │    (35 种类型全部 None — _context, _intersection, _jig_instance, _linked_posture, _locked_params_log…)
+│  │  │  │     (省略 45 个子属性…)
+│  │  │  │  │  ├─ _active_cancel_aops <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  │  │  │  ├─ _animation_context <AnimationContext> → 见 services.active_household().client.active_sim._posture_state._aspect_body._anima
+│  │  │  │  │  ├─ _animation_data <AnimationDataUniversal>
+│  │  │  │  │  ├─ _asm <Asm> → 见 services.active_household().client.active_sim._posture_state._aspect_body._asm
+│  │  │  │  │  ├─ _primitive <PosturePrimitive> → 见 services.active_household().client.active_sim._posture_state._aspect_body._primi
+│  │  │  │  │  ├─ _track <PostureTrack> → 见 services.active_household().client.active_sim._posture_state._aspect_body._track
+│  │  │  │  │  ├─ animation_context <AnimationContext> → 见 services.active_household().client.active_sim._posture_state._aspect_body._anima
+│  │  │  │  │  ├─ asm <Asm> → 见 services.active_household().client.active_sim._posture_state._aspect_body._asm
+│  │  │  │  │  ├─ outfit_change <_OutfitChangeNone> → 见 services.active_household().client.active_sim._posture_state._aspect_body.outfit
+│  │  │  │  │  ├─ sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  │  │  ├─ track <PostureTrack> → 见 services.active_household().client.active_sim._posture_state._aspect_body._track
+│  │  │  │  │  ├─ tuning_manager <InstanceManager> → 见 services.active_household().client.active_sim._posture_state._aspect_body.tuning
+│  │  │  │  │  ├─ INSTANCE_SUBCLASSES_ONLY <bool> = True
+│  │  │  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  │  ├─ IS_BODY_POSTURE <bool> = False
+│  │  │  │  │  ├─ _XEVT_ID <int> = 701
+│  │  │  │  │  ├─ _actor_param_name <str> = "x"
+│  │  │  │  │  ├─ _appearance_modifier_active <bool> = False
+│  │  │  │  │  ├─ _apply_target_to_interaction_asms <bool> = True
+│  │  │  │  │  ├─ _asm_key <Key> = <Key> '00000000!549d3708'8cd08b69.02d5df13'
+│  │  │  │  │  ├─ _asm_registry <defaultdict> = <defaultdict len=0>
+│  │  │  │  │  ├─ _asms_with_posture_info <set> = <set len=0>
+│  │  │  │  │  ├─ _carry_aspect_forwarding <ImmutableSlots> = <ImmutableSlots len=3>
+│  │  │  │  │  ├─ _enter_state_name <str> = "putDown"
+│  │  │  │  │  ├─ _entry_anim_complete <bool> = True
+│  │  │  │  │  ├─ _entry_occult_switch_processed <bool> = False
+│  │  │  │  │  ├─ _exit_anim_complete <bool> = False
+│  │  │  │  │  ├─ _exit_state_name <str> = "exit"
+│  │  │  │  │  ├─ _failed_parts <set> = <set len=0>
+│  │  │  │  │  ├─ _locked_params <frozendict> = <frozendict len=27>
+│  │  │  │  │  ├─ _owning_interactions <set> = <set len=0>
+│  │  │  │  │  ├─ _posture_object_event_added <bool> = False
+│  │  │  │  │  ├─ _posture_transitions <dict> = <dict len=708>
+│  │  │  │  │  ├─ _primitive_created <bool> = True
+│  │  │  │  │  ├─ _provided_postures <frozendict> = <frozendict len=5>
+│  │  │  │  │  ├─ _slot_constraint <dict> = <dict len=1>
+│  │  │  │  │  ├─ _state_name <str> = "CarryNothing"
+│  │  │  │  │  ├─ _supported_postures <tuple> = <tuple len=2>
+│  │  │  │  │  ├─ _supports_carry <bool> = False
+│  │  │  │  │  ├─ _supports_infant <bool> = False
+│  │  │  │  │  ├─ additional_interaction_jig_fgl_distance <float> = 0.0
+│  │  │  │  │  └─ additional_put_down_distance <float> = 0.5
+│  │  │  │  ├─ _aspect_carry_left <posture_CarryNothing> → 见 services.active_household().client.active_sim._posture_state._aspect_carry_back
+│  │  │  │  ├─ _aspect_carry_right <posture_CarryNothing> → 见 services.active_household().client.active_sim._posture_state._aspect_carry_back
+│  │  │  │  ├─ _constraint_intersection <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ _posture_constraint <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ _posture_constraint_strict <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ _spec <PostureSpec>
+│  │  │  │    (14 种类型全部 None — _body_part, _body_target, _body_target_type, _body_target_with_part, _slot_target…)
+│  │  │  │  │  ├─ body <PostureAspectBody>
+│  │  │  │  │  ├─ carry <PostureAspectCarry>
+│  │  │  │  │  ├─ carry_posture <PostureSpecVariable>
+│  │  │  │  │    (PostureSpecVariable 枚举值 × 13，首见 services.active_household().client.active_sim._pos)
+│  │  │  │  │  ├─ surface <PostureAspectSurface>
+│  │  │  │  │    (3 种类型全部 None — slot_target, slot_type, target)
+│  │  │  │  │  ├─ _at_surface <bool> = False
+│  │  │  │  │  ├─ _attribute_definitions <tuple> = <tuple len=10>
+│  │  │  │  │  ├─ _body_posture_name <str> = "stand"
+│  │  │  │  │  ├─ _is_carrying <bool> = False
+│  │  │  │  │  ├─ requires_carry_target_in_hand <bool> = False
+│  │  │  │  │  └─ requires_carry_target_in_slot <bool> = False
+│  │  │  │  ├─ back <posture_CarryNothing> → 见 services.active_household().client.active_sim._posture_state._aspect_carry_back
+│  │  │  │  ├─ body <posture_Stand> → 见 services.active_household().client.active_sim._posture_state._aspect_body
+│  │  │  │  ├─ body_posture_state_constraint <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ constraint_intersection <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ left <posture_CarryNothing> → 见 services.active_household().client.active_sim._posture_state._aspect_carry_back
+│  │  │  │  ├─ posture_constraint <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ posture_constraint_strict <Constraint> → 见 services.active_household().client.active_sim._los_constraint
+│  │  │  │  ├─ right <posture_CarryNothing> → 见 services.active_household().client.active_sim._posture_state._aspect_carry_back
+│  │  │  │  ├─ sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  │  ├─ spec <PostureSpec> → 见 services.active_household().client.active_sim._posture_state._spec
+│  │  │  │  ├─ _constraint_intersection_dirty <bool> = False
+│  │  │  │  ├─ _constraints <dict> = <dict len=2>
+│  │  │  │  ├─ _invalid_expected <bool> = False
+│  │  │  │  ├─ _valid <bool> = True
+│  │  │  │  ├─ aspects <tuple> = <tuple len=4>
+│  │  │  │  ├─ body_state_spec_only <bool> = False
+│  │  │  │  ├─ carry_aspects <tuple> = <tuple len=3>
+│  │  │  │  ├─ carry_targets <tuple> = <tuple len=3>
+│  │  │  │  └─ valid <bool> = True
+│  │  │  ├─ _provided_surface <UnsetType> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._age_pro
+│  │  │  ├─ _raycast_context <PathPlanContext>
+│  │  │  │  ├─ agent_position_offset <Vector3> → 见 services.active_household().client.active_sim._los_constraint.average_position
+│  │  │  │  ├─ connectivity_handles <connectivity_handle_list>
+│  │  │  │  ├─ add_path_boundary_obstacle <bool> = False
+│  │  │  │  ├─ agent_extra_clearance_multiplier <float> = 2.5
+│  │  │  │  ├─ agent_goal_radius <float> = 0.12300000339746475
+│  │  │  │  ├─ agent_height_clearance_override <float> = -1.0
+│  │  │  │  ├─ agent_id <int> = 984624028662366240
+│  │  │  │  ├─ agent_name <str> = ""
+│  │  │  │  ├─ agent_path_plan_radius <float> = 0.0
+│  │  │  │  ├─ agent_radius <float> = 0.12300000339746475
+│  │  │  │  ├─ debug_trace <bool> = False
+│  │  │  │  ├─ disable_fake_portals <bool> = False
+│  │  │  │  ├─ footprint_key <Key> = <Key> '00000000!5e1cc80e'168c18df.d382bf57'
+│  │  │  │  ├─ ghost_route <bool> = False
+│  │  │  │  ├─ impassable_goals_auto_fail <bool> = False
+│  │  │  │  ├─ max_goal_clipping_score <float> = 60.0
+│  │  │  │  ├─ max_slope_angle <float> = 0.0
+│  │  │  │  ├─ object_descriptor <str> = ""
+│  │  │  │  ├─ object_footprint_id <NoneType> = <None>
+│  │  │  │  ├─ object_id <int> = 984624028662366240
+│  │  │  │  ├─ object_radius <float> = 0.12300000339746475
+│  │  │  │  ├─ path_goals_id <int> = 0
+│  │  │  │  ├─ route_fail_on_fake_portals <bool> = False
+│  │  │  │  ├─ track_transition_indoor_outdoor <bool> = False
+│  │  │  │  ├─ track_transition_terrain <bool> = False
+│  │  │  │  └─ tracked_terrain_tags <NoneType> = <None>
+│  │  │  ├─ _reference_arb <Arb>
+│  │  │  │  ├─ _handlers <list> = <list len=0>
+│  │  │  │  ├─ _in_sync_group <bool> = False
+│  │  │  │  ├─ _native_handle <int> = 1430
+│  │  │  │  ├─ actor_ids <tuple> = <tuple len=2>
+│  │  │  │  ├─ additional_blockers <set> = <set len=0>
+│  │  │  │  ├─ empty <bool> = False
+│  │  │  │  ├─ master_actor_id <int> = 984624028662366239
+│  │  │  │  ├─ network_id <int> = 1430
+│  │  │  │  └─ unhandled_event_records <list> = <list len=0>
+│  │  │  ├─ _school <SchoolTuning>
+│  │  │  │  ├─ school_data_tests <CompoundTestList>
+│  │  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=2>
+│  │  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <NoneType> = <None>
+│  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=2>
+│  │  │  │  └─ school_data <frozendict> = <frozendict len=2>
+│  │  │  ├─ _si_state <SIState>
+│  │  │  │  ├─ sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  │  ├─ _constraints <dict> = <dict len=0>
+│  │  │  │  ├─ _removing_interactions <set> = <set len=0>
+│  │  │  │  ├─ _resetting <bool> = False
+│  │  │  │  ├─ _super_interactions <set> = <set len=1>
+│  │  │  │  └─ _watchers <dict> = <dict len=0>
+│  │  │  ├─ _sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  │  ├─ _simulation_state <SimulationState>
+│  │  │    (SimulationState 枚举值 × 4，首见 services.active_household().client.active_sim._sim)
+│  │  │  │  ├─ _enum_export_path <str> = "sims-sim.SimulationState"
+│  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  ├─ cache_key <str> = "SimulationState"
+│  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  ├─ export <bool> = False
+│  │  │  │  ├─ imag <int> = 0
+│  │  │  │  ├─ locked <bool> = False
+│  │  │  │  ├─ name <str> = "SIMULATING"
+│  │  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  │  ├─ numerator <int> = 3
+│  │  │  │  ├─ offset <int> = 0
+│  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  ├─ real <int> = 3
+│  │  │  │  ├─ value <int> = 3
+│  │  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  │  ├─ _ui_manager <UIManager>
+│  │  │  │  ├─ _routing_info <InteractionInfo>
+│  │  │  │    (8 种类型全部 None — _super_display_name, _super_icon_info_data, _target_ref, associated_skill, insert_strategy…)
+│  │  │  │  │  ├─ _icon_info_data <IconInfoData>
+│  │  │  │  │    (7 种类型全部 None — icon_background_resource, multicolor, obj_def_id, obj_geo_hash, obj_instance…)
+│  │  │  │  │  ├─ display_name <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  │  ├─ icon_info <IconInfoData> → 见 services.active_household().client.active_sim._ui_manager._routing_info._icon_in
+│  │  │  │  │  ├─ priority <Priority> → 见 services.active_household().client._interaction_priority
+│  │  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  │  ├─ ROUTING_DATA <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  │  │  │  ├─ canceled <bool> = False
+│  │  │  │  │  ├─ client_notified <bool> = False
+│  │  │  │  │  ├─ insert_after_id <int> = 0
+│  │  │  │  │  ├─ interaction_id <int> = 18446744073709551614
+│  │  │  │  │  ├─ interactions_to_be_canceled <set> = <set len=1>
+│  │  │  │  │  ├─ participants <tuple> = <tuple len=0>
+│  │  │  │  │  ├─ routing_owner_id <int> = 2339
+│  │  │  │  │  ├─ source_id <int> = 0
+│  │  │  │  │  ├─ super_id <int> = 0
+│  │  │  │  │  ├─ ui_state <int> = 2
+│  │  │  │  │  ├─ ui_visual_type <int> = 3
+│  │  │  │  │  ├─ user_cancelable <bool> = True
+│  │  │  │  │  └─ visual_group_priority <int> = 0
+│  │  │  │  ├─ _running_interactions <generator>
+│  │  │  │  │  ├─ gi_code <code>
+│  │  │  │  │    (bytes 枚举值 × 2，首见 services.active_household()._household_milestone_t)
+│  │  │  │  │  ├─ gi_frame <frame>
+│  │  │  │  │  ├─ gi_running <bool> = False
+│  │  │  │  │  └─ gi_yieldfrom <NoneType> = <None>
+│  │  │  │  ├─ _sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  │  │  ├─ _continuation_interactions <list> = <list len=0>
+│  │  │  │  ├─ _group_interactions <dict> = <dict len=0>
+│  │  │  │  ├─ _last_running_interaction_id <int> = 0
+│  │  │  │  ├─ _queued_interactions <list> = <list len=0>
+│  │  │  │  ├─ _si_skill_mapping <dict> = <dict len=0>
+│  │  │  │  └─ _super_interactions <list> = <list len=2>
+│  │  │  ├─ _visibility <VisibilityState>
+│  │  │  │  ├─ enable_drop_shadow <bool> = False
+│  │  │  │  ├─ inherits <NoneType> = <None>
+│  │  │  │  └─ visibility <bool> = True
+│  │  │  ├─ FADE_DURATION <float> = 1.2
+│  │  │  ├─ FORWARD_OFFSET <float> = 0.04
+│  │  │  ├─ HOVERTIP_HANDLE <int> = 0
+│  │  │  ├─ INITIAL_DEPRECIATION <float> = 0.2
+│  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=10>
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  │  ├─ MULTI_MOTIVE_BUFF_MOTIVES <frozendict> = <frozendict len=13>
+│  │  │  ├─ REMOVE_INSTANCE_TUNABLES <set> = <set len=2>
+│  │  │  ├─ VISIBLE_TO_AUTOMATION <bool> = True
+│  │  │  ├─ _NO_SLOTS <frozenset> = <frozenset len=0>
+│  │  │  ├─ _allow_route_instantly_when_hitting_marks <bool> = True
+│  │  │  ├─ _awareness_scores <Counter> = <Counter len=1>
+│  │  │  ├─ _base_value <int> = 0
+│  │  │  ├─ _buff_handles <list> = <list len=2>
+│  │  │  ├─ _build_buy_lockout <bool> = False
+│  │  │  ├─ _build_buy_use_flags <int> = 0
+│  │  │  ├─ _cached_commodity_flags <frozenset> = <frozenset len=224>
+│  │  │  ├─ _cached_locations_for_posture <tuple> = <tuple len=1>
+│  │  │  ├─ _cached_position_and_routing_surface_for_posture <list> = <list len=1>
+│  │  │  ├─ _client_scale <int> = 1
+│  │  │  ├─ _commodity_flags <tuple> = <tuple len=168>
+│  │  │  ├─ _component_commodity_flags_invalid <bool> = False
+│  │  │  ├─ _component_definitions <tuple> = <tuple len=18>
+│  │  │  ├─ _component_instances <dict> = <dict len=18>
+│  │  │  ├─ _component_reload_hooks <dict> = <dict len=19>
+│  │  │  ├─ _components <ImmutableSlots> = <ImmutableSlots len=70>
+│  │  │  ├─ _components_native <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  │  ├─ _created_constraints_dirty <bool> = True
+│  │  │  ├─ _default_anim_params <frozendict> = <frozendict len=1>
+│  │  │  └─ _default_definition_id <int> = 794
+│  │  ├─ active_sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+│  │  ├─ choice_menu <ChoiceMenu> → 见 services.active_household().client._choice_menu
+│  │  ├─ household <Household> → 见 services.active_household()
+│  │  ├─ interaction_priority <Priority> → 见 services.active_household().client._interaction_priority
+│  │  ├─ interaction_source <InteractionSource> → 见 services.active_household().client._interaction_source
+│  │  ├─ manager <ClientManager> → 见 services.client_manager()
+│  │  ├─ objects_moved_via_live_drag <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ selectable_sims <SelectableSims> → 见 services.active_household().client._selectable_sims
+│  │  ├─ ui_objects <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _household_id <int> = 47875306169303069
+│  │  ├─ _interaction_parameters <dict> = <dict len=0>
+│  │  ├─ _live_drag_is_stack <bool> = False
+│  │  ├─ _live_drag_objects <list> = <list len=0>
+│  │  ├─ _live_drag_sell_dialog_active <bool> = False
+│  │  ├─ active <bool> = True
+│  │  ├─ household_id <int> = 47875306169303069
+│  │  ├─ id <int> = 3
+│  │  ├─ is_sim <bool> = False
+│  │  ├─ live_drag_objects <list> = <list len=0>
+│  │  ├─ primitives <tuple> = <tuple len=0>
+│  │  ├─ valid_for_distribution <bool> = True
+│  │  ├─ visible_to_client <bool> = True
+│  │  └─ zone_id <int> = 984624028664234928
+│  ├─ collection_tracker <CollectionTracker> → 见 services.active_household()._collection_tracker
+│  ├─ creator_uuid <bytes> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._base.fa
+│  ├─ delivery_tracker <DeliveryTracker>
+│  │  ├─ _household <Household> → 见 services.active_household()
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  ├─ RECIPE_AT_HOME_DELIVERY_NOTIFICATION <NoneType> = <None>
+│  │  ├─ RECIPE_AWAY_DELIVERY_NOTIFICATION <NoneType> = <None>
+│  │  ├─ _expected_deliveries <dict> = <dict len=0>
+│  │  └─ _sims_spawned <bool> = False
+│  ├─ funds <FamilyFunds> → 见 services.active_household()._funds
+│  ├─ holiday_tracker <HolidayTracker> → 见 services.active_household()._holiday_tracker
+│  ├─ household_milestone_tracker <HouseholdMilestoneTracker> → 见 services.active_household()._household_milestone_tracker
+│  ├─ inventory_rewards <RewardPartList> → 见 services.active_household()._reward_inventory
+│  ├─ laundry_tracker <HouseholdLaundryTracker>
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ owner <Household> → 见 services.active_household()
+│  │  ├─ _finished_laundry_conditions <dict> = <dict len=0>
+│  │  ├─ _last_unload_laundry_time <DateAndTime> = 09:24:19.560 day:1 week:11
+│  │  ├─ finished_laundry_conditions <dict> = <dict len=0>
+│  │  └─ last_unload_laundry_time <DateAndTime> = 09:24:19.560 day:1 week:11
+│  ├─ manager <HouseholdManager>
+│    (3 种类型全部 None — _pending_household_funds, _save_slot_data, zone_id)
+│  │  ├─ id_object_pairs <dict_items> → 见 services.sim_info_manager().id_object_pairs
+│  │  ├─ ids <dict_keys> → 见 services.sim_info_manager().ids
+│  │  ├─ objects <dict_values> → 见 services.sim_info_manager().objects
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ _loaded <bool> = True
+│  │  ├─ _objects <dict> = <dict len=215>
+│  │  ├─ _objects_to_be_removed <list> = <list len=0>
+│  │  ├─ _pending_transfers <dict> = <dict len=0>
+│  │  ├─ _registered_callbacks <dict> = <dict len=3>
+│  │  ├─ auto_manage_distributor <bool> = True
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ id <int> = 7
+│  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  └─ supports_parenting <bool> = False
+│  ├─ ANCESTRY_PURGE_DEPTH <int> = 3
+│  ├─ HOUSEHOLD_TRACKERS <OrderedDict> = <OrderedDict len=8>
+│  ├─ MAXIMUM_SIZE <int> = 8
+│  ├─ MODULE_TUNABLES <dict> = <dict len=6>
+│  ├─ NPC_HOUSEHOLD_DEFAULT_FUNDS <int> = 20000
+│  ├─ SIM_SPAWN_RADIUS <int> = 2
+│  ├─ SIM_TRANSFER_BUFFS <tuple> = <tuple len=1>
+│  ├─ SPECIAL_FIXES <ImmutableSlots> = <ImmutableSlots len=1>
+│  ├─ _adopting_sim_ids <set> = <set len=0>
+│  ├─ _age_update_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3C2AD9950>
+│  ├─ _aging_update_alarm <NoneType> = <None>
+│  ├─ _always_welcome_sim_ids <set> = <set len=0>
+│  ├─ _build_buy_unlocks <set> = <set len=137>
+│  ├─ _cached_home_lot_value <int> = 483282
+│  ├─ _description <str> = ""
+│  ├─ _has_cheated <bool> = False
+│  ├─ _hidden <bool> = False
+│  ├─ _highest_earned_situation_medals <dict> = <dict len=6>
+│  ├─ _home_world_id <int> = 1420552844
+│  ├─ _home_zone_id <int> = 984624028664234928
+│  ├─ _home_zone_move_in_time <DateAndTime> = 08:00:00.000 day:0 week:0
+│  ├─ _is_dependent_household <bool> = False
+│  ├─ _is_played_household <bool> = True
+│  ├─ _is_player_household <bool> = True
+│  ├─ _last_active_sim_id <int> = 984624028662366240
+│  ├─ _last_played_home_zone_id <int> = 984624028664234928
+│  ├─ _name <str> = "波斑一家人v8"
+│  ├─ _receive_homework_help_map <dict> = <dict len=2>
+│  ├─ _service_npc_record <dict> = <dict len=2>
+│  └─ _sim_infos <list> = <list len=8>
+├─ current_zone() <Zone>
+  (8 种类型全部 None — _client_connect_speed, _lot_level_instance_added_callbacks, _restricted_open_street_autonomy_area, _tick_metrics, _world_spawn_point_locators…)
+   (省略 46 个子属性…)
+│  ├─ RESTRICTED_AUTONOMY_AREA_TAG <Tag>
+│    (Tag 枚举值 × 7322，首见 services.current_zone().RESTRICTED_AUTONOMY_AREA_T)
+│    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _enum_export_path <str> = "tag.Tag"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ _static_index <int> = 0
+│  │  ├─ cache_key <str> = "Tag"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = True
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = True
+│  │  ├─ name <str> = "Func_Festival_Autonomy_Area_Marker"
+│  │  ├─ name_to_value <dict> = <dict len=7322>
+│  │  ├─ numerator <int> = 1575
+│  │  ├─ partitioned <bool> = True
+│  │  ├─ real <int> = 1575
+│  │  ├─ value <int> = 1575
+│  │  └─ value_to_name <dict> = <dict len=7321>
+│  ├─ _active_lot_arrival_spawn_point <WorldSpawnPoint>
+│  │  ├─ ARRIVAL_SPAWN_POINT_TAG <Tag> → 见 services.current_zone().RESTRICTED_AUTONOMY_AREA_TAG
+│  │  ├─ FOOTPRINT_HALF_DIMENSIONS <Vector3Immutable> → 见 services.active_household().client.active_sim._location.transform.translation
+│  │  ├─ SLOT_START_OFFSET_FROM_CENTER <Vector3Immutable> → 见 services.active_household().client.active_sim._location.transform.translation
+│  │  ├─ VISITOR_ARRIVAL_SPAWN_POINT_TAG <Tag> → 见 services.current_zone().RESTRICTED_AUTONOMY_AREA_TAG
+│  │  ├─ _center <Vector3Immutable> → 见 services.active_household().client.active_sim._location.transform.translation
+│  │  ├─ _footprint_polygon <Polygon>
+│  │  │  ├─ ccw <bool> = True
+│  │  │  ├─ convex <bool> = True
+│  │  │  ├─ degenerate <bool> = False
+│  │  │  ├─ has_collinear_vertices <bool> = False
+│  │  │  ├─ has_duplicated_consecutive_vertices <bool> = False
+│  │  │  ├─ has_enough_vertices <bool> = True
+│  │  │  ├─ simple <bool> = True
+│  │  │  ├─ too_small <bool> = False
+│  │  │  └─ too_thin <bool> = False
+│  │  ├─ _rotation <QuaternionImmutable> → 见 services.active_household().client.active_sim._location.transform.orientation
+│  │  ├─ _routing_surface <SurfaceIdentifier> → 见 services.active_household().client.active_sim._location.routing_surface
+│  │  ├─ routing_surface <SurfaceIdentifier> → 见 services.active_household().client.active_sim._location.routing_surface
+│  │  ├─ spawn_point_priority <SpawnPointPriority>
+│  │    (SpawnPointPriority 枚举值 × 3，首见 services.current_zone()._active_lot_arrival_spawn_)
+│  │    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  ├─ _enum_export_path <str> = "world-spawn_point_enums.SpawnPointPriority"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ _static_index <int> = 0
+│  │  │  ├─ cache_key <str> = "SpawnPointPriority"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "DEFAULT"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ SLOT_OFFSET_HORSE_Z <float> = 0.5
+│  │  ├─ SLOT_OFFSET_ODD_X <float> = 0.5
+│  │  ├─ SPAWN_POINT_JITTER_X <float> = 0.2
+│  │  ├─ SPAWN_POINT_JITTER_Z <float> = 0.3
+│  │  ├─ SPAWN_POINT_SLOTS <int> = 8
+│  │  ├─ SPAWN_POINT_SLOT_COLUMNS <int> = 4
+│  │  ├─ SPAWN_POINT_SLOT_ROWS <int> = 2
+│  │  ├─ _footprint_id <int> = 539
+│  │  ├─ _obj_def_guid <int> = 25266
+│  │  ├─ _random_indices <list> = <list len=8>
+│  │  ├─ _scale <float> = 1.0
+│  │  ├─ _spawn_index <int> = 0
+│  │  ├─ _spawn_point_id <int> = 984624028670996690
+│  │  ├─ _tags <frozenset> = <frozenset len=1>
+│  │  ├─ _valid_slots <int> = 0
+│  │  ├─ attractor_point_ids <frozenset> = <frozenset len=0>
+│  │  ├─ lot_id <int> = 1300824067
+│  │  ├─ obj_def_guid <int> = 25266
+│  │  ├─ spawn_point_id <int> = 984624028670996690
+│  │  └─ spawn_point_index <int> = 4
+│  ├─ _client <Client> → 见 services.active_household().client
+│  ├─ _royalty_alarm_manager <RoyaltyAlarmManager>
+│  │  └─ _alarm_handle <NoneType> = <None>
+│  ├─ _zone_state <ZoneState>
+│    (ZoneState 枚举值 × 8，首见 services.current_zone()._zone_state)
+│  │  ├─ _enum_export_path <str> = "zone_types.ZoneState"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "ZoneState"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = False
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "RUNNING"
+│  │  ├─ name_to_value <dict> = <dict len=8>
+│  │  ├─ numerator <int> = 6
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 6
+│  │  ├─ value <int> = 6
+│  │  └─ value_to_name <dict> = <dict len=8>
+│  ├─ active_lot_arrival_spawn_point <WorldSpawnPoint> → 见 services.current_zone()._active_lot_arrival_spawn_point
+│  ├─ adoption_service <AdoptionService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ PET_ADOPTION_CATALOG_LIFETIME <float> = 1440.0
+│  │  ├─ PET_ADOPTION_GENDER_OPTION_TRAITS <tuple> = <tuple len=2>
+│  │  ├─ _creation_times <dict> = <dict len=0>
+│  │  ├─ _real_sim_ids <NoneType> = <None>
+│  │  ├─ _sim_infos <defaultdict> = <defaultdict len=0>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ all_transition_controllers <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ ambient_service <AmbientService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=7>
+│  │  ├─ SOCIAL_AFFORDANCES <tuple> = <tuple len=1>
+│  │  ├─ SOCIAL_CHANCE_TO_START <float> = 0.5
+│  │  ├─ SOCIAL_COOLDOWN <float> = 60.0
+│  │  ├─ SOCIAL_MAX_DURATION <float> = 20.0
+│  │  ├─ SOCIAL_MAX_START_DISTANCE <float> = 100.0
+│  │  ├─ SOCIAL_VIEW_CONE_ANGLE <float> = 3.141592653589793
+│  │  ├─ _flavor_alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3A79B3D88>
+│  │  ├─ _sources <list> = <list len=2>
+│  │  ├─ _update_alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3A79B3830>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ arb_accumulator_service <ArbAccumulatorService>
+│  │  ├─ _shave_time <WeakKeyDictionary> → 见 services.active_household().client._choice_menu.objects
+│  │  ├─ _time_debt <WeakKeyDictionary> → 见 services.active_household().client._choice_menu.objects
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ CUSTOM_EVENT <int> = 901
+│  │  ├─ MAXIMUM_SHAVE_ANIMATION_RATIO <float> = 2.0
+│  │  ├─ MAXIMUM_SHAVE_FRAMES_PER_ANIMATION <int> = 5
+│  │  ├─ MAXIMUM_TIME_DEBT <float> = 1.0
+│  │  ├─ MAX_XEVT <int> = 999
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  ├─ _arb_sequence <list> = <list len=0>
+│  │  ├─ _custom_xevt_id_generator <int> = 901
+│  │  ├─ _in_flush <bool> = False
+│  │  ├─ _sequence_parallel <NoneType> = <None>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ autonomy_service <AutonomyService>
+│    (3 种类型全部 None — _automated_load_test_connection, _automated_performance_test_connection, _automated_performance_test_sim_id)
+│  │  ├─ _active_sim <object_sim> → 见 services.active_household().client.active_sim
+│  │  ├─ _cached_autonomy_state_setting <AutonomyState> → 见 services.active_household()._autonomy_settings.STARTING_DEFAULT_AUTONOMY_STATE
+│  │  ├─ _default_autonomy_settings <AutonomySettings> → 见 services.active_household()._autonomy_settings
+│  │  ├─ _global_autonomy_settings <AutonomySettings> → 见 services.active_household()._autonomy_settings
+│  │  ├─ default_autonomy_settings <AutonomySettings> → 见 services.active_household()._autonomy_settings
+│  │  ├─ global_autonomy_settings <AutonomySettings> → 见 services.active_household()._autonomy_settings
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MAX_OPEN_STREET_ROUTE_DISTANCE_FOR_INITIATING_SOCIAL <float> = 100.0
+│  │  ├─ MAX_OPEN_STREET_ROUTE_DISTANCE_FOR_SOCIAL_TARGET <float> = 15.0
+│  │  ├─ MAX_SECONDS_PER_LOOP <float> = 0.1
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=4>
+│  │  ├─ NUM_INTERACTIONS <int> = 10
+│  │  ├─ _ARTIFICIAL_MAX_ROUTE_TIME_INCREMENT <float> = 0.0001
+│  │  ├─ _processed_sim_count <int> = 0
+│  │  ├─ _processor <ElementHandle> = <ElementHandle len=5>
+│  │  ├─ _selected_sim_autonomy_enabled <bool> = True
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ logging_sims <set> = <set len=0>
+│  │  ├─ queue <list> = <list len=0>
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ broadcaster_real_time_service <BroadcasterRealTimeService>
+│    (3 种类型全部 None — _object_cache, _object_cache_tags, _processing_task)
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ DEFAULT_QUADTREE_RADIUS <float> = 0.1
+│  │  ├─ INTERVAL <float> = 5.0
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _active_broadcasters <list> = <list len=1052>
+│  │  ├─ _alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF4F0475200>
+│  │  ├─ _cluster_requests <dict> = <dict len=5>
+│  │  ├─ _pending_broadcasters <list> = <list len=0>
+│  │  ├─ _pending_update <bool> = False
+│  │  ├─ _quadtrees <defaultdict> = <defaultdict len=5>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ broadcaster_service <BroadcasterService>
+│  │  ├─ _object_cache <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ DEFAULT_QUADTREE_RADIUS <float> = 0.1
+│  │  ├─ INTERVAL <float> = 5.0
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _active_broadcasters <list> = <list len=56>
+│  │  ├─ _alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF4F04753F8>
+│  │  ├─ _cluster_requests <dict> = <dict len=12>
+│  │  ├─ _object_cache_tags <set> = <set len=2>
+│  │  ├─ _pending_broadcasters <list> = <list len=0>
+│  │  ├─ _pending_update <bool> = False
+│  │  ├─ _processing_task <NoneType> = <None>
+│  │  ├─ _quadtrees <defaultdict> = <defaultdict len=2>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ calendar_service <CalendarService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ _event_alarm_map <dict> = <dict len=4>
+│  │  ├─ _event_data_map <dict> = <dict len=51>
+│  │  ├─ _event_favorite_map <defaultdict> = <defaultdict len=1>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ career_service <CareerService>
+│    (4 种类型全部 None — _last_day_updated, _main_career_event_zone_id, _save_lock, _shuffled_career_list)
+│  │  ├─ _pending_career_events <deque>
+│  │  │  └─ maxlen <NoneType> = <None>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ _career_event_subvenue_zone_ids <dict> = <dict len=0>
+│  │  ├─ _career_lay_off_enabled <bool> = True
+│  │  ├─ _career_list_seed <int> = 10357298220017693320
+│  │  ├─ _gig_buckets <dict> = <dict len=0>
+│  │  ├─ _gig_picker_associated_sims_map <dict> = <dict len=0>
+│  │  ├─ _gig_picker_disabled_gigs_map <dict> = <dict len=0>
+│  │  ├─ _noble_career_auto_promotion_enabled <bool> = False
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ career_lay_off_enabled <bool> = True
+│  │  ├─ enabled <bool> = True
+│  │  ├─ noble_career_auto_promotion_enabled <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ cleanup_service <CleanupService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ OPEN_STREET_CLEANUP_TIME <DateAndTime> = 04:00:00.000 day:0 week:0
+│  │  ├─ _alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF4F0475170>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ conditional_layer_service <ConditionalLayerService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ STREET_LAYER_OBJECTS_ALARM_TIME <float> = 1.0
+│  │  ├─ STREET_LAYER_OBJECTS_TO_DESTROY <int> = 5
+│  │  ├─ _active_street_conditional_layers <set> = <set len=0>
+│  │  ├─ _current_request <NoneType> = <None>
+│  │  ├─ _layer_infos <dict> = <dict len=0>
+│  │  ├─ _requests <list> = <list len=0>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ requests <tuple> = <tuple len=0>
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ daycare_service <DaycareService>
+│  │  ├─ _daycare_interactions <WeakKeyDictionary> → 见 services.active_household().client._choice_menu.objects
+│  │  ├─ _excluded_sims <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _global_unavailable_sims <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _unavailable_sims <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ _nanny_dialog_shown <bool> = False
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ demographics_service <DemographicsService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ door_service <DoorService>
+│  │  ├─ FRONT_DOOR_ALLOWED_APARTMENT_PORTAL_FLAGS <PortalFlags>
+│  │    (PortalFlags 枚举值 × 52，首见 services.current_zone().door_service.FRONT_DOOR_AL)
+│  │    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  ├─ _enum_export_path <str> = "routing-portals-portal_tuning.PortalFlags"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ _static_index <int> = 19
+│  │  │  ├─ cache_key <str> = "PortalFlags"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "Elevator"
+│  │  │  ├─ name_to_value <dict> = <dict len=52>
+│  │  │  ├─ numerator <int> = 34359738368
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 34359738368
+│  │  │  ├─ value <int> = 34359738368
+│  │  │  └─ value_to_name <dict> = <dict len=52>
+│  │  ├─ FRONT_DOOR_ALLOWED_PORTAL_FLAGS <PortalFlags> → 见 services.current_zone().door_service.FRONT_DOOR_ALLOWED_APARTMENT_PORTAL_FLAGS
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ _front_door_id <int> = 984624028675195367
+│  │  ├─ _plex_door_infos <dict> = <dict len=0>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ drama_schedule_service <DramaScheduleService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ BUCKET_SCORING_RULES <frozendict> = <frozendict len=100>
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=4>
+│  │  ├─ SCORING_TIME <int> = 3
+│  │  ├─ STARTUP_BUCKETS <frozenset> = <frozenset len=34>
+│  │  ├─ VENUE_BUCKET_DAYS <dict> = <dict len=7>
+│  │  ├─ WEEKLY_SCHEDULING_RULES <frozendict> = <frozendict len=28>
+│  │  ├─ WEEKLY_SCHEDULING_TIME <int> = 3
+│  │  ├─ _active_nodes <dict> = <dict len=4>
+│  │  ├─ _cooldown_groups <dict> = <dict len=9>
+│  │  ├─ _cooldown_nodes <dict> = <dict len=206>
+│  │  ├─ _drama_node_groups_on_permanent_cooldown <set> = <set len=0>
+│  │  ├─ _drama_nodes_on_permanent_cooldown <set> = <set len=12>
+│  │  ├─ _enabled <bool> = True
+│  │  ├─ _grouped_weekly_nodes <defaultdict> = <defaultdict len=28>
+│  │  ├─ _has_started_up <bool> = True
+│  │  ├─ _process_cooldown_handle <ElementHandle> = <ElementHandle len=5>
+│  │  ├─ _processing_node <NoneType> = <None>
+│  │  ├─ _processor <ElementHandle> = <ElementHandle len=5>
+│  │  ├─ _processor_weekly_schedule <ElementHandle> = <ElementHandle len=5>
+│  │  ├─ _scheduled_nodes <dict> = <dict len=396>
+│  │  ├─ _startup_buckets_used <set> = <set len=34>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ processing_node <NoneType> = <None>
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ dust_service <DustService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ DUST_COMMODITIES_TO_REMOVE <tuple> = <tuple len=3>
+│  │  ├─ MIN_AREA_REQUIRED_TO_ADD_DUST_COMMODITY <float> = 0.0
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=7>
+│  │  ├─ OBJECT_TAGS_TO_RECLAIM <frozenset> = <frozenset len=4>
+│  │  ├─ TESTS_TO_ENABLE <TestList> = <TestList len=1>
+│  │  ├─ ZONE_MODIFIERS <frozenset> = <frozenset len=1>
+│  │  ├─ ZONE_MODIFIERS_WHEN_DISABLED <frozenset> = <frozenset len=1>
+│  │  ├─ _active_on_zone <bool> = False
+│  │  ├─ _game_option_enabled <bool> = False
+│  │  ├─ can_incremental_start <bool> = False
+│  │  ├─ game_option_enabled <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ dynamic_area_service <DynamicAreaService>
+│  │  ├─ EXTERIOR_AREA_TYPE <DynamicAreaType>
+│  │    (DynamicAreaType 枚举值 × 5，首见 services.current_zone().dynamic_area_service.EXTER)
+│  │  │  ├─ _enum_export_path <str> = "dynamic_areas-dynamic_area_enums.DynamicAreaType"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "DynamicAreaType"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "BUSINESS_PUBLIC"
+│  │  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=5>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ AREA_TYPE_OBJECT_TAG <frozendict> = <frozendict len=3>
+│  │  ├─ DYNAMIC_AREA_AUTONOMY_RESTRICTION <tuple> = <tuple len=2>
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=5>
+│  │  ├─ PORTALS_EXCLUSIONS <tuple> = <tuple len=2>
+│  │  ├─ PORTALS_TRANSITION_OVERRIDE <tuple> = <tuple len=1>
+│  │  ├─ _areas <list> = <list len=3>
+│  │  ├─ _is_in_build_buy <bool> = False
+│  │  ├─ _is_registered_to_callbacks <bool> = True
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ ensemble_service <EnsembleService>
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _ensemble_service_data <NoneType> = <None>
+│  │  ├─ _ensembles <defaultdict> = <defaultdict len=1>
+│  │  ├─ can_incremental_start <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ fire_service <FireService>
+│    (13 种类型全部 None — _burning_objects, _fire_alarm_alarm, _fire_brigade_situation_id, _fire_quadtree, _fire_spread_alarm…)
+│     (省略 8 个子属性…)
+│  │  ├─ FIRE_ALARM_OBJECT_DEF <Definition> → 见 services.active_household().bills_manager.BILL_OBJECT
+│  │  ├─ FIRE_CAN_SPREAD_TO_SIM_TESTS <CompoundTestList> → 见 services.active_household().client.active_sim._school.school_data_tests
+│  │  ├─ FIRE_INSURANCE_CLAIM_MULTIPLIERS <TunableMultiplier> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._lifesty
+│  │  ├─ FIRE_OBJECT_DEF <Definition> → 见 services.active_household().bills_manager.BILL_OBJECT
+│  │  ├─ FIRE_OBJECT_SPREAD_CHANCE <TunableMultiplier> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._lifesty
+│  │  ├─ FIRE_PLACEMENT_RANGE <TunedInterval> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._degree_
+│  │  ├─ FIRE_SIM_ON_FIRE_CHANCE <SuccessChance>
+│  │  │  ├─ ONE <SuccessChance> → 见 services.current_zone().fire_service.FIRE_SIM_ON_FIRE_CHANCE
+│  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=2>
+│  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <NoneType> = <None>
+│  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=2>
+│  │  │  ├─ base_chance <float> = 1.0
+│  │  │  └─ multipliers <tuple> = <tuple len=2>
+│  │  ├─ SPRINKLER_BOX_OBJECT_TAG <Tag> → 见 services.current_zone().RESTRICTED_AUTONOMY_AREA_TAG
+│  │  ├─ SPRINKLER_FLOOR_OBJECT_TAG <Tag> → 见 services.current_zone().RESTRICTED_AUTONOMY_AREA_TAG
+│  │  ├─ SPRINKLER_HEAD_OBJECT_DEF <Definition> → 见 services.active_household().bills_manager.BILL_OBJECT
+│  │  ├─ _activated_fire_alarms <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _fire_alarm_objects <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _fire_objects <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _fire_objects_being_suppressed <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ _flammable_objects_quadtree <QuadTree>
+│  │  ├─ _unsuppressible_fires <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  │  ├─ flammable_objects_quadtree <QuadTree> → 见 services.current_zone().fire_service._flammable_objects_quadtree
+│  │  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  │  ├─ ARSONIST_PERK_BASE_MULTIPLIER <int> = 1
+│  │  ├─ FIRE_ALARM_ACTIVATION_RADIUS <float> = 10.0
+│  │  ├─ FIRE_ALARM_CYCLE_TIME <int> = 3
+│  │  ├─ FIRE_EXTNIGUISH_NEARBY_RADIUS <float> = 1.1
+│  │  ├─ FIRE_INSURANCE_CLAIM_PERCENTAGE <float> = 0.5
+│  │  ├─ FIRE_PANIC_BUFFS <tuple> = <tuple len=2>
+│  │  ├─ FIRE_QUADTREE_RADIUS <float> = 0.4
+│  │  ├─ FIRE_RETARDANT_EXTRA_OBJECT_RADIUS <float> = 0.2
+│  │  ├─ FIRE_SPREAD_CHANCE <float> = 1.0
+│  │  ├─ FIRE_SPREAD_HEIGHT_THRESHOLD <float> = 0.5
+│  │  ├─ FIRE_SPREAD_INTIAL_TIME_IN_SIM_MINUTES <int> = 30
+│  │  ├─ FIRE_SPREAD_REPEATING_TIME_IN_SIM_MINUTES <int> = 13
+│  │  ├─ FIRE_STRENGTH_COMMODITY_SUPRESSION_DECAY <float> = 20.0
+│  │  ├─ FLAMMABLE_COMMODITY_BURNT_VALUE <int> = 0
+│  │  ├─ FLAMMABLE_COMMODITY_DECAY_PER_FIRE <float> = 2.0
+│  │  ├─ IMMEDIATE_SUPPRESSION_RATE <float> = 100.0
+│  │  ├─ MAX_NUM_ATTEMPTS_TO_PLACE_FIRE <int> = 10
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=54>
+│  │  ├─ PERK_EVENTS <tuple> = <tuple len=1>
+│  │  ├─ ROUTING_FIRE_CHECK_RADIUS <float> = 0.2
+│  │  ├─ SCORCH_TERRAIN_CLEANUP_HOUR <int> = 4
+│  │  ├─ SCORCH_TERRAIN_CLEANUP_RADIUS <float> = 2.5
+│  │  ├─ SPRINKLER_ACTIVATION_TIME <int> = 20
+│  │  ├─ SPRINKLER_FLOOR_SUPPRESSION_RADIUS <float> = 1.5
+│  │  ├─ SPRINKLER_HEAD_CEILING_OFFSET <float> = 0.1
+│  │  ├─ SPRINKLER_HEAD_SUPPRESSION_RADIUS <float> = 3.0
+│  │  ├─ SPRINKLER_PUDDLE_CHANCE <int> = 30
+│  │  ├─ SPRINKLER_RUN_TIME <int> = 5
+│  │  ├─ _alerted_sims <bool> = False
+│  │  └─ _arsonist_perk_multiplier <int> = 1
+│  ├─ FESTIVAL_AUTONOMY_AREA_POINT_COUNT <int> = 4
+│  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  ├─ _dynamic_spawn_points <dict> = <dict len=2>
+│  ├─ _first_visit_to_zone <bool> = False
+│  ├─ _gc_full_count <int> = 0
+│  ├─ _items_to_move_to_inventory <dict> = <dict len=0>
+│  ├─ _save_slot_data_id <int> = 15
+│  ├─ _should_perform_deferred_front_door_check <bool> = False
+│  ├─ _time_of_last_open_street_save <DateAndTime> = 08:50:51.520 day:2 week:11
+│  ├─ _time_of_last_save <DateAndTime> = 08:50:51.520 day:2 week:11
+│  ├─ _time_of_zone_spin_up <DateAndTime> = 08:50:51.520 day:2 week:11
+│  ├─ _world_spawn_points <dict> = <dict len=7>
+│  ├─ _zone_state_callbacks <dict> = <dict len=1>
+│  ├─ animate_instantly <bool> = False
+│  ├─ are_sims_hitting_their_marks <bool> = False
+│  ├─ current_navmesh_fence_id <int> = 2
+│  ├─ entitlement_unlock_handlers <dict> = <dict len=0>
+│  ├─ force_process_transitions <bool> = False
+│  ├─ force_route_instantly <bool> = False
+│  ├─ have_households_and_sim_infos_loaded <bool> = True
+│  ├─ id <int> = 984624028664234928
+│  ├─ is_active_lot_clearing <bool> = False
+│  ├─ is_first_visit_to_zone <bool> = False
+│  ├─ is_in_build_buy <bool> = False
+│  ├─ is_instantiated <bool> = True
+│  ├─ is_zone_loading <bool> = False
+│  ├─ is_zone_running <bool> = True
+│  ├─ is_zone_shutting_down <bool> = False
+│  ├─ navmesh_alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF4F0475B90>
+│  └─ navmesh_id <int> = 5
+├─ affordance_manager() <InteractionInstanceManager>
+│  ├─ TYPE <Types>
+│    (Types 枚举值 × 176，首见 services.affordance_manager().TYPE)
+│  │  ├─ _enum_export_path <str> = "sims4-resources.Types"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "Types"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = False
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "INTERACTION"
+│  │  ├─ name_to_value <dict> = <dict len=176>
+│  │  ├─ numerator <int> = 3900887599
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 3900887599
+│  │  ├─ value <int> = 3900887599
+│  │  └─ value_to_name <dict> = <dict len=176>
+│  ├─ PATH <str> = "E:\The Sims 4\Data\Simulation\Data\Interactions"
+│  ├─ _ac_cache <dict> = <dict len=0>
+│  ├─ _base_game_only <bool> = False
+│  ├─ _callback_helper <dict> = <dict len=0>
+│  ├─ _class_templates <list> = <list len=0>
+│  ├─ _current_group_id <int> = 0
+│  ├─ _key_groupid_dict <dict> = <dict len=0>
+│  ├─ _load_all_complete <bool> = True
+│  ├─ _pack_resources <NoneType> = <None>
+│  ├─ _remapped_keys <dict> = <dict len=28531>
+│  ├─ _require_reference <bool> = True
+│  ├─ _tuned_classes <dict> = <dict len=53614>
+│  ├─ _tuning_dependencies_cache <NoneType> = <None>
+│  ├─ _use_guid_for_ref <bool> = True
+│  ├─ _verify_tunable_callback_helper <dict> = <dict len=0>
+│  ├─ all_instances_loaded <bool> = True
+│  ├─ base_game_only <bool> = False
+│  ├─ is_instanced_class_tuning_manager <bool> = False
+│  ├─ load_time <int> = 0
+│  ├─ pending_reload_inst_ids <set> = <set len=0>
+│  ├─ remapped_keys <dict> = <dict len=28531>
+│  ├─ require_reference <bool> = True
+│  ├─ types <dict> = <dict len=53614>
+│  └─ use_guid_for_ref <bool> = True
+├─ game_clock_service() <GameClock>
+│  ├─ _clock_speed <ClockSpeedMode>
+│    (ClockSpeedMode 枚举值 × 6，首见 services.game_clock_service()._clock_speed)
+│  │  ├─ _enum_export_path <str> = "clock.ClockSpeedMode"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "ClockSpeedMode"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "NORMAL"
+│  │  ├─ name_to_value <dict> = <dict len=6>
+│  │  ├─ numerator <int> = 1
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 1
+│  │  ├─ value <int> = 1
+│  │  └─ value_to_name <dict> = <dict len=6>
+│  ├─ _clock_speed_multiplier_type <ClockSpeedMultiplierType>
+│    (ClockSpeedMultiplierType 枚举值 × 3，首见 services.game_clock_service()._clock_speed_multipl)
+│    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _enum_export_path <str> = "clock.ClockSpeedMultiplierType"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ _static_index <int> = 1
+│  │  ├─ cache_key <str> = "ClockSpeedMultiplierType"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = True
+│  │  ├─ name <str> = "DEFAULT"
+│  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  ├─ numerator <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 0
+│  │  ├─ value <int> = 0
+│  │  └─ value_to_name <dict> = <dict len=3>
+│  ├─ _non_ui_clock_speed <ClockSpeedMode> → 见 services.game_clock_service()._clock_speed
+│  ├─ clock_speed <ClockSpeedMode> → 见 services.game_clock_service()._clock_speed
+│  ├─ clock_speed_multiplier_type <ClockSpeedMultiplierType> → 见 services.game_clock_service()._clock_speed_multiplier_type
+│  ├─ persistable_clock_speed <ClockSpeedMode> → 见 services.game_clock_service()._clock_speed
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ MAX_GAME_CLOCK_TICK_STEP <int> = 5000
+│  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  ├─ NORMAL_SPEED_MULTIPLIER <int> = 1
+│  ├─ PAUSED_SPEED_MULTIPLIER <int> = 0
+│  ├─ SECONDS_BETWEEN_CLOCK_BROADCAST <int> = 5
+│  ├─ _clock_speed_multiplier_type_override <NoneType> = <None>
+│  ├─ _error_debt <int> = 0
+│  ├─ _game_clock <Clock> = <Clock> <clock.Clock object at 0x00007FF3B6CD6FA0>
+│  ├─ _initial_server_ticks <int> = 436424156603
+│  ├─ _initial_ticks <int> = 171436288
+│  ├─ _last_speed_change_server_time <int> = 436424221844
+│  ├─ _loading_monotonic_ticks <int> = 5940
+│  ├─ _previous_absolute_ticks <int> = 436424332538
+│  ├─ _server_ticks_spent_in_speed <Counter> = <Counter len=3>
+│  ├─ _tick_to_next_message <int> = 436424336186
+│  ├─ can_incremental_start <bool> = False
+│  ├─ ignore_game_speed_requests <bool> = False
+│  ├─ required_packs <tuple> = <tuple len=1>
+│  └─ speed_controllers <defaultdict> = <defaultdict len=4>
+├─ drama_scheduler_service() <DramaScheduleService> → 见 services.current_zone().drama_schedule_service
+├─ calendar_service() <CalendarService> → 见 services.current_zone().calendar_service
+├─ lunar_cycle_service() <LunarCycleService>
+│  ├─ _current_phase <LunarPhaseType>
+│    (LunarPhaseType 枚举值 × 8，首见 services.lunar_cycle_service()._current_phase)
+│  │  ├─ _enum_export_path <str> = "lunar_cycle-lunar_cycle_enums.LunarPhaseType"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "LunarPhaseType"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "FULL_MOON"
+│  │  ├─ name_to_value <dict> = <dict len=8>
+│  │  ├─ numerator <int> = 4
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 4
+│  │  ├─ value <int> = 4
+│  │  └─ value_to_name <dict> = <dict len=8>
+│  ├─ _cycle_length_selected <LunarCycleLengthOption>
+│    (LunarCycleLengthOption 枚举值 × 5，首见 services.lunar_cycle_service()._cycle_length_selec)
+│  │  ├─ _enum_export_path <str> = "lunar_cycle-lunar_cycle_enums.LunarCycleLengthOption"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "LunarCycleLengthOption"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "FULL_LENGTH"
+│  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  ├─ numerator <int> = 2
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 2
+│  │  ├─ value <int> = 2
+│  │  └─ value_to_name <dict> = <dict len=5>
+│  ├─ _lunar_phase_aware_objects <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ _phase_lock <LunarPhaseLockedOption>
+│    (LunarPhaseLockedOption 枚举值 × 9，首见 services.lunar_cycle_service()._phase_lock)
+│  │  ├─ _enum_export_path <str> = "lunar_cycle-lunar_cycle_enums.LunarPhaseLockedOption"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "LunarPhaseLockedOption"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = False
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "FULL_MOON"
+│  │  ├─ name_to_value <dict> = <dict len=9>
+│  │  ├─ numerator <int> = 4
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 4
+│  │  ├─ value <int> = 4
+│  │  └─ value_to_name <dict> = <dict len=9>
+│  ├─ current_phase <LunarPhaseType> → 见 services.lunar_cycle_service()._current_phase
+│  ├─ cycle_length_selected <LunarCycleLengthOption> → 见 services.lunar_cycle_service()._cycle_length_selected
+│  ├─ locked_phase <LunarPhaseLockedOption> → 见 services.lunar_cycle_service()._phase_lock
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ _active_effects <dict> = <dict len=7>
+│  ├─ _daily_phase_check_handler <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3DC4732D8>
+│  ├─ _effect_alarms <dict> = <dict len=2>
+│  ├─ _forecasts <dict> = <dict len=0>
+│  ├─ _lunar_cycle_timeline <Timeline> = <Timeline> <scheduling.Timeline object at 0x00007FF3AD0F4B90>
+│  ├─ _lunar_effects_disabled <bool> = False
+│  ├─ _region_supports_lunar_cycle <bool> = True
+│  ├─ _start_of_phase <DateAndTime> = 07:00:00.000 day:0 week:11
+│  ├─ can_incremental_start <bool> = False
+│  ├─ current_phase_start <DateAndTime> = 07:00:00.000 day:0 week:11
+│  ├─ lunar_effects_disabled <bool> = False
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ get_zone_situation_manager() <SituationManager>
+  (5 种类型全部 None — _arriving_situation_seed, _departing_situation_seed, _pause_handle, _sim_being_created, sim_being_created)
+   (省略 2 个子属性…)
+│  ├─ SUPER_SPEED_THREE_REQUEST_BUFF <BuffReference> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  ├─ _bouncer <Bouncer>
+│  │  ├─ _update_mode <_BouncerUpdateMode>
+│  │    (_BouncerUpdateMode 枚举值 × 2，首见 services.get_zone_situation_manager()._bouncer._up)
+│  │  │  ├─ _enum_export_path <str> = "situations-bouncer-bouncer._BouncerUpdateMode"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "_BouncerUpdateMode"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "FULLY_OPERATIONAL"
+│  │  │  ├─ name_to_value <dict> = <dict len=2>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=2>
+│  │  ├─ EXCLUSIVITY_RULES <list> = <list len=189>
+│  │  ├─ INDEXES_PER_BOUNCER_REQUEST_PRIORITY <int> = 4
+│  │  ├─ MAX_UNFULFILLED_INDEX <int> = 40
+│  │  ├─ SPAWN_COOLDOWN_MINUTES <int> = 5
+│  │  ├─ _cap_cheat_enabled <bool> = False
+│  │  ├─ _exclusivity_rules <dict> = <dict len=189>
+│  │  ├─ _fulfilled_requests <list> = <list len=38>
+│  │  ├─ _reserved_sims <defaultdict> = <defaultdict len=0>
+│  │  ├─ _sim_filter_service_in_progress <bool> = False
+│  │  ├─ _sim_to_bouncer_sim_data <dict> = <dict len=11>
+│  │  ├─ _situation_id_for_filter_gsi <int> = 151458706627952741
+│  │  ├─ _situation_to_bouncer_situation_data <dict> = <dict len=11>
+│  │  ├─ _spawning_freeze_enabled <bool> = False
+│  │  └─ _unfulfilled_requests <list> = <list len=40>
+│  ├─ bouncer <Bouncer> → 见 services.get_zone_situation_manager()._bouncer
+│  ├─ id_object_pairs <dict_items> → 见 services.sim_info_manager().id_object_pairs
+│  ├─ ids <dict_keys> → 见 services.sim_info_manager().ids
+│  ├─ objects <dict_values> → 见 services.sim_info_manager().objects
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ EXTERNAL_AUTONOMY_DISCOURAGEMENT_MULTIPLIER <float> = 0.1
+│  ├─ LEAVE_INTERACTION_TAGS <frozenset> = <frozenset len=1>
+│  ├─ MODULE_TUNABLES <dict> = <dict len=10>
+│  ├─ MULTI_INSTANCE_SITUATION_DISPLAY_TYPES <frozenset> = <frozenset len=3>
+│  ├─ SITUATION_CATEGORY_PLAYER_PLANNED_DRAMA_NODE <frozendict> = <frozendict len=5>
+│  ├─ _added_to_distributor <set> = <set len=3>
+│  ├─ _callbacks <defaultdict> = <defaultdict len=0>
+│  ├─ _debug_sims <set> = <set len=0>
+│  ├─ _delay_situation_destruction_ref_count <int> = 0
+│  ├─ _layers_resolved <bool> = True
+│  ├─ _leave_situation_id <int> = 712156601687151034
+│  ├─ _loaded_layers <defaultdict> = <defaultdict len=0>
+│  ├─ _objects <dict> = <dict len=15>
+│  ├─ _objects_to_be_removed <list> = <list len=0>
+│  ├─ _open_street_seeds_for_zone_spinup <list> = <list len=3>
+│  ├─ _perf_test_cheat_enabled <bool> = False
+│  ├─ _player_greeted_situation_id <int> = 0
+│  ├─ _player_waiting_to_be_greeted_situation_id <int> = 0
+│  ├─ _registered_callbacks <dict> = <dict len=3>
+│  ├─ _requested_layers <defaultdict> = <defaultdict len=0>
+│  ├─ _sim_assignment_complete <bool> = True
+│  ├─ _sim_data <dict> = <dict len=15>
+│  ├─ _situations_for_delayed_destruction <set> = <set len=0>
+│  ├─ _zone_seeds_for_zone_spinup <list> = <list len=2>
+│  ├─ _zone_spin_up_greeted_complete <bool> = False
+│  ├─ auto_manage_distributor <bool> = False
+│  ├─ can_incremental_start <bool> = False
+│  ├─ id <int> = 5
+│  ├─ required_packs <tuple> = <tuple len=1>
+│  └─ sim_assignment_complete <bool> = True
+├─ sim_spawner_service() <SimSpawnerService>
+│  ├─ _mode <_SpawningMode>
+│    (_SpawningMode 枚举值 × 4，首见 services.sim_spawner_service()._mode)
+│  │  ├─ _enum_export_path <str> = "sims-sim_spawner_service._SpawningMode"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ cache_key <str> = "_SpawningMode"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = False
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = False
+│  │  ├─ name <str> = "UPDATE"
+│  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  ├─ numerator <int> = 3
+│  │  ├─ offset <int> = 0
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = 3
+│  │  ├─ value <int> = 3
+│  │  └─ value_to_name <dict> = <dict len=4>
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ COUNT_NPCS_COOLDOWN_MINUTES <int> = 5
+│  ├─ LEAVING_INTERACTION_TAGS <frozenset> = <frozenset len=2>
+│  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  ├─ NPC_SOFT_CAP <int> = 20
+│  ├─ SPAWN_COOLDOWN_MINUTES <int> = 5
+│  ├─ SPAWN_COOLDOWN_TIME <float> = 5.0
+│  ├─ _cap_cheat_enabled <bool> = False
+│  ├─ _gui_smoke_notification_enabled <bool> = False
+│  ├─ _listening_requests <list> = <list len=0>
+│  ├─ _next_npc_count_time <DateAndTime> = 10:12:24.160 day:2 week:11
+│  ├─ _next_spawn_time <DateAndTime> = 10:10:45.400 day:2 week:11
+│  ├─ _npc_cap_modifier <int> = 0
+│  ├─ _npc_count_cooldown <TimeSpan> = <TimeSpan> 5.00 minutes
+│  ├─ _npc_soft_cap_override <NoneType> = <None>
+│  ├─ _number_of_instantiated_npcs <int> = 3
+│  ├─ _number_of_leaving_npcs <int> = 2
+│  ├─ _prune_and_sort_submitted_requests_override <NoneType> = <None>
+│  ├─ _sim_cooldowns <dict> = <dict len=0>
+│  ├─ _spawn_cooldown <TimeSpan> = <TimeSpan> 5.00 minutes
+│  ├─ _spawning_requests <list> = <list len=0>
+│  ├─ _submitted_needs_sorting <bool> = False
+│  ├─ _submitted_requests <list> = <list len=0>
+│  ├─ batch_spawning_complete <bool> = True
+│  ├─ can_incremental_start <bool> = False
+│  ├─ npc_soft_cap <int> = 12
+│  ├─ number_of_npcs_instantiated <int> = 3
+│  ├─ number_of_npcs_leaving <int> = 2
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ ui_dialog_service() <UiDialogService>
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ _active_dialogs <dict> = <dict len=5>
+│  ├─ _auto_respond <bool> = False
+│  ├─ _auto_respond_alarm_handles <dict> = <dict len=0>
+│  ├─ _enabled <bool> = True
+│  ├─ _is_phone_silenced <bool> = True
+│  ├─ _tns_configs <dict> = <dict len=48>
+│  ├─ auto_respond <bool> = False
+│  ├─ can_incremental_start <bool> = False
+│  ├─ is_phone_silenced <bool> = True
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ privacy_service() <PrivacyService>
+│  ├─ _potential_vehicles_to_check <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ _privacy_instances <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ privacy_instances <WeakSet> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._account
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ can_incremental_start <bool> = False
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ weather_service() <WeatherService>
+  (6 种类型全部 None — _lightning_alarm, _lightning_collectible_alarm, _override_forecast, _override_forecast_season, _puddle_alarm…)
+   (省略 17 个子属性…)
+│  ├─ EXTREME_COLD_WEATHER_TYPE <WeatherType>
+│    (WeatherType 枚举值 × 40，首见 services.weather_service().EXTREME_COLD_WEATHER_TY)
+│    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _enum_export_path <str> = "weather-weather_enums.WeatherType"
+│  │  ├─ _mutable <bool> = False
+│  │  ├─ _static_index <int> = 12
+│  │  ├─ cache_key <str> = "WeatherType"
+│  │  ├─ denominator <int> = 1
+│  │  ├─ display_sorted <bool> = False
+│  │  ├─ export <bool> = True
+│  │  ├─ imag <int> = 0
+│  │  ├─ locked <bool> = True
+│  │  ├─ name <str> = "Freezing"
+│  │  ├─ name_to_value <dict> = <dict len=40>
+│  │  ├─ numerator <int> = -3
+│  │  ├─ partitioned <bool> = False
+│  │  ├─ real <int> = -3
+│  │  ├─ value <int> = -3
+│  │  └─ value_to_name <dict> = <dict len=40>
+│  ├─ EXTREME_HEAT_WEATHER_TYPE <WeatherType> → 见 services.weather_service().EXTREME_COLD_WEATHER_TYPE
+│  ├─ _last_op <SeasonWeatherInterpolations>
+│  │  ├─ DESCRIPTOR <Descriptor> → 见 services.active_household()._reward_inventory.DESCRIPTOR
+│  │  ├─ _HACK_REFCOUNTS <SeasonWeatherInterpolations> → 见 services.weather_service()._last_op
+│  │  ├─ _cmsg <CMessage> → 见 services.active_household()._reward_inventory._cmsg
+│  │  ├─ message_descriptor <Descriptor> → 见 services.active_household()._reward_inventory.DESCRIPTOR
+│  │  ├─ season_weather_interlops <RepeatedCompositeContainer> → 见 services.active_household()._reward_inventory.reward_parts
+│  │  ├─ SEASON_WEATHER_INTERLOPS_FIELD_NUMBER <int> = 1
+│  │  ├─ _composite_fields <dict> = <dict len=1>
+│  │  └─ _extensions_by_name <dict> = <dict len=0>
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ ACTIVE_LIGHTNING <ImmutableSlots> = <ImmutableSlots len=1>
+│  ├─ COUNTS_AS_SHADE <frozenset> = <frozenset len=1>
+│  ├─ FROST_GROUND_ACCUMULATION_MAX <float> = 0.1
+│  ├─ FROST_WINDOW_MELT_RATE <ImmutableSlots> = <ImmutableSlots len=6>
+│  ├─ ICY_CONDITIONS <ImmutableSlots> = <ImmutableSlots len=5>
+│  ├─ MODULE_TUNABLES <dict> = <dict len=29>
+│  ├─ OUTDOOR_AUTONOMY_RAIN_PENALTIES <tuple> = <tuple len=4>
+│  ├─ OUTDOOR_AUTONOMY_RAIN_PENALTY_REDUCTIONS <frozendict> = <frozendict len=3>
+│  ├─ OUTDOOR_AUTONOMY_SNOW_PENALTIES <tuple> = <tuple len=4>
+│  ├─ OUTDOOR_AUTONOMY_SNOW_PENALTY_REDUCTIONS <frozendict> = <frozendict len=4>
+│  ├─ PUDDLES <ImmutableSlots> = <ImmutableSlots len=5>
+│  ├─ SNOW_ACCUMULATION_RATE <float> = 0.016
+│  ├─ SNOW_DRIFT <ImmutableSlots> = <ImmutableSlots len=4>
+│  ├─ SNOW_FRESHNESS_ACCUMULATION_RATE <float> = 0.2
+│  ├─ SNOW_FRESHNESS_DECAY_RATE <float> = 0.02
+│  ├─ SNOW_MELT_RATE <ImmutableSlots> = <ImmutableSlots len=6>
+│  ├─ WATER_ACCUMULATION_RATE <float> = 0.03
+│  ├─ WATER_EVAPORATION_RATE <ImmutableSlots> = <ImmutableSlots len=6>
+│  ├─ WATER_THAW_RATE <ImmutableSlots> = <ImmutableSlots len=6>
+│  ├─ WEATHER_AWARE_TIME_SLICE_SECONDS <float> = 0.1
+│  ├─ WEATHER_ENDING_EVENT <frozendict> = <frozendict len=1>
+│  ├─ WEATHER_OUFTIT_CHANGE_REASONS_TO_IGNORE <frozenset> = <frozenset len=20>
+│  ├─ WEATHER_OUTFIT_TESTS <ImmutableSlots> = <ImmutableSlots len=2>
+│  ├─ WEATHER_TYPE_MULTIPLE_TEST <frozendict> = <frozendict len=9>
+│  ├─ WEATHER_TYPE_UI_INFO <frozendict> = <frozendict len=24>
+│  ├─ _add_message_objects <set> = <set len=0>
+│  ├─ _add_weather_types <set> = <set len=0>
+│  ├─ _current_weather_types <set> = <set len=5>
+│  ├─ _forecast_time <DateAndTime> = 00:00:00.000 day:2 week:11
+│  └─ _forecasts <list> = <list len=1>
+├─ npc_hosted_situation_service() <NPCHostedSituationService>
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  ├─ WELCOME_WAGON_TUNING <ImmutableSlots> = <ImmutableSlots len=4>
+│  ├─ _suspended <bool> = False
+│  ├─ _welcome_wagon_alarm <NoneType> = <None>
+│  ├─ can_incremental_start <bool> = False
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ situation_goal_manager() <InstancedClassManager>
+│  ├─ TYPE <Types> → 见 services.affordance_manager().TYPE
+│  ├─ PATH <str> = "E:\The Sims 4\Data\Simulation\Data\SituationGoals"
+│  ├─ _base_game_only <bool> = False
+│  ├─ _callback_helper <dict> = <dict len=0>
+│  ├─ _class_templates <list> = <list len=0>
+│  ├─ _current_group_id <int> = 0
+│  ├─ _key_groupid_dict <dict> = <dict len=0>
+│  ├─ _load_all_complete <bool> = True
+│  ├─ _remapped_keys <dict> = <dict len=2479>
+│  ├─ _require_reference <bool> = True
+│  ├─ _tuned_classes <dict> = <dict len=5123>
+│  ├─ _tuning_dependencies_cache <NoneType> = <None>
+│  ├─ _use_guid_for_ref <bool> = True
+│  ├─ _verify_tunable_callback_helper <dict> = <dict len=0>
+│  ├─ all_instances_loaded <bool> = True
+│  ├─ base_game_only <bool> = False
+│  ├─ is_instanced_class_tuning_manager <bool> = True
+│  ├─ load_time <int> = 0
+│  ├─ pending_reload_inst_ids <set> = <set len=0>
+│  ├─ remapped_keys <dict> = <dict len=2479>
+│  ├─ require_reference <bool> = True
+│  ├─ types <dict> = <dict len=5123>
+│  └─ use_guid_for_ref <bool> = True
+├─ situation_goal_set_manager() <InstancedClassManager> → 见 services.situation_goal_manager()
+├─ situation_job_manager() <InstancedClassManager> → 见 services.situation_goal_manager()
+├─ sim_filter_service() <SimFilterService>
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ _filter_requests <list> = <list len=0>
+│  ├─ _global_blacklist <dict> = <dict len=1>
+│  ├─ can_incremental_start <bool> = False
+│  ├─ is_processing_request <bool> = False
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ venue_service() <VenueService>
+  (9 种类型全部 None — _open_street_director_requests, _persisted_background_event_id, _persisted_special_event_id, _prior_open_street_director_proto, _prior_zone_director_proto…)
+│  ├─ _active_venue <venue_residential>
+│    (15 种类型全部 None — _active_background_event_id, _active_special_event_id, _civic_policy_provider, _club_gathering_schedule, active_background_event_id…)
+│     (省略 12 个子属性…)
+│  │  ├─ _background_event_schedule <SituationWeeklySchedule>
+│  │    (7 种类型全部 None — _alarm_handle, _cooldown_time, _early_warning_alarm_handle, _early_warning_callback, _early_warning_time_span…)
+│  │  │  ├─ _alarm_data <dict> = <dict len=0>
+│  │  │  ├─ _cross_zone <bool> = False
+│  │  │  ├─ _random_alarm_handles <list> = <list len=0>
+│  │  │  ├─ _schedule_entries <set> = <set len=0>
+│  │  │  └─ _schedule_entry_tuning <tuple> = <tuple len=0>
+│  │  ├─ _special_event_schedule <SituationWeeklySchedule> → 见 services.venue_service()._active_venue._background_event_schedule
+│  │  ├─ display_name <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ display_name_incomplete <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ display_name_with_tier <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ is_vacation_venue <VenueFlags>
+│  │    (VenueFlags 枚举值 × 4，首见 services.venue_service()._active_venue.is_vacation)
+│  │  │  ├─ _enum_export_path <str> = "venues-venue_enums.VenueFlags"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "VenueFlags"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "NONE"
+│  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  ├─ new_venue_type_button_headline_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ new_venue_type_dialog_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ new_venue_type_headline_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ tier_banner_max_fail_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ tier_banner_min_fail_text <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ tuning_manager <InstanceManager> → 见 services.active_household().client.active_sim._posture_state._aspect_body.tuning
+│  │  ├─ venue_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  ├─ venue_flags <VenueFlags> → 见 services.venue_service()._active_venue.is_vacation_venue
+│  │  ├─ venue_requires_front_door <VenueFrontdoorRequirement>
+│  │    (VenueFrontdoorRequirement 枚举值 × 3，首见 services.venue_service()._active_venue.venue_requi)
+│  │  │  ├─ _enum_export_path <str> = "objects-doors-door_enums.VenueFrontdoorRequirement"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "VenueFrontdoorRequirement"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "ALWAYS"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ venue_type <VenueTypes>
+│  │    (VenueTypes 枚举值 × 11，首见 services.venue_service()._active_venue.venue_type)
+│  │  │  ├─ _enum_export_path <str> = "venues-venue_enums.VenueTypes"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "VenueTypes"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = True
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "RESIDENTIAL"
+│  │  │  ├─ name_to_value <dict> = <dict len=11>
+│  │  │  ├─ numerator <int> = 1
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 1
+│  │  │  ├─ value <int> = 1
+│  │  │  └─ value_to_name <dict> = <dict len=11>
+│  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=52>
+│  │  ├─ MODULE_TUNABLES <dict> = <dict len=2>
+│  │  ├─ NEW_VENUE_DIALOG_SPECIAL_CASES <tuple> = <tuple len=1>
+│  │  ├─ NEW_VENUE_TUNING_GROUP <str> = "New Venue Dialog"
+│  │  ├─ allow_game_triggered_events <bool> = True
+│  │  ├─ allow_rolestate_routing_on_navmesh <bool> = False
+│  │  ├─ allow_super_speed_three <bool> = True
+│  │  ├─ allowed_for_clubs <bool> = True
+│  │  ├─ allows_fire <bool> = False
+│  │  ├─ automatic_objects <tuple> = <tuple len=1>
+│  │  ├─ category_tags <tuple> = <tuple len=0>
+│  │  ├─ display_venue_features <tuple> = <tuple len=0>
+│  │  ├─ drama_node_events <tuple> = <tuple len=0>
+│  │  ├─ drama_node_events_to_schedule <int> = 1
+│  │  ├─ exclude_owned_objects_in_lot_value_calculation <bool> = False
+│  │  ├─ forbidden_objects <tuple> = <tuple len=0>
+│  │  ├─ guid <int> = 161985733
+│  │  ├─ guid64 <int> = 28614
+│  │  ├─ hide_from_buildbuy_ui <bool> = False
+│  │  ├─ included_venues_for_club_gathering <tuple> = <tuple len=1>
+│  │  ├─ is_custom_venue <bool> = False
+│  │  ├─ is_multi_unit <bool> = False
+│  │  ├─ is_rental <bool> = False
+│  │  ├─ is_residential <bool> = True
+│  │  ├─ is_small_business <bool> = False
+│  │  ├─ is_university_housing <bool> = False
+│  │  ├─ new_venue_type_buttons <tuple> = <tuple len=0>
+│  │  ├─ npc_summoning_behavior <frozendict> = <frozendict len=11>
+│  │  ├─ player_requires_visitation_rights <ImmutableSlots> = <ImmutableSlots len=2>
+│  │  └─ reloadable <bool> = True
+│  ├─ _source_venue <venue_residential> → 见 services.venue_service()._active_venue
+│  ├─ _zone_director <zone_director_residential_player>
+│    (12 种类型全部 None — _business_manager, _customer_situation_alarm_handle, _yoga_class_schedule, business_manager, disallow_familiars…)
+│     (省略 21 个子属性…)
+│  │  ├─ _fan_situations_manager <FanSituationManager>
+│  │  │  ├─ _celebrity_container_situation <situation_FanStan_CelebritySims>
+│  │  │    (56 种类型全部 None — _default_job, _duration_alarm_handle, _dynamic_goals, _ensemble, _ensemble_data…)
+│  │  │     (省略 102 个子属性…)
+│  │  │  │  ├─ SET_JOB_UNIFORM_TEST <CompoundTestList> → 见 services.active_household().client.active_sim._school.school_data_tests
+│  │  │  │  ├─ _buff <BuffReference> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ _cur_state <_SimBackgroundSituationMainState>
+│  │  │  │  │  ├─ owner <situation_FanStan_CelebritySims> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  │  ├─ _active <bool> = True
+│  │  │  │  │  ├─ _alarms <dict> = <dict len=0>
+│  │  │  │  │  └─ _registered_test_events <set> = <set len=0>
+│  │  │  │  ├─ _display_name <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ _goal_tracker <SituationGoalTracker>
+│  │  │  │  │  ├─ _situation <situation_FanStan_CelebritySims> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  │  ├─ MAX_MINOR_GOALS <int> = 3
+│  │  │  │  │  ├─ _completed_goals <dict> = <dict len=0>
+│  │  │  │  │  ├─ _goal_chains <list> = <list len=0>
+│  │  │  │  │  ├─ _has_offered_goals <bool> = True
+│  │  │  │  │  ├─ _inherited_target_sim_info <NoneType> = <None>
+│  │  │  │  │  ├─ _main_goal_completed <bool> = False
+│  │  │  │  │  ├─ _realized_main_goal <NoneType> = <None>
+│  │  │  │  │  ├─ _realized_minor_goals <dict> = <dict len=0>
+│  │  │  │  │  └─ constrained_goals <set> = <set len=0>
+│  │  │  │  ├─ _guest_list <SituationGuestList>
+│  │  │  │  │  ├─ _host_sim_id <int> = 0
+│  │  │  │  │  ├─ _invite_only <bool> = False
+│  │  │  │  │  ├─ _job_type_to_guest_infos <dict> = <dict len=0>
+│  │  │  │  │  ├─ filter_requesting_sim_id <int> = 0
+│  │  │  │  │  ├─ guest_info_count <int> = 0
+│  │  │  │  │  ├─ host_sim <NoneType> = <None>
+│  │  │  │  │  ├─ host_sim_id <int> = 0
+│  │  │  │  │  ├─ host_sim_info <NoneType> = <None>
+│  │  │  │  │  ├─ invite_only <bool> = False
+│  │  │  │  │  └─ job_type_to_guest_infos <dict> = <dict len=0>
+│  │  │  │  ├─ _seed <SituationSeed>
+│  │  │  │    (26 种类型全部 None — _complex, _creation_source, _duration_override, _goal_tracker, _guest_attire_color…)
+│  │  │  │  │  ├─ _guest_list <SituationGuestList> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  │  ├─ _purpose <SeedPurpose>
+│  │  │  │  │    (SeedPurpose 枚举值 × 4，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ guest_list <SituationGuestList> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  │  ├─ purpose <SeedPurpose> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  │  ├─ _allow_creation <bool> = True
+│  │  │  │  │  ├─ _allow_time_jump <bool> = False
+│  │  │  │  │  ├─ _apply_appearance_modifier <bool> = False
+│  │  │  │  │  ├─ _job_data <dict> = <dict len=0>
+│  │  │  │  │  ├─ _linked_sim_id <int> = 0
+│  │  │  │  │  ├─ _main_goal_visibility <bool> = True
+│  │  │  │  │  ├─ _score <int> = 0
+│  │  │  │  │  ├─ _scoring_enabled <bool> = True
+│  │  │  │  │  ├─ _situation_id <int> = 151458706627952741
+│  │  │  │  │  ├─ _spawn_sims_during_zone_spin_up <bool> = False
+│  │  │  │  │  ├─ _start_time <DateAndTime> = 01:14:40.640 day:5 week:1220022756197
+│  │  │  │  │  ├─ _user_facing <bool> = False
+│  │  │  │  │  ├─ _zone_id <int> = 0
+│  │  │  │  │  ├─ allow_creation <bool> = True
+│  │  │  │  │  ├─ allow_time_jump <bool> = False
+│  │  │  │  │  ├─ apply_appearance_modifier <bool> = False
+│  │  │  │  │  ├─ extra_kwargs <dict> = <dict len=0>
+│  │  │  │  │  ├─ has_user_defined_outfit <bool> = False
+│  │  │  │  │  ├─ host_sim_id <int> = 0
+│  │  │  │  │  ├─ is_loadable <bool> = False
+│  │  │  │  │  ├─ linked_sim_id <int> = 0
+│  │  │  │  │  ├─ main_goal_visibility <bool> = True
+│  │  │  │  │  ├─ score <int> = 0
+│  │  │  │  │  ├─ scoring_enabled <bool> = True
+│  │  │  │  │  ├─ situation_id <int> = 151458706627952741
+│  │  │  │  │  ├─ spawn_sims_during_zone_spin_up <bool> = False
+│  │  │  │  │  ├─ user_facing <bool> = False
+│  │  │  │  │  └─ zone_id <int> = 0
+│  │  │  │  ├─ _stage <SituationStage>
+│  │  │  │    (SituationStage 枚举值 × 5，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationStage"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SituationStage"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = False
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "RUNNING"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 2
+│  │  │  │  │  ├─ value <int> = 2
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=5>
+│  │  │  │  ├─ category <SituationCategoryUid>
+│  │  │  │    (SituationCategoryUid 枚举值 × 11，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │    (3 种类型全部 None — _dynamic_entry_owner, _elements, offset)
+│  │  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationCategoryUid"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ _static_index <int> = 7
+│  │  │  │  │  ├─ cache_key <str> = "SituationCategoryUid"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = True
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = True
+│  │  │  │  │  ├─ name <str> = "DEFAULT"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=11>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=11>
+│  │  │  │  ├─ creation_ui_option <SituationCreationUIOption>
+│  │  │  │    (SituationCreationUIOption 枚举值 × 4，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationCreationUIOption"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SituationCreationUIOption"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "NOT_AVAILABLE"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=4>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=4>
+│  │  │  │  ├─ description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ display_name <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ display_style <SituationDisplayStyle>
+│  │  │  │    (SituationDisplayStyle 枚举值 × 10，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationDisplayStyle"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SituationDisplayStyle"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "DEFAULT"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=10>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=10>
+│  │  │  │  ├─ exclusivity <BouncerExclusivityCategory>
+│  │  │  │    (BouncerExclusivityCategory 枚举值 × 34，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-bouncer-bouncer_types.BouncerExclusivityCategory"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "BouncerExclusivityCategory"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "NON_WALKBY_BACKGROUND"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=34>
+│  │  │  │  │  ├─ numerator <int> = 524288
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 524288
+│  │  │  │  │  ├─ value <int> = 524288
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=34>
+│  │  │  │  ├─ guest_list <SituationGuestList> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  ├─ job_and_role_state <SituationJobAndRoleState>
+│  │  │  │  │  └─ FACTORY_TUNABLES <dict> = <dict len=2>
+│  │  │  │  ├─ location_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ main_objective <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ manager <SituationManager> → 见 services.get_zone_situation_manager()
+│  │  │  │  ├─ sim <situation_FanStan_CelebritySims> → 见 services.venue_service()._zone_director._fan_situations_manager._celebrity_conta
+│  │  │  │  ├─ situation_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ situation_display_priority <SituationDisplayPriority>
+│  │  │  │    (SituationDisplayPriority 枚举值 × 3，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationDisplayPriority"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SituationDisplayPriority"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = False
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "MEDIUM"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 2
+│  │  │  │  │  ├─ value <int> = 2
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  │  │  ├─ situation_display_type <SituationDisplayType>
+│  │  │  │    (SituationDisplayType 枚举值 × 11，首见 services.venue_service()._zone_director._fan_situa)
+│  │  │  │  │  ├─ _enum_export_path <str> = "situations-situation_types.SituationDisplayType"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "SituationDisplayType"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = True
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "NORMAL"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=11>
+│  │  │  │  │  ├─ numerator <int> = 0
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 0
+│  │  │  │  │  ├─ value <int> = 0
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=11>
+│  │  │  │  ├─ situation_location_description <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ situation_main_objective <LocalizedString> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._familia
+│  │  │  │  ├─ AUTOMATIC_BRONZE_TRAITS <tuple> = <tuple len=2>
+│  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=7>
+│  │  │  │  ├─ INSTANCE_SUBCLASSES_ONLY <bool> = True
+│  │  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  ├─ INVALID_STATE_UID <int> = -1
+│  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=1>
+│  │  │  │  ├─ NON_USER_FACING_REMOVE_INSTANCE_TUNABLES <tuple> = <tuple len=41>
+│  │  │  │  ├─ NOTIFICATION_GROUP <str> = "Notifications"
+│  │  │  │  ├─ NPC_HOSTED_SITUATION_AGE_WEIGHTING <frozendict> = <frozendict len=5>
+│  │  │  │  ├─ PLAYABLE_SIMS_SCORE_MULTIPLIER <LinearCurve> = <LinearCurve> <sims4.math.LinearCurve object at 0x00007FF3D02B5948>
+│  │  │  │  ├─ REMOVE_INSTANCE_TUNABLES <set> = <set len=4>
+│  │  │  │  ├─ SITUATION_CREATION_ROLESLOTCELLVIEW_WIDTH <int> = 146
+│  │  │  │  ├─ SITUATION_CREATION_ROLE_PANEL_WIDTH <int> = 809
+│  │  │  │  ├─ SITUATION_EVENT_REMOVE_INSTANCE_TUNABLES <tuple> = <tuple len=40>
+│  │  │  │  ├─ SITUATION_SCORING_REMOVE_INSTANCE_TUNABLES <tuple> = <tuple len=14>
+│  │  │  │  ├─ SITUATION_START_FROM_UI_REMOVE_INSTANCE_TUNABLES <tuple> = <tuple len=10>
+│  │  │  │  ├─ SITUATION_STATE_GROUP <str> = "Situation State"
+│  │  │  │  ├─ SITUATION_USER_FACING_REMOVE_INSTANCE_TUNABLES <tuple> = <tuple len=10>
+│  │  │  │  ├─ STATE_ADVANCEMENT_GROUP <str> = "State Advancement"
+│  │  │  │  ├─ STATE_ID_KEY <str> = "state_id"
+│  │  │  │  ├─ TIMEOUT_GROUP <str> = "Timeout And Time Jump"
+│  │  │  │  ├─ _allow_external_autonomy <bool> = True
+│  │  │  │  ├─ _always_run_situation_ended_events <bool> = False
+│  │  │  │  ├─ _cost <int> = 0
+│  │  │  │  ├─ _guid <int> = 151458706627952742
+│  │  │  │  ├─ _hidden_scoring_override <bool> = False
+│  │  │  │  ├─ _implies_greeted_status <bool> = False
+│  │  │  │  ├─ _initiating_sim_tests <TestList> = <TestList len=0>
+│  │  │  │  ├─ _is_invite_only <bool> = False
+│  │  │  │  └─ _is_unique <bool> = False
+│  │  │  ├─ fan_situations <ShiftlessDesiredSituations>
+│  │  │  │  ├─ _desired_situations <_DesiredSituations>
+│  │  │  │  │  ├─ desired_sim_count <TunedIntervalLiteral>
+│  │  │  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=3>
+│  │  │  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <set> = <set len=1>
+│  │  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=2>
+│  │  │  │  │  ├─ disable_churn <bool> = False
+│  │  │  │  │  └─ weighted_situations <tuple> = <tuple len=0>
+│  │  │  │  ├─ desired_sim_count_multipliers <TunableMultiplier> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._lifesty
+│  │  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=2>
+│  │  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <set> = <set len=2>
+│  │  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=0>
+│  │  │  │  ├─ _additional_count_multiplier <int> = 1
+│  │  │  │  └─ is_shift_churn_disabled <bool> = False
+│  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=5>
+│  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <NoneType> = <None>
+│  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=5>
+│  │  │  ├─ _celebrity_container_situation_id <int> = 151458706627952741
+│  │  │  ├─ _fan_situation_alarm_handle <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3CB057998>
+│  │  │  ├─ _fan_situation_ids <set> = <set len=0>
+│  │  │  ├─ _stan_situation_ids <set> = <set len=0>
+│  │  │  ├─ fan_count_by_fame_level <frozendict> = <frozendict len=3>
+│  │  │  └─ fan_situation_interval <float> = 15.0
+│  │  ├─ _open_street_director_manager <OpenStreetDirectorManager>
+│  │  │  ├─ _active_open_street_director_request <OpenStreetDirectorRequest>
+│  │  │    (5 种类型全部 None — _premature_destruction_callback, _preroll_start_time, _timeout, _timeout_alarm_handle, _timeout_callback)
+│  │  │  │  ├─ _manager <OpenStreetDirectorManager> → 见 services.venue_service()._zone_director._open_street_director_manager
+│  │  │  │  ├─ _open_street_director <openStreetDirector_FameWorld_VIP>
+│  │  │  │    (3 种类型全部 None — reactionary_whim_set, set_host_as, whim_set)
+│  │  │  │  │  ├─ _object_layer_schedule <ObjectLayerWeeklySchedule>
+│  │  │  │  │    (7 种类型全部 None — _alarm_handle, _cooldown_time, _early_warning_alarm_handle, _early_warning_callback, _early_warning_time_span…)
+│  │  │  │  │  ├─ _situation_shifts <SituationShifts>
+│  │  │  │  │    (3 种类型全部 None — AUTO_INIT_KWARGS, AUTO_INIT_OPTIONAL_KWARGS, set_host_as)
+│  │  │  │  │  ├─ priority <OpenStreetDirectorPriority>
+│  │  │  │  │    (OpenStreetDirectorPriority 枚举值 × 3，首见 services.venue_service()._zone_director._open_stre)
+│  │  │  │  │  ├─ request <OpenStreetDirectorRequest> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  │  │  │  ├─ tuning_manager <InstanceManager> → 见 services.active_household().client.active_sim._posture_state._aspect_body.tuning
+│  │  │  │  │  ├─ INSTANCE_SUBCLASSES_ONLY <bool> = True
+│  │  │  │  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=2>
+│  │  │  │  │  ├─ LAYER_OBJECTS_ALARM_TIME <float> = 1.0
+│  │  │  │  │  ├─ LAYER_OBJECTS_TO_DESTROY <int> = 2
+│  │  │  │  │  ├─ LAYER_OBJECTS_TO_LOAD <int> = 5
+│  │  │  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  │  │  │  ├─ _being_cleaned_up <bool> = False
+│  │  │  │  │  ├─ _cleanup_actions <list> = <list len=0>
+│  │  │  │  │  ├─ _current_layers <dict> = <dict len=0>
+│  │  │  │  │  ├─ _destruction_alarms <dict> = <dict len=0>
+│  │  │  │  │  ├─ _layers_in_destruction <list> = <list len=0>
+│  │  │  │  │  ├─ _loaded_layers <list> = <list len=0>
+│  │  │  │  │  ├─ _prerolling <bool> = False
+│  │  │  │  │  ├─ _ready_for_destruction <bool> = False
+│  │  │  │  │  ├─ _situations_on_load_ids <list> = <list len=0>
+│  │  │  │  │  ├─ allow_loading_after_time_passes_elsewhere <bool> = False
+│  │  │  │  │  ├─ churn_alarm_interval <float> = 10.0
+│  │  │  │  │  ├─ did_preroll <bool> = False
+│  │  │  │  │  ├─ guid <int> = 206695370
+│  │  │  │  │  ├─ guid64 <int> = 201308
+│  │  │  │  │  ├─ npc_summoning_behavior <frozendict> = <frozendict len=0>
+│  │  │  │  │  ├─ ready_for_destruction <bool> = False
+│  │  │  │  │  ├─ reloadable <bool> = True
+│  │  │  │  │  ├─ resource_key <Key> = <Key> '00000000!00000000'0003125c.4b6fdec4'
+│  │  │  │  │  ├─ seasonal_object_layer_schedule_mapping <frozendict> = <frozendict len=0>
+│  │  │  │  │  ├─ set_host_as_active_sim <bool> = False
+│  │  │  │  │  ├─ situation_shifts <tuple> = <tuple len=1>
+│  │  │  │  │  ├─ situations_on_load <tuple> = <tuple len=0>
+│  │  │  │  │  └─ was_loaded <bool> = True
+│  │  │  │  ├─ _priority <OpenStreetDirectorPriority> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  │  │  ├─ _state <OpenStreetDirectorRequestState>
+│  │  │  │    (OpenStreetDirectorRequestState 枚举值 × 5，首见 services.venue_service()._zone_director._open_stre)
+│  │  │  │  │  ├─ _enum_export_path <str> = "open_street_director-open_street_director_request.OpenStreet"
+│  │  │  │  │  ├─ _mutable <bool> = False
+│  │  │  │  │  ├─ cache_key <str> = "OpenStreetDirectorRequestState"
+│  │  │  │  │  ├─ denominator <int> = 1
+│  │  │  │  │  ├─ display_sorted <bool> = False
+│  │  │  │  │  ├─ export <bool> = False
+│  │  │  │  │  ├─ imag <int> = 0
+│  │  │  │  │  ├─ locked <bool> = False
+│  │  │  │  │  ├─ name <str> = "ACTIVE_REQUEST"
+│  │  │  │  │  ├─ name_to_value <dict> = <dict len=5>
+│  │  │  │  │  ├─ numerator <int> = 2
+│  │  │  │  │  ├─ offset <int> = 0
+│  │  │  │  │  ├─ partitioned <bool> = False
+│  │  │  │  │  ├─ real <int> = 2
+│  │  │  │  │  ├─ value <int> = 2
+│  │  │  │  │  └─ value_to_name <dict> = <dict len=5>
+│  │  │  │  ├─ manager <OpenStreetDirectorManager> → 见 services.venue_service()._zone_director._open_street_director_manager
+│  │  │  │  ├─ open_street_director <openStreetDirector_FameWorld_VIP> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  │  │  ├─ priority <OpenStreetDirectorPriority> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  │  │  ├─ _timestamp <DateAndTime> = 08:50:51.520 day:2 week:11
+│  │  │  │  └─ is_factory <bool> = False
+│  │  │  ├─ open_street_director <openStreetDirector_FameWorld_VIP> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  │  ├─ _active <bool> = True
+│  │  │  ├─ _open_street_director_requests <list> = <list len=3>
+│  │  │  ├─ _prior_open_street_director_proto <NoneType> = <None>
+│  │  │  └─ active <bool> = True
+│  │  ├─ _open_street_saved_sim_op <_OpenStreetSavedSimOp>
+│  │    (_OpenStreetSavedSimOp 枚举值 × 2，首见 services.venue_service()._zone_director._open_stre)
+│  │  │  ├─ _enum_export_path <str> = "zone_director._OpenStreetSavedSimOp"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "_OpenStreetSavedSimOp"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "MAINTAIN"
+│  │  │  ├─ name_to_value <dict> = <dict len=2>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=2>
+│  │  ├─ _situation_shifts <SituationShifts> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  ├─ _zone_saved_sim_op <_ZoneSavedSimOp>
+│  │    (_ZoneSavedSimOp 枚举值 × 3，首见 services.venue_service()._zone_director._zone_save)
+│  │  │  ├─ _enum_export_path <str> = "zone_director._ZoneSavedSimOp"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "_ZoneSavedSimOp"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "MAINTAIN"
+│  │  │  ├─ name_to_value <dict> = <dict len=3>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=3>
+│  │  ├─ customer_situation_type_curve <SituationCurve>
+│  │  │  ├─ desired_sim_count_multipliers <TunableMultiplier> → 见 services.active_household()._household_milestone_tracker.owner_sim_info._lifesty
+│  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=2>
+│  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <set> = <set len=2>
+│  │  │  ├─ FACTORY_TUNABLES <dict> = <dict len=1>
+│  │  │  ├─ _additional_count_multiplier <int> = 1
+│  │  │  ├─ entries <tuple> = <tuple len=1>
+│  │  │  └─ is_shift_churn_disabled <bool> = False
+│  │  ├─ open_street_director <openStreetDirector_FameWorld_VIP> → 见 services.venue_service()._zone_director._open_street_director_manager._active_op
+│  │  ├─ open_street_manager <OpenStreetDirectorManager> → 见 services.venue_service()._zone_director._open_street_director_manager
+│  │  ├─ tested_spawn_point_override <TestedSpawnPointOverride>
+│  │  │  ├─ AUTO_INIT_IGNORE_VALUE <str> = "AUTO_INIT_IGNORE_VALUE"
+│  │  │  ├─ AUTO_INIT_KWARGS <set> = <set len=1>
+│  │  │  ├─ AUTO_INIT_OPTIONAL_KWARGS <NoneType> = <None>
+│  │  │  └─ FACTORY_TUNABLES <dict> = <dict len=1>
+│  │  ├─ tuning_manager <InstanceManager> → 见 services.active_household().client.active_sim._posture_state._aspect_body.tuning
+│  │  ├─ INSTANCE_TUNABLES <dict> = <dict len=1>
+│  │  ├─ _attractor_ids <defaultdict> = <defaultdict len=0>
+│  │  ├─ _avoid_spawning_other_travel_groups <bool> = False
+│  │  ├─ _cleanup_actions <list> = <list len=0>
+│  │  ├─ _cta_disabled <bool> = False
+│  │  ├─ _customer_situation_ids <list> = <list len=0>
+│  │  ├─ _customers_allowed <bool> = False
+│  │  ├─ _disallowed_behaviors_triggered <set> = <set len=0>
+│  │  ├─ _employee_situation_id_list <list> = <list len=0>
+│  │  ├─ _employee_situation_ids <defaultdict> = <defaultdict len=0>
+│  │  ├─ _has_cta_been_seen <bool> = False
+│  │  ├─ _injected_into_zone_sim_infos <set> = <set len=0>
+│  │  ├─ _is_npc_store <bool> = False
+│  │  ├─ _object_situation_shifts <dict> = <dict len=0>
+│  │  ├─ _object_weekly_schedule <dict> = <dict len=0>
+│  │  ├─ _open_street_saved_sim_infos <set> = <set len=0>
+│  │  ├─ _plex_group_saved_sim_infos <set> = <set len=0>
+│  │  ├─ _resident_sim_infos <set> = <set len=0>
+│  │  ├─ _return_sim_to_home_lot_alarm_handles <set> = <set len=0>
+│  │  ├─ _situations_on_load_ids <list> = <list len=0>
+│  │  ├─ _traveled_sim_infos <set> = <set len=0>
+│  │  ├─ _valid_attractor_positions <defaultdict> = <defaultdict len=0>
+│  │  ├─ _zone_saved_sim_infos <set> = <set len=0>
+│  │  ├─ affected_objects_map <dict> = <dict len=0>
+│  │  ├─ allow_venue_background_situations <bool> = True
+│  │  ├─ attractors <tuple> = <tuple len=0>
+│  │  ├─ churn_alarm_interval <float> = 10.0
+│  │  ├─ customer_situation_interval <float> = 10.0
+│  │  ├─ employee_situation_data <frozendict> = <frozendict len=1>
+│  │  └─ forward_ungreeted_front_door_interactions_to_terrain <bool> = True
+│  ├─ active_venue <venue_residential> → 见 services.venue_service()._active_venue
+│  ├─ save_error_code <ErrorCodes> → 见 services.sim_info_manager().save_error_code
+│  ├─ source_venue <venue_residential> → 见 services.venue_service()._active_venue
+│  ├─ ELAPSED_TIME_SINCE_LAST_VISIT_FOR_CLEANUP <float> = 0.0
+│  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  ├─ SPECIAL_EVENT_SCHEDULE_DELAY <float> = 10.0
+│  ├─ _special_event_start_alarm <AlarmHandle> = <AlarmHandle> <alarms.AlarmHandle object at 0x00007FF3E5E5AD40>
+│  ├─ _university_housing_kick_out_completed <bool> = False
+│  ├─ _venue_start_time <DateAndTime> = 08:50:51.520 day:2 week:11
+│  ├─ build_buy_edit_mode <bool> = False
+│  ├─ can_incremental_start <bool> = False
+│  ├─ has_zone_director <bool> = True
+│  └─ required_packs <tuple> = <tuple len=1>
+├─ INSTANCE_TUNING_DEFINITIONS <list> = <list len=117>
+├─ annotations <_Feature>
+│  ├─ compiler_flag <int> = 1048576
+│  ├─ mandatory <tuple> = <tuple len=5>
+│  └─ optional <tuple> = <tuple len=5>
+├─ definition <InstanceTuningDefinition>
+│  ├─ TypeNames <str> = "TdescDebugs"
+│  ├─ base_game_only <bool> = False
+│  ├─ file_extension <str> = "tdesc_debug"
+│  ├─ manager_name <str> = "tdesc_debug_manager"
+│  ├─ manager_type <NoneType> = <None>
+│  ├─ require_reference <bool> = False
+│  ├─ resource_type <int> = 1779917084
+│  ├─ type_name <str> = "tdesc_debug"
+│  └─ use_guid_for_ref <bool> = True
+├─ logger <Logger>
+│  ├─ default_owner <NoneType> = <None>
+│  ├─ group <str> = "Services"
+│  ├─ key_words <NoneType> = <None>
+│  └─ suppress <bool> = False
+├─ production_logger <ProductionLogger>
+│  ├─ default_owner <NoneType> = <None>
+│  └─ group <str> = "Services"
+├─ tuning_managers <InstanceTuningManagers>
+│  └─ _type_to_def_mapping <dict> = <dict len=117>
+├─ zone <Zone> → 见 services.current_zone()
+├─ lot <Lot>
+  (108 种类型全部 None — AffordanceTuning, AnimalHome, AnimalObject, AnimalPreference, Animation…)
+   (省略 2 个子属性…)
+│  ├─ center <Vector3> → 见 services.active_household().client.active_sim._los_constraint.average_position
+│  ├─ commodity_tracker <CommodityTracker>
+│    (12 种类型全部 None — _actor_mixers_cache, _delayed_active_lod_statistics, _delta_watchers, _listener_seeds, _on_remove_callbacks…)
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ owner <Lot> → 见 zone.lot
+│  │  ├─ simulation_level <CommodityTrackerSimulationLevel>
+│  │    (CommodityTrackerSimulationLevel 枚举值 × 2，首见 zone.lot.commodity_tracker.simulation_level)
+│  │  │  ├─ _enum_export_path <str> = "statistics-statistic_enums.CommodityTrackerSimulationLevel"
+│  │  │  ├─ _mutable <bool> = False
+│  │  │  ├─ cache_key <str> = "CommodityTrackerSimulationLevel"
+│  │  │  ├─ denominator <int> = 1
+│  │  │  ├─ display_sorted <bool> = False
+│  │  │  ├─ export <bool> = False
+│  │  │  ├─ imag <int> = 0
+│  │  │  ├─ locked <bool> = False
+│  │  │  ├─ name <str> = "REGULAR_SIMULATION"
+│  │  │  ├─ name_to_value <dict> = <dict len=2>
+│  │  │  ├─ numerator <int> = 0
+│  │  │  ├─ offset <int> = 0
+│  │  │  ├─ partitioned <bool> = False
+│  │  │  ├─ real <int> = 0
+│  │  │  ├─ value <int> = 0
+│  │  │  └─ value_to_name <dict> = <dict len=2>
+│  │  ├─ _statistics <dict> = <dict len=5>
+│  │  ├─ load_in_progress <bool> = False
+│  │  ├─ recovery_add_in_progress <bool> = False
+│  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  ├─ suppress_callback_alarm_calculation <bool> = False
+│  │  └─ suppress_callback_setup_during_load <bool> = False
+│  ├─ components <dict_values> → 见 services.sim_info_manager().objects
+│  ├─ orientation <Quaternion>
+│  │  ├─ w <float> = 1.0
+│  │  ├─ x <float> = 0.0
+│  │  ├─ y <float> = 0.0
+│  │  └─ z <float> = 0.0
+│  ├─ position <Vector3> → 见 services.active_household().client.active_sim._los_constraint.average_position
+│  ├─ size <Vector3> → 见 services.active_household().client.active_sim._los_constraint.average_position
+│  ├─ static_commodity_tracker <BaseStatisticTracker>
+│    (10 种类型全部 None — _delayed_active_lod_statistics, _delta_watchers, _listener_seeds, _on_remove_callbacks, _recovery_add_in_progress…)
+│  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  ├─ recovery_add_in_progress <bool> = False
+│  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  ├─ suppress_callback_alarm_calculation <bool> = False
+│  │  └─ suppress_callback_setup_during_load <bool> = False
+│  ├─ statistic_component <StatisticComponent>
+│  │  ├─ _commodity_tracker <CommodityTracker> → 见 zone.lot.commodity_tracker
+│  │  ├─ _static_commodity_tracker <BaseStatisticTracker> → 见 zone.lot.static_commodity_tracker
+│  │  ├─ _statistic_tracker <StatisticTracker>
+│  │    (8 种类型全部 None — _delayed_active_lod_statistics, _delta_watchers, _listener_seeds, _on_remove_callbacks, _recovery_add_in_progress…)
+│  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  ├─ owner <Lot> → 见 zone.lot
+│  │  │  ├─ _monetary_value_statistics <list> = <list len=0>
+│  │  │  ├─ _statistics <dict> = <dict len=31>
+│  │  │  ├─ recovery_add_in_progress <bool> = False
+│  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ suppress_callback_alarm_calculation <bool> = False
+│  │  │  └─ suppress_callback_setup_during_load <bool> = False
+│  │  ├─ _trait_statistic_tracker <TraitStatisticTracker>
+│  │    (14 种类型全部 None — _delayed_active_lod_statistics, _delta_watchers, _end_of_day_alarm_handle, _listener_seeds, _on_remove_callbacks…)
+│  │  │  ├─ _tracker_lod_threshold <SimInfoLODLevel> → 见 services.active_household()._collection_tracker._tracker_lod_threshold
+│  │  │  ├─ owner <Lot> → 见 zone.lot
+│  │  │  ├─ END_OF_DAY_TIME <DateAndTime> = 00:00:00.000 day:0 week:0
+│  │  │  ├─ MODULE_TUNABLES <dict> = <dict len=3>
+│  │  │  ├─ PERIODIC_TEST_TIMER_RANDOMIZER <float> = 60.0
+│  │  │  ├─ load_in_progress <bool> = False
+│  │  │  ├─ recovery_add_in_progress <bool> = False
+│  │  │  ├─ required_packs <tuple> = <tuple len=1>
+│  │  │  ├─ suppress_callback_alarm_calculation <bool> = False
+│  │  │  └─ suppress_callback_setup_during_load <bool> = False
+│  │  ├─ owner <Lot> → 见 zone.lot
+│  │  ├─ priority <ComponentPriority> → 见 services.active_household()._household_milestone_tracker.owner_sim_info.Buffs.pr
+│  │  ├─ CNAME <str> = "Statistic"
+│  │  ├─ INAME <str> = "statistic_component"
+│  │  ├─ _commodities_added <dict> = <dict len=0>
+│  │  ├─ _commodity_distress_refs <list> = <list len=0>
+│  │  ├─ _distance_to_object_score_modifiers <dict> = <dict len=0>
+│  │  ├─ _interaction_modifiers <dict> = <dict len=0>
+│  │  ├─ _interaction_score_modifier <list> = <list len=0>
+│  │  ├─ _locked_commodities <dict> = <dict len=0>
+│  │  ├─ _locked_commodities_lock_reasons <defaultdict> = <defaultdict len=0>
+│  │  ├─ _locked_commodities_unlock_reasons <defaultdict> = <defaultdict len=0>
+│  │  ├─ _object_tags_that_override_off_lot_autonomy_ref_count <defaultdict> = <defaultdict len=0>
+│  │  ├─ _outside_object_supression <NoneType> = <None>
+│  │  ├─ _prevent_skills_from_being_added_ref_count <int> = 0
+│  │  ├─ _relationship_score_multiplier_with_buff_on_target <defaultdict> = <defaultdict len=0>
+│  │  ├─ _saved_commodities_value_for_travel <dict> = <dict len=0>
+│  │  ├─ _sit_posture_transition_penalties <list> = <list len=0>
+│  │  ├─ _situation_type_social_score_multipliers <defaultdict> = <defaultdict len=0>
+│  │  ├─ _statistic_modifiers <dict> = <dict len=159>
+│  │  ├─ _suspended_modifiers <dict> = <dict len=0>
+│  │  ├─ _tested_relationship_score_multipliers <list> = <list len=0>
+│  │  ├─ _ui_skill_bar_suppression_count <int> = 0
+│  │  ├─ allow_dynamic <bool> = True
+│  │  ├─ has_trait_statistic_tracker <bool> = True
+│  │  ├─ prevent_skills_from_being_added <bool> = False
+│  │  └─ required_packs <tuple> = <tuple len=1>
+│  ├─ statistic_tracker <StatisticTracker> → 见 zone.lot.statistic_component._statistic_tracker
+│  ├─ trait_statistic_tracker <TraitStatisticTracker> → 见 zone.lot.statistic_component._trait_statistic_tracker
+│  ├─ _component_definitions <tuple> = <tuple len=1>
+│  ├─ _component_instances <dict> = <dict len=1>
+│  ├─ _component_reload_hooks <dict> = <dict len=1>
+│  ├─ _max_level <int> = 4
+│  ├─ _min_level <int> = 0
+│  ├─ _shared_inventory_containers <dict> = <dict len=12>
+│  ├─ _suppress_statistic_callback_alarm_calculation <bool> = False
+│  ├─ component_definitions <tuple> = <tuple len=1>
+│  ├─ corners <tuple> = <tuple len=4>
+│  ├─ display_level <int> = 1
+│  ├─ furnished_lot_value <int> = 483267
+│  ├─ has_id <bool> = False
+│  ├─ has_trait_statistic_tracker <bool> = True
+│  ├─ inventory_owners <defaultdict> = <defaultdict len=17>
+│  ├─ is_downloaded <bool> = False
+│  ├─ is_sim <bool> = False
+│  ├─ is_social_group <bool> = False
+│  ├─ lot_id <int> = 1300824067
+│  ├─ lot_levels <dict> = <dict len=5>
+│  ├─ max_allowed_level <int> = 4
+│  ├─ max_level <int> = 4
+│  ├─ min_allowed_level <int> = -4
+│  ├─ min_level <int> = 0
+│  ├─ owner_household_id <int> = 47875306169303069
+│  ├─ rotation <float> = 0.0
+│  ├─ size_x <float> = 64.0
+│  ├─ size_y <float> = 26.0
+│  ├─ size_z <float> = 64.0
+│  ├─ tile_count <int> = 4512
+│  └─ unfurnished_lot_value <int> = 173769
+├─ household <Household> → 见 services.active_household()
+├─ sim_info <SimInfo> → 见 services.active_household()._household_milestone_tracker.owner_sim_info
+└─ sim <object_sim> → 见 services.active_household().client.active_sim
