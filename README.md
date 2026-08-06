@@ -96,6 +96,8 @@ The following documents are **independent of the AI system** — they are infras
 | [`data/types_index.txt`](data/types_index.txt) | 423 types, 28,571 properties — searchable runtime API directory | grep instead of guessing: `grep "lifestyle" types_index.txt` |
 | [`data/structure_tree.txt`](data/structure_tree.txt) | DFS hierarchy tree preserving "who contains whom" relationships | Understand the game's object architecture at a glance |
 | [`data/affordances_index.txt`](data/affordances_index.txt) | 36K affordances with pushability, target type, menu, EA/MOD source | grep before you push: "can I push Piano?" → 5 seconds |
+| [`game/mythica_action.py`](game/mythica_action.py) | Generic action executor: push/goto primitives, routing table, target finding | Drop-in module for pushing interactions via EA's `push_super_affordance` |
+| [`game/mythica_network.py`](game/mythica_network.py) | HTTP client + desktop connectivity detection + action result feedback | Reusable network layer for mod↔desktop communication |
 
 > These resources require zero AI knowledge. You don't need to care about LLMs, agents, or sandboxes — you just need to want to mod Sims 4.
 
@@ -241,6 +243,8 @@ Sims 4 恰好提供了一个完美的实验平台：角色属性、人际关系�
 | [`data/types_index.txt`](data/types_index.txt) | 423 个类型、28,571 个属性——可搜索的运行时 API 目录 | 用 grep 代替猜：`grep "lifestyle" types_index.txt` |
 | [`data/structure_tree.txt`](data/structure_tree.txt) | DFS 树状图，保留"谁包含谁"的层级关系 | 一眼看清游戏的对象架构 |
 | [`data/affordances_index.txt`](data/affordances_index.txt) | 36K 交互目录，含可推送性、目标类型、菜单、EA/MOD 来源 | 推之前先 grep："钢琴能推吗？"→ 5 秒 |
+| [`game/mythica_action.py`](game/mythica_action.py) | 通用动作执行器：push/goto 两原语、路由表、目标查找 | 拿来就能用的交互推送模块 |
+| [`game/mythica_network.py`](game/mythica_network.py) | HTTP 客户端 + 桌面连接检测 + 动作结果回传 | 可复用的 mod↔桌面通信层 |
 
 > 这些资源不依赖任何 AI 知识。你不需要关心 LLM、Agent、沙盘——只需要想给 Sims 4 写 mod。
 
