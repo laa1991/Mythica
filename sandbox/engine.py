@@ -1,6 +1,19 @@
 # engine.py — 沙盘核心引擎
 """两段式 AI 决策核心循环。
 
+Usage::
+
+    engine = SandboxEngine()
+    ws = game_bridge.parse_scene_snapshot_to_world_state(snapshot)
+
+    result = engine.run_cycle(ws)
+    if result.success:
+        game_bridge.emit_action_commands(result.all_actions, ws)
+        print(f"[{result.pov_name}] {result.inner_voice}")
+
+Every cycle: collect world state → decide what to do → emit commands → loop.
+No presets, no scripts — each round is a real-time AI decision.
+
 三层决策架构（2026-07-28）：
   1. P4 生存层 — _execute_motive_emergency：膀胱 < -80 → 自动去厕所（纯生理，零叙事空间）
   2. Tier 1 AI — _call_inner_voice + _call_action_selector：大模型做所有有叙事选择空间的决策
@@ -57,6 +70,18 @@ _MOTIVE_EMERGENCY_THRESHOLD = -80
 _MOTIVE_EMERGENCY_MOTIVES = frozenset({"bladder"})
 
 
+def _is_character_unavailable(c) -> bool:
+    """Return True if the character is asleep or otherwise unavailable for actions.
+
+    Used by POV scoring, motive emergency, and auto-trigger candidate scoring
+    to skip characters that can't act.  Centralized so the sleep heuristic
+    (check both mood and current_action) is defined in one place.
+    """
+    mood_lower = (c.mood or "").lower()
+    action_lower = (c.current_action or "").lower()
+    return "asleep" in mood_lower or "sleep" in action_lower
+
+
 @dataclass
 class CycleRecord:
     """一轮决策的历史摘要——跨轮上下文注入用（会话内内存态，重启即清）。"""
@@ -69,7 +94,8 @@ class CycleRecord:
     pending_intent: str = ""  # 🆕 2026-07-28：上轮想做但未完成的意图（下轮注入 prompt）
 
 
-def format_recent_cycles_for_pov(history, pov_id: str, limit: int = 2) -> str:
+def format_recent_cycles_for_pov(history: 'deque[CycleRecord]', pov_id: str,
+                               limit: int = 2) -> str:
     """把同一 POV 的最近轮次格式化为内心声音 prompt 的 {recent_cycles} 块。
 
     只取当前 POV 自己的历史（别人的内心不该出现在"你此前的想法"里）；
@@ -91,7 +117,7 @@ def format_recent_cycles_for_pov(history, pov_id: str, limit: int = 2) -> str:
     return "\n".join(lines)
 
 
-def format_recent_actions(history, limit: int = 4) -> str:
+def format_recent_actions(history: 'deque[CycleRecord]', limit: int = 4) -> str:
     """把最近轮次（全 POV）的已执行动作格式化为动作选择 prompt 的 {recent_actions} 块。
 
     给决策器"刚做过什么"的记忆——避免机械重复（连续三轮拥抱）、支持意图延续。
@@ -392,9 +418,7 @@ def _score_pov_candidates(present, ws, cycle_history,
             score += 25
 
         # 睡眠惩罚
-        mood_lower = (c.mood or "").lower()
-        action_lower = (c.current_action or "").lower()
-        if "asleep" in mood_lower or "sleep" in action_lower or "sleeping" in action_lower:
+        if _is_character_unavailable(c):
             score -= 60
 
         # 特殊动画状态检测（mod 特定实现已省略）
@@ -492,10 +516,16 @@ class SandboxEngine:
         return rest
 
     def _read_auto_feedback(self) -> tuple[set[str], set[str]]:
-        """扫描 push_history，返回本轮应跳过的 (sim_ids, rule_ids)。
+        """Scan push_history for consecutive failures and return (sim_ids, rule_ids)
+        to skip this round.
 
-        反馈闭环（2026-07-28）：同一 sim 或同一规则连续失败
-        _AUTO_FAILURE_SKIP_THRESHOLD 次 → 本轮跳过，给其他 sim/规则机会。
+        Feedback loop (2026-07-28): when a sim or rule has _AUTO_FAILURE_SKIP_THRESHOLD
+        consecutive failures, skip them this round to give others a chance.
+
+        Two levels:
+          - Per-sim: if all of a sim's recent auto actions failed → skip sim entirely
+          - Per-rule: if every sim that tried this rule keeps failing → skip rule globally
+            (e.g. "repair" requires a broken object — if nothing is broken, it always fails)
         """
         failed_sims: set[str] = set()
         failed_rules: set[str] = set()
@@ -503,48 +533,37 @@ class SandboxEngine:
         if not records:
             return failed_sims, failed_rules
 
-        # ── 按 sim 分组：最近 N 条都是失败 → 跳过 ──
-        sim_results: dict[str, list[bool]] = {}  # sim_id → [True=ok, False=fail]
+        # Collect per-sim and per-rule success/failure sequences.
+        # Only auto-triggered actions participate (custom_ prefix).
+        sim_results: dict[str, list[bool]] = {}
+        rule_results: dict[str, list[bool]] = {}
+
         for r in records:
             rule_id = self._extract_auto_rule_id(r.action_id)
             if not rule_id:
-                continue  # 非自动动作，不参与
+                continue
             ok = r.status == "pushed"
             sim_results.setdefault(r.character_id, []).append(ok)
-            if not ok:
-                # per-rule 失败计数
-                sim_rule_key = (r.character_id, rule_id)
-                pass  # 下面统一处理
+            rule_results.setdefault(rule_id, []).append(ok)
 
-        # 只看最近 _AUTO_FAILURE_SKIP_THRESHOLD 条
+        # Per-sim: skip sim if its last N auto actions all failed.
         for sid, results in sim_results.items():
             recent = results[-_AUTO_FAILURE_SKIP_THRESHOLD:]
             if len(recent) >= _AUTO_FAILURE_SKIP_THRESHOLD and not any(recent):
                 failed_sims.add(sid)
 
-        # ── 按 (sim, rule) 分组：同 sim+同规则 连续失败 → 跳规则 ──
-        rule_sim_results: dict[tuple[str, str], list[bool]] = {}
-        for r in records:
-            rule_id = self._extract_auto_rule_id(r.action_id)
-            if not rule_id:
-                continue
-            key = (r.character_id, rule_id)
-            ok = r.status == "pushed"
-            rule_sim_results.setdefault(key, []).append(ok)
-
-        # 同 sim+同规则连续失败 → 只跳过该规则（不影响该 sim 做其他事）
-        for (sid, rule_id), results in rule_sim_results.items():
+        # Per-rule: skip rule globally when every sim that tried it fails
+        # N times in a row.  This catches "broken object already fixed" and
+        # similar environmental failures that aren't sim-specific.
+        for rule_id, results in rule_results.items():
             recent = results[-_AUTO_FAILURE_SKIP_THRESHOLD:]
             if len(recent) >= _AUTO_FAILURE_SKIP_THRESHOLD and not any(recent):
-                # 跨 sim：任意两个 sim 对此规则连续失败 → 跳过规则
-                pass  # 不做——不同 sim 失败可能是 sim 自己的问题（缺技能等）
-            # 同一 sim+同一规则 连续失败：该 sim 本轮跳过该规则
-            # （已由上面的 per-sim 检查覆盖——同 sim 的任意规则连续失败都跳过。）
+                failed_rules.add(rule_id)
 
         if failed_sims or failed_rules:
             log_message("engine.auto_feedback",
-                        f"Skipping {len(failed_sims)} sims {failed_sims}, "
-                        f"{len(failed_rules)} rules {failed_rules} "
+                        f"Skipping {len(failed_sims)} sims ({failed_sims}), "
+                        f"{len(failed_rules)} rules ({failed_rules}) "
                         f"due to {_AUTO_FAILURE_SKIP_THRESHOLD}+ consecutive failures")
         return failed_sims, failed_rules
 
@@ -572,10 +591,7 @@ class SandboxEngine:
         for c in present:
             if c.sim_id in skip_sim_ids:
                 continue
-            # 硬排除
-            mood_lower = (c.mood or "").lower()
-            action_lower = (c.current_action or "").lower()
-            if "asleep" in mood_lower or "sleep" in action_lower:
+            if _is_character_unavailable(c):
                 continue
             # 特殊动画状态已跳过（mod 特定实现已省略）
 
@@ -754,9 +770,7 @@ class SandboxEngine:
             # 硬排除
             if c.sim_id in skip_sim_ids:
                 continue
-            mood_lower = (c.mood or "").lower()
-            action_lower = (c.current_action or "").lower()
-            if "asleep" in mood_lower or "sleep" in action_lower:
+            if _is_character_unavailable(c):
                 continue
             # 特殊动画状态已跳过（mod 特定实现已省略）
 
