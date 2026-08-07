@@ -1,5 +1,7 @@
 # Mythica — An LLM Agent for Game Narrative & Behavioral Decision-Making
 
+[![Test](https://github.com/laa1991/Mythica/actions/workflows/test.yml/badge.svg)](https://github.com/laa1991/Mythica/actions/workflows/test.yml)
+
 **Not an AI that writes stories. An AI that directs them.**
 
 An LLM agent system running inside a live game environment (The Sims 4). It reads real-time game state — character attributes, relationships, environmental events — generates coherent narratives through a three-phase pipeline, and makes executable behavioral decisions through a sandbox engine.
@@ -146,6 +148,8 @@ If this work proves useful to your research or model training, a mention of "Myt
 ---
 
 # Mythica — LLM Agent 驱动的游戏叙事与行为决策引擎
+
+[![Test](https://github.com/laa1991/Mythica/actions/workflows/test.yml/badge.svg)](https://github.com/laa1991/Mythica/actions/workflows/test.yml)
 
 **不是让 AI 写小说，是让 AI 做导演。**
 
