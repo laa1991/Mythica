@@ -4,6 +4,8 @@
 
 **Not an AI that follows instructions. An AI that discovers what it can do, tries it, and learns from the results.**
 
+*A controlled-yet-real black-box environment, validating a minimal viable architecture for self-evolving agents.*
+
 Mythica is an LLM agent system running inside The Sims 4 — a dense, real-time, black-box simulation. It reads live game state, makes behavioral decisions through a sandbox engine, and continuously expands its own action repertoire through a dual closed-loop architecture: one loop for execution feedback, one loop for knowledge discovery. The two loops cross-validate in symbolic space, enabling the agent to self-evolve without model fine-tuning.
 
 > This is a curated showcase. The full project spans 20+ modules, ~2,000 tests, and 39 numbered design decisions. Core architecture, design methodology, and the dual-loop system are shown here.
