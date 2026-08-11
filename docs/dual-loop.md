@@ -291,9 +291,27 @@ To build an equivalent system for a physical robot:
 
 3. **A safety valve for auto-acquired capabilities** — when the agent learns something new on its own, there must be a mechanism to un-learn it if it turns out to be wrong. Gradient descent doesn't have a clean "un-learn this specific capability" operation; symbolic rules do (set `verified=False`).
 
+### 5.3 Parallel: MirroS Physical RSI (2026)
+
+In August 2026, MirroS published the first complete framework for extending Recursive Self-Improvement (RSI) from digital environments to physical reality. Their core insight mirrors the dual-loop architecture:
+
+| MirroS Physical RSI | Mythica Dual-Loop |
+|---|---|
+| **Actor RSI + World Model RSI** — dual-axis coupled evolution | Loop 1 (Actor feedback) + Loop 2 (World Model discovery) — cross-validated |
+| **Environment Gap** — "is my world model wrong?" before "is my action wrong?" | Observer `_proven` index checks before modifying action hints |
+| **World Model must be built from code**, not neural implicit representations — or it cannot be surgically corrected | Knowledge stored as JSON rules with named fields, not distributed weights |
+| **OOD events are evolutionary fuel** — every surprise exposes a blind spot in the world model | Game autonomous behavior feeds the Observer → `observed_rules.json` pipeline |
+| **Active exploration of unknowns** — the system must seek out the edges of its knowledge | Probationary tier `🧪` — AI is encouraged to cautiously try unverified rules |
+| **Eight-step evolutionary cycle**: encounter → surprise → diagnose → abstract → simulate → solve → verify → internalize | Cross-validation gate: observe → generate → dual-signal verify → promote or demote |
+
+The structural isomorphism is not coincidental. Both systems face the same fundamental challenge: an agent operating in an environment it cannot fully pre-model must simultaneously improve its understanding of the world (World Model) and its ability to act in it (Actor). These two improvements cannot be sequenced — they must co-evolve, with each cycle of action exposing gaps in understanding, and each improvement in understanding enabling better action.
+
+**Where they differ:** MirroS targets the physical world — continuous, stochastic, with no ground truth. Every sensor reading is a probability distribution. The world model can never be "verified" — only "hasn't failed yet." Mythica targets a deterministic black-box game — finite, observable, with definitive yes/no answers. This makes Mythica's cross-validation simpler and more definitive (`push_confirmed > 0 AND all_in_proven` is a boolean decision), but the architectural pattern is the same.
+
+**What this means:** Mythica's dual-loop is not just a game mod architecture. It is a minimal viable implementation of the Physical RSI paradigm in the only environment where it's currently feasible to close both loops with boolean precision. When Physical RSI frameworks move from paper to implementation, they will face the same engineering problems Mythica already solved: how to separate mutable knowledge from frozen reasoning, how to cross-validate independent signal sources, and how to safely auto-demote what stops working.
+
 ---
 
-## 6. Design Decisions
 
 ### 6.1 Why "Suggest" Not "Auto-Modify" (Historical)
 

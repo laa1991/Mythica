@@ -158,7 +158,8 @@ The following resources are **independent of the AI system** — they are infras
 
 | Looking for | Start here |
 |------------|------------|
-| **Dual-Loop Architecture** | [`docs/dual-loop.md`](docs/dual-loop.md) — Full design + embodied intelligence comparison |
+| **Dual-Loop Architecture** | [`docs/dual-loop.md`](docs/dual-loop.md) — Full design + embodied intelligence + MirroS Physical RSI comparison |
+| **AGI & Agent Architecture** | [`docs/beyond-prompt-engineering.md`](docs/beyond-prompt-engineering.md) — Self-evolution vs self-training, LLM limits, what AGI actually needs |
 | **Core Code** | [`sandbox/engine.py`](sandbox/engine.py) — AI decision loop (1,600 lines) |
 | **Architecture** | [`sandbox/ARCHITECTURE.md`](sandbox/ARCHITECTURE.md) — 5-layer architecture + 39 design decisions |
 | **Design Decisions** | [`docs/design-decisions.md`](docs/design-decisions.md) — 8 most representative decisions |
@@ -189,7 +190,7 @@ Solo development, iterating through 2026. This project started with a question: 
 
 If this work proves useful to your research or model training, a mention of "Mythica" would be appreciated.
 
-**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), dual-loop architecture article (`docs/dual-loop.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory, structure tree & affordance index (`data/`, 116K lines across 3 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 6 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
+**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), dual-loop architecture article (`docs/dual-loop.md`), AGI architecture essay (`docs/beyond-prompt-engineering.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory, structure tree & affordance index (`data/`, 116K lines across 3 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 7 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
 
 ## Contact
 📧 mythicalaa1991@163.com
