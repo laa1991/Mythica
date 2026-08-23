@@ -1,0 +1,1250 @@
+[
+  {
+    "rule_id": "obs_sit_4ee7",
+    "label": "🍽 Sit → Sitdiningqa 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdiningqa"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningqa 01；Focused时；多角色实证: 示例Sim, 示例Sim",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": true,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_2f56",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；Flirty时；多角色实证: 示例Sim, 示例Sim",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_db00",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Focused时；多角色实证: 示例Sim；场景: 0",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_563e",
+    "label": "🍽 Sit → Sitdiningqa 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdining",
+      "sitsofaqa3x"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningqa 01；在32；Energized时；多角色实证: 示例Sim, 示例Sim, 示例Sim；场景: 14, 32",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_d6c0",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在33；Energized时；多角色实证: 示例Sim, 示例Sim；场景: 32, 33",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_a99f",
+    "label": "💃 Dance → Dance Floor Cardboard",
+    "action_type": "push",
+    "target_kind": "inventory_item",
+    "hints": [
+      "stereo_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [
+      "dance",
+      "floor",
+      "cardboard"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Dance Floor Cardboard；在32；Inspired时；多角色实证: 示例Sim；场景: 32",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_353b",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "generic_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在0；Energized时；前置：superInteraction_MakeAMess_VariantC_Continue",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_0399",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "stereo_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Energized时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_a6a9",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Stressed时；前置：sim_CreateCarryUmbrella；多角色实证: 示例Sim, 示例Sim；场景: 0",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_2638",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "generic_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Energized时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_takeshower_e235",
+    "label": "🛁 TakeShower",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "shower_TakeShower"
+    ],
+    "verb": "{actor} 淋浴 → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在14；Uncomfortable时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Uncomfortable"
+    ],
+    "location_prefer": [
+      "14"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_9a6c",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Energized时；多角色实证: 示例Sim；场景: 0；主导心情: Energized；主导位置: 0；预计150s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_ad67",
+    "label": "💺 Sit → Sitsofafc3X1 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitsofafc3x",
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitsofafc3X1 01；在0；Energized时；前置：generic_consume_food_toddler；多角色实证: 示例Sim, 示例Sim；场景: 0, 32；常见前置: generic_consume_food_toddler, generic_consume_food；预计2s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": true,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [
+      "generic_consume_food_toddler",
+      "generic_consume_food"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_9455",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Playful时；多角色实证: 示例Sim；场景: 0；主导心情: Playful；主导位置: 0；预计174s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Playful"
+    ],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_c8be",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "generic_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Inspired时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_a0ab",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在33；Energized时；多角色实证: 示例Sim；场景: 32, 33；主导心情: Energized；常见前置: generic_consume_food；预计17s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [
+      "generic_consume_food"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_e984",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "generic_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Inspired时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_5788",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Energized时；前置：sim_CreateCarryUmbrella；多角色实证: 示例Sim, 示例Sim；场景: 0, 33；主导心情: Energized；常见前置: sim_CreateCarryUmbrella, canvas_PaintPainting_Staging_Medium；预计14s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [
+      "sim_CreateCarryUmbrella",
+      "canvas_PaintPainting_Staging_Medium"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_8a58",
+    "label": "💺 Sit → Sitlivinggen 02",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitlivinggen",
+      "sitsofafc3x",
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitlivinggen 02；在0；Energized时；多角色实证: 示例Sim, 示例Sim, 示例Sim；场景: 0, 14, 32；主导心情: Energized；常见前置: carry_holdobject；预计14s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [
+      "carry_holdobject"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_593d",
+    "label": "💺 Sit → Sitloveseatsc2X1 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitloveseatsc2x",
+      "sitsofafc3x"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitloveseatsc2X1 01；在32；Energized时；多角色实证: 示例Sim, 示例Sim；场景: 14, 32；主导心情: Energized；主导位置: 14；常见前置: generic_consume_food_toddler；预计3s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [
+      "14"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [
+      "generic_consume_food_toddler"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_ad7e",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在29；Inspired时；多角色实证: 示例Sim；场景: 29；主导心情: Inspired；主导位置: 29；预计19s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "29"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_dance_b2fb",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "stereo_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Inspired时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_loaddishes_4b80",
+    "label": "🧺 LoadDishes → Painteaselgen 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "dishwasher_LoadDishes"
+    ],
+    "verb": "{actor} 收碗碟 → {target}",
+    "target_match": [
+      "painteaselgen"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Painteaselgen 01；在33；Energized时；前置：easel_CreateCanvas；多角色实证: 示例Sim；场景: 33；主导心情: Energized；主导位置: 33；常见前置: easel_CreateCanvas；预计4s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Energized"
+    ],
+    "location_prefer": [
+      "33"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [
+      "easel_CreateCanvas"
+    ],
+    "estimated_duration_s": 4.4
+  },
+  {
+    "rule_id": "obs_clean_80e2",
+    "label": "🧹 Clean",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "bar_Clean"
+    ],
+    "verb": "{actor} 清洁 → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在26；Confident时；前置：generic_Bed_Sleep",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Confident"
+    ],
+    "location_prefer": [
+      "26"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_a520",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在32；Focused时；多角色实证: 示例Sim, 示例Sim；场景: 32；主导位置: 32；预计16s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 16.0
+  },
+  {
+    "rule_id": "obs_sit_ed5f",
+    "label": "💺 Sit",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在0；Uncomfortable时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Uncomfortable"
+    ],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_f46e",
+    "label": "💺 Sit → Sitdiningqa 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningqa 01；在32；Inspired时；多角色实证: 示例Sim, 示例Sim, 示例Sim；场景: 32；主导心情: Inspired；主导位置: 32；常见前置: carry_holdobject, sim_Chat；预计7s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": true,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [
+      "carry_holdobject",
+      "sim_Chat"
+    ],
+    "estimated_duration_s": 7.0
+  },
+  {
+    "rule_id": "obs_dance_09ef",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "stereo_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在33；Sad时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Sad"
+    ],
+    "location_prefer": [
+      "33"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_916c",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在1；Flirty时；前置：reaction_ObjectFamiliarity_high_TalkingToilet_Happy_si；多角色实证: 示例Sim；场景: 1；主导心情: Flirty；主导位置: 1；常见前置: reaction_ObjectFamiliarity_high_TalkingToilet_Happy_si",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Flirty"
+    ],
+    "location_prefer": [
+      "1"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [
+      "reaction_ObjectFamiliarity_high_TalkingToilet_Happy_si"
+    ],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_sit_1dae",
+    "label": "💺 Sit → Sitdiningsc 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningsc 01；在0；Inspired时；多角色实证: 示例Sim, 示例Sim；场景: 0；主导位置: 0；预计8s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 8.4
+  },
+  {
+    "rule_id": "obs_chat_6594",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在32；Inspired时；前置：reaction_AnnoyedByMess；多角色实证: 示例Sim, 示例Sim；场景: 32；主导心情: Inspired；主导位置: 32；常见前置: generic_Dance, reaction_AnnoyedByMess；预计2s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [
+      "generic_Dance",
+      "reaction_AnnoyedByMess"
+    ],
+    "estimated_duration_s": 2.2
+  },
+  {
+    "rule_id": "obs_dance_5312",
+    "label": "💃 Dance",
+    "action_type": "push",
+    "target_kind": "self",
+    "hints": [
+      "stereo_Dance"
+    ],
+    "verb": "{actor} Dance → {target}",
+    "target_match": [],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；在32；Inspired时",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 0.0
+  },
+  {
+    "rule_id": "obs_chat_aef0",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Inspired时；前置：seating_Sit；多角色实证: 示例Sim, 示例Sim；场景: 0, 32；常见前置: seating_Sit；预计2s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [],
+    "needs_goto": false,
+    "preceding_actions": [
+      "seating_Sit"
+    ],
+    "estimated_duration_s": 2.5
+  },
+  {
+    "rule_id": "obs_chat_9a1c",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Optimistic时；多角色实证: 示例Sim；场景: 0；主导心情: Optimistic；主导位置: 0；预计22s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Optimistic"
+    ],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 21.9
+  },
+  {
+    "rule_id": "obs_sit_9afb",
+    "label": "💺 Sit → Sitdiningqa 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningqa 01；在32；Inspired时；多角色实证: 示例Sim；场景: 32；主导心情: Inspired；主导位置: 32；预计614s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "32"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 614.1
+  },
+  {
+    "rule_id": "obs_chat_1160",
+    "label": "💬 Chat → 示例Sim",
+    "action_type": "push",
+    "target_kind": "sim",
+    "hints": [
+      "sim_Chat"
+    ],
+    "verb": "{actor} 聊天 → {target}",
+    "target_match": [
+      "示例Sim"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→示例Sim；在0；Energized时；多角色实证: 示例Sim, 示例Sim；场景: 0；主导位置: 0；预计36s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 36.0
+  },
+  {
+    "rule_id": "obs_sit_f00d",
+    "label": "💺 Sit → Sitdiningsc 01",
+    "action_type": "push",
+    "target_kind": "object",
+    "hints": [
+      "seating_Sit"
+    ],
+    "verb": "{actor} 吃东西 → {target}",
+    "target_match": [
+      "sitdining"
+    ],
+    "target_exclude": [],
+    "verified": true,
+    "tested_failed": false,
+    "condition_gated": false,
+    "note": "来源：autonomous；示例Sim→Sitdiningsc 01；在0；Inspired时；多角色实证: 示例Sim；场景: 0；主导心情: Inspired；主导位置: 0；预计65s",
+    "object_state_requires": [],
+    "object_state_forbidden": [],
+    "min_skill": {},
+    "min_age": "",
+    "allow_in_use": false,
+    "clear_queue": false,
+    "auto_trigger": false,
+    "group": "",
+    "mood_requires": [
+      "Inspired"
+    ],
+    "location_prefer": [
+      "0"
+    ],
+    "needs_goto": false,
+    "preceding_actions": [],
+    "estimated_duration_s": 64.9
+  }
+]

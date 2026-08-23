@@ -50,11 +50,12 @@ class CustomActionRule:
     allow_in_use: bool = False
     clear_queue: bool = False
     auto_trigger: bool = False
-    group: str = ""                 # 🆕 2026-08-01：语义分组覆盖——social/romance/use_object/need/walk/stop/inventory/self
+    group: str = ""                 # 🆕 2026-08-01：语义分组覆盖——social/use_object/need/walk/stop/inventory/self
                                     #     空=""则按 target_kind 自动推断（object→use_object, self→self, sim→"goto_sim"旧行为）
-                                    #     WW sim-target 动作应显式设为 "romance" 避免掉入【其他】段落
     mood_requires: tuple = ()       # 🆕 心情门控：仅在指定心情时推（如 ("Inspired",)），空=不限
     location_prefer: tuple = ()     # 🆕 位置偏好：优先在指定房间推（如 ("书房",)），空=不限
     needs_goto: bool = False        # 🆕 此动作通常需要前置 gohere（observer 数据驱动）
     preceding_actions: tuple = ()   # 🆕 常见的前置动作（如 ("terrain-gohere",)），空=无
     estimated_duration_s: float = 0.0  # 🆕 闭环 #6：预计执行时长（秒），observer 从 durations 统计计算，0=未知
+    mood: str = ""                  # 🆕 2026-08-13：add_buff 原语的目标心情名（EA Mood_<Name> 去前缀，
+                                    #     如 "Happy"/"Sad"）——游戏端按 mood_type 匹配对应心情 buff

@@ -129,7 +129,7 @@ No presets, no scripts — every round is a real-time AI decision based on curre
 | God class (11,887 lines) → 12 Mixins + 20 modules | [Architecture governance](docs/refactoring.md) — incremental refactoring |
 | Probe toolkit: type library + structure tree (black-box reverse engineering) | Methodology for undocumented systems |
 | ~2,000 tests + 13 offline verification scripts + pre-deploy hard gates | Engineering discipline & QA |
-| Declarative action rule system (132 rules, 112 shown) | DSL design & extensible frameworks |
+| Declarative action rule system (6 domains, 127 rules + 37 auto-observed) | DSL design & extensible frameworks |
 | 39 numbered design decisions, each with rejected alternatives | Written technical decision-making |
 | Connection to embodied AI research | Cross-domain architectural thinking |
 
@@ -167,7 +167,7 @@ The following resources are **independent of the AI system** — they are infras
 | **Action Closed Loop** | [`docs/action-closed-loop.md`](docs/action-closed-loop.md) — Decide→Execute→Observe→Feedback |
 | **Black-Box Exploration** | [`docs/probe-toolkit.md`](docs/probe-toolkit.md) — API discovery methodology |
 | **Architecture Governance** | [`docs/refactoring.md`](docs/refactoring.md) — God class → 12 Mixin incremental refactoring |
-| **Action Rules** | [`sandbox/actions/`](sandbox/actions/) — Declarative rule system (5 domains, 112 rules) |
+| **Action Rules** | [`sandbox/actions/`](sandbox/actions/) — Declarative rule system (6 domains, 127 rules + 37 auto-observed) |
 | **Data Hub** | [`lib/probe_hub.py`](lib/probe_hub.py) — Pub/sub + Protocol interface |
 | **IPC Protocol** | [`lib/signal_protocol.py`](lib/signal_protocol.py) — Declarative connection discovery |
 | **Sims 4 Knowledge Base** | [See bonus section above](#bonus-sims-4-interaction-system-knowledge-base) — Infrastructure docs for mod developers |
@@ -190,7 +190,7 @@ Solo development, iterating through 2026. This project started with a question: 
 
 If this work proves useful to your research or model training, a mention of "Mythica" would be appreciated.
 
-**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), dual-loop architecture article (`docs/dual-loop.md`), AGI architecture essay (`docs/beyond-prompt-engineering.md`), declarative action rule system (`sandbox/actions/`, 112 rules across 5 domains), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory, structure tree & affordance index (`data/`, 116K lines across 3 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 7 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
+**Open-sourced in this repository:** Sandbox decision engine (`sandbox/engine.py`), five-layer architecture documentation (`sandbox/ARCHITECTURE.md`), dual-loop architecture article (`docs/dual-loop.md`), AGI architecture essay (`docs/beyond-prompt-engineering.md`), declarative action rule system (`sandbox/actions/`, 127 rules across 6 domains + 37 auto-observed rules), Sims 4 interaction architecture & action injection knowledge base (`docs/game/`, 3 docs), runtime API directory, structure tree & affordance index (`data/`, 116K lines across 3 files), shared library core modules (`lib/probe_hub.py` + `lib/signal_protocol.py`), design decisions & methodology docs (`docs/`, 7 docs). The full project (narrative pipeline, dialogue engine, game client mod, GUI) remains closed-source.
 
 ## Contact
 📧 mythicalaa1991@163.com
@@ -328,7 +328,7 @@ observer_to_rules 管道 — 分组观察 → 生成 CustomActionRule
 | 上帝类（11,887行）→ 12 Mixin + 20 模块重构 | [架构治理](docs/refactoring.md) — 渐进式重构方法论 |
 | 探针工具箱：图书馆 + 结构树（黑箱引擎逆向） | 无文档系统的探索方法论 |
 | ~2,000 测试 + 13 项离线校验 + 部署前硬门禁 | 工程纪律与质量保证 |
-| 声明式动作规则系统（132 条，展示版含 112 条） | DSL 设计与可扩展框架 |
+| 声明式动作规则系统（6 个域，127 条 + 37 条自动观察） | DSL 设计与可扩展框架 |
 | 39 个编号设计决策，每条含被拒方案 | 技术决策的书面表达能力 |
 | 与具身智能研究的架构呼应 | 跨领域架构思维 |
 
@@ -365,7 +365,7 @@ observer_to_rules 管道 — 分组观察 → 生成 CustomActionRule
 | **动作闭环** | [`docs/action-closed-loop.md`](docs/action-closed-loop.md) — 决定→执行→观察→反馈 |
 | **黑箱探索** | [`docs/probe-toolkit.md`](docs/probe-toolkit.md) — 无文档系统的 API 发现方法论 |
 | **架构治理** | [`docs/refactoring.md`](docs/refactoring.md) — 上帝类 → 12 Mixin 渐进式重构 |
-| **动作规则** | [`sandbox/actions/`](sandbox/actions/) — 声明式规则系统（5 个域，112 条） |
+| **动作规则** | [`sandbox/actions/`](sandbox/actions/) — 声明式规则系统（6 个域，127 条 + 37 条自动观察） |
 | **数据中枢** | [`lib/probe_hub.py`](lib/probe_hub.py) — 发布/订阅 + Protocol 接口 |
 | **IPC 协议** | [`lib/signal_protocol.py`](lib/signal_protocol.py) — 声明式连接发现 |
 | **Sims 4 知识库** | [见额外贡献](#额外贡献sims-4-交互系统知识库) — 为 mod 开发者整理的基础设施文档 |
@@ -388,7 +388,7 @@ Python 3.12（桌面端/沙盘） · Python 3.7（游戏端，Sims 4 内嵌） �
 
 如果这个项目对你的研究或模型训练有帮助，希望能附上 "Mythica" 的名字。
 
-**本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、双层闭环架构文章（`docs/dual-loop.md`）、声明式动作规则系统（`sandbox/actions/`，5 域 112 条）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、运行时 API 目录、结构树与交互索引（`data/`，3 文件共 116K 行）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
+**本仓库已开源内容：** 沙盘决策引擎（`sandbox/engine.py`）、五层架构文档（`sandbox/ARCHITECTURE.md`）、双层闭环架构文章（`docs/dual-loop.md`）、声明式动作规则系统（`sandbox/actions/`，6 域 127 条 + 37 条自动观察规则）、游戏交互架构与动作注入知识库（`docs/game/`，3 篇）、运行时 API 目录、结构树与交互索引（`data/`，3 文件共 116K 行）、共享库核心模块（`lib/probe_hub.py` + `lib/signal_protocol.py`）、设计决策与方法论文档（`docs/`，6 篇）。完整项目（叙事管线、对话引擎、游戏端 mod、GUI 界面）未开源。
 
 ## 联系作者
 📧 mythicalaa1991@163.com
